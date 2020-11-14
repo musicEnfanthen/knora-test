@@ -18,18 +18,26 @@ jobs:
         run: |
           brew --version
           brew update
-      
-      - name: Install expect
-        run: brew install expect
-        
-      - name: Install sbt
-        run: brew install sbt
 
-      - name: Switch to AdoptOpenJDK 11
+      - name: Switch to JAVA 11 (AdoptOpenJDK)
         run: |
           # brew tap AdoptOpenJDK/openjdk
           # brew cask install AdoptOpenJDK/openjdk/adoptopenjdk11
           export JAVA_HOME=`/usr/libexec/java_home -v 11`
           java -version
+                
+      - name: Install expect
+        run: brew install expect
+        
+      - name: Install sbt
+        run: brew install sbt
+        
+      - name: Install Bazel
+        run: npm install -g @bazel/bazelisk
+          
+      - name: Make stack-up
+        run: |
+          # make init-db-test
+          # make stack-up
           
           
