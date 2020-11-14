@@ -33,6 +33,7 @@ jobs:
         if: always()
         run: |
           env | grep DOCKER
+          # see https://github.com/actions/virtual-environments/issues/1143#issuecomment-652264388
       
       - name: Check and update homebrew 
         if: always()
