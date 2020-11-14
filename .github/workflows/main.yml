@@ -21,12 +21,11 @@ jobs:
           if bazelisk version; then
             echo "Updating bazelisk"
             npm update -g @bazel/bazelisk
-            bazelisk version
           else
             echo "Installing bazelisk"
             npm install -g @bazel/bazelisk
-            bazelisk version
           fi
+          bazelisk version
             
       - name: Check Docker
         if: always()
