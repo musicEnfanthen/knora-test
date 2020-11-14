@@ -23,7 +23,7 @@ jobs:
         if: always()
         run: | 
           if [[ -z "$(brew --version)" ]] ; then
-            echo "Installing brew"
+            echo "Brew needs to be installed"
           fi
           brew --version
           brew update
@@ -32,6 +32,7 @@ jobs:
         if: always()
         run: |
           if [[ -z "$(git --version)" ]] ; then
+            echo "Installing git"
             brew install git
           fi
           git --version
@@ -39,13 +40,11 @@ jobs:
       - name: Check and update Bazelisk
         if: always()
         run: |         
-          if [[ $(brew leaves | grep bazelisk) ]]; then
-            echo "Updating bazelisk"
-            brew upgrade bazelisk
-          else
+          if [[ -z "$(brew leaves | grep bazelisk)" ]]; then
             echo "Installing bazelisk"
             brew install bazelisk
           fi
+          brew upgrade bazelisk
           bazelisk version
   
       - name: Switch to JAVA 11 (AdoptOpenJDK)
@@ -99,10 +98,6 @@ jobs:
           echo "-- Docker is ready."
           docker version
       
-      - name: Clean up homebrew 
-        if: always()
-        run: brew cleanup -s  
-    
       - name: Checkout KNORA_API_REPO into KNORA_API_DIR
         if: always()
         uses: actions/checkout@v2
