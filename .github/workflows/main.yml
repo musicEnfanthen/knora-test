@@ -18,16 +18,8 @@ jobs:
       - name: Check and update Bazelisk
         if: always()
         run: |
-          # npm list --depth 0 -g
-          npm -g v @bazel/bazelisk
-          if npm -g ls | grep @bazel/bazelisk ; then
-            echo "bazelisk already installed."
-          else
-            # if not, install bazelisk
-            echo "No bazelisk installed."
-          fi 
-          # npm list -g --depth 0 bazelisk
-          # npm update -g @bazel/bazelisk
+          npm -g verbose @bazel/bazelisk
+          npm -g update @bazel/bazelisk
       
       - name: Check Docker
         if: always()
