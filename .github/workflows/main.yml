@@ -16,7 +16,7 @@ jobs:
 
       - name: Check and update Bazelisk
         run: |
-           if npm -g ls | grep bazelisk ; then
+          if npm -g ls | grep bazelisk ; then
             echo "bazelisk already installed."
           else
             # if not, install bazelisk
