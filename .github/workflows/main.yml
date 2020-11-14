@@ -1,0 +1,35 @@
+name: Test
+
+on:
+  workflow_dispatch: # trigger manually
+
+jobs:
+  build:
+    runs-on: macOS-10.15
+
+    steps:
+      - name: Prerequisites   # cf. https://docs.knora.org/04-publishing-deployment/getting-started/
+        run: echo "Installing prerequisites"
+        
+      - name: Check git
+        run: git -v
+
+      - name: Check homebrew
+        run: |
+          brew --version
+          brew update
+      
+      - name: Install expect
+        run: brew install expect
+        
+      - name: Install sbt
+        run: brew install sbt
+
+      - name: Install AdoptOpenJDK
+        run: |
+          # brew tap AdoptOpenJDK/openjdk
+          # brew cask install AdoptOpenJDK/openjdk/adoptopenjdk11
+          export JAVA_HOME=`/usr/libexec/java_home -v 11`
+          java -v
+          
+          
