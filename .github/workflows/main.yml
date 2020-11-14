@@ -23,9 +23,19 @@ jobs:
         if: always()
         run: git --version
 
+      - name: Check and update homebrew 
+        if: always()
+        run: |
+          if brew --version ; then
+            brew update
+          fi
+
       - name: Check and update Bazelisk
         if: always()
         run: |
+          echo "Bazelisk from Homebrew?"
+          brew list bazelisk
+          
           if bazelisk version; then
             echo "Updating bazelisk"
             npm update -g @bazel/bazelisk
@@ -34,13 +44,7 @@ jobs:
             npm install -g @bazel/bazelisk
           fi
           bazelisk version
-      
-      - name: Check and update homebrew 
-        if: always()
-        run: |
-          brew --version
-          brew update
-
+  
       - name: Switch to JAVA 11 (AdoptOpenJDK)
         if: always()
         run: |
