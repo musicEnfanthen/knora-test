@@ -16,9 +16,19 @@ jobs:
 
       - name: Check and update Bazelisk
         run: |
-          npm list -g --depth 0 bazelisk
-          npm update -g bazelisk
-          
+           if npm -g ls | grep bazelisk ; then
+            echo "bazelisk already installed."
+          else
+            # if not, install bazelisk
+            echo "No bazelisk installed."
+          fi 
+          # npm list -g --depth 0 bazelisk
+          # npm update -g bazelisk
+      
+      - name: Check Docker
+        run: |
+          docker version
+      
       - name: Check and update homebrew 
         run: |
           brew --version
