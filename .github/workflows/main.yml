@@ -19,7 +19,7 @@ jobs:
         if: always()
         run: |
           bazelisk version
-          if [ npm -g list @bazel/bazelisk] ; then
+          if [[ bazelisk version ]]; then
             echo "Hurray, already installed"
           else
             echo "Needs to be installed"
