@@ -23,13 +23,13 @@ jobs:
           else
             echo "Needs to be installed"
           fi
-          npm -g view @bazel/bazelisk
+          # npm -g view @bazel/bazelisk
           npm -g update @bazel/bazelisk
       
       - name: Check Docker
         if: always()
         run: |
-          env | grep DOCKER
+          # env | grep DOCKER
           # see https://github.com/actions/virtual-environments/issues/1143#issuecomment-652264388
       
       - name: Check and update homebrew 
