@@ -14,6 +14,11 @@ jobs:
       - name: Check git
         run: git --version
 
+      - name: Check and update Bazelisk
+        run: |
+          npm list -g --depth 0 bazelisk
+          npm update -g bazelisk
+          
       - name: Check and update homebrew 
         run: |
           brew --version
@@ -31,9 +36,6 @@ jobs:
         
       - name: Install sbt
         run: brew install sbt
-        
-      - name: Install Bazel
-        run: npm install -g @bazel/bazelisk
           
       - name: Make stack-up
         run: |
