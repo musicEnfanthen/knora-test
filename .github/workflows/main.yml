@@ -18,6 +18,11 @@ jobs:
       - name: Check and update Bazelisk
         if: always()
         run: |
+          if [ npm -g view @bazel/bazelisk] ; then
+            echo "Hurray, already installed"
+          else
+            echo "Needs to be installed"
+          fi
           npm -g view @bazel/bazelisk
           npm -g update @bazel/bazelisk
       
