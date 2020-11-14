@@ -18,7 +18,8 @@ jobs:
       - name: Check and update Bazelisk
         if: always()
         run: |
-          if [ npm -g view @bazel/bazelisk] ; then
+          bazelisk version
+          if [ npm -g list @bazel/bazelisk] ; then
             echo "Hurray, already installed"
           else
             echo "Needs to be installed"
