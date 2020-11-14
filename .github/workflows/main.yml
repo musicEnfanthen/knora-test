@@ -12,9 +12,11 @@ jobs:
         run: echo "Installing prerequisites"
         
       - name: Check git
+        if: always()
         run: git --version
 
       - name: Check and update Bazelisk
+        if: always()
         run: |
           npm list --depth 0 -g
           npm -g v bazelisk
@@ -28,15 +30,18 @@ jobs:
           # npm update -g bazelisk
       
       - name: Check Docker
+        if: always()
         run: |
-          docker version
+          env | grep DOCKER
       
       - name: Check and update homebrew 
+        if: always()
         run: |
           brew --version
           brew update
 
       - name: Switch to JAVA 11 (AdoptOpenJDK)
+        if: always()
         run: |
           # brew tap AdoptOpenJDK/openjdk
           # brew cask install AdoptOpenJDK/openjdk/adoptopenjdk11
@@ -44,12 +49,15 @@ jobs:
           java -version
                 
       - name: Install expect
+        if: always()
         run: brew install expect
         
       - name: Install sbt
+        if: always()
         run: brew install sbt
           
       - name: Make stack-up
+        if: always()
         run: |
           # make init-db-test
           # make stack-up
