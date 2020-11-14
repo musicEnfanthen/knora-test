@@ -14,7 +14,7 @@ jobs:
       - name: Check git
         run: git --version
 
-      - name: Check homebrew
+      - name: Check and update homebrew 
         run: |
           brew --version
           brew update
@@ -25,11 +25,11 @@ jobs:
       - name: Install sbt
         run: brew install sbt
 
-      - name: Install AdoptOpenJDK
+      - name: Switch to AdoptOpenJDK 11
         run: |
           # brew tap AdoptOpenJDK/openjdk
           # brew cask install AdoptOpenJDK/openjdk/adoptopenjdk11
           export JAVA_HOME=`/usr/libexec/java_home -v 11`
-          java -v
+          java -version
           
           
