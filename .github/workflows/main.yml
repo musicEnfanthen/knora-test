@@ -18,7 +18,7 @@ jobs:
       - name: Check and update Bazelisk
         if: always()
         run: |
-          npm list --depth 0 -g
+          # npm list --depth 0 -g
           npm -g v @bazel/bazelisk
           if npm -g ls | grep @bazel/bazelisk ; then
             echo "bazelisk already installed."
