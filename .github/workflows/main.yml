@@ -23,7 +23,7 @@ jobs:
         if: always()
         run: | 
           if [[ -z "$(brew --version)" ]] ; then
-            # install brew
+            echo "Installing brew"
           fi
           brew --version
           brew update
