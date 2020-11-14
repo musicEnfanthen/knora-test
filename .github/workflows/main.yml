@@ -25,16 +25,16 @@ jobs:
 
       - name: Check and update homebrew 
         if: always()
-        run: |
-          if brew --version ; then
-            brew update
-          fi
+        run: brew update
 
       - name: Check and update Bazelisk
         if: always()
         run: |
           echo "Bazelisk from Homebrew?"
+          brew leaves
+          echo "---"
           brew list bazelisk
+          echo "---"
           
           if bazelisk version; then
             echo "Updating bazelisk"
@@ -64,7 +64,6 @@ jobs:
       - name: Install and set up Docker
         if: always()
         run: |
-          # env | grep DOCKER
           # see https://github.com/actions/virtual-environments/issues/1143#issuecomment-652264388
           # see https://github.com/play-with-go/play-with-go/blob/main/_scripts/macCISetup.sh
           
@@ -97,6 +96,10 @@ jobs:
           echo "-- Docker is ready."
           docker version
       
+      - name: Clean up homebrew 
+        if: always()
+        run: brew cleanup -s  
+    
       - name: Checkout KNORA_API_REPO into KNORA_API_DIR
         if: always()
         uses: actions/checkout@v2
