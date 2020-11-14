@@ -3,6 +3,14 @@ name: Test
 on:
   workflow_dispatch: # trigger manually
 
+# globals
+env:
+  # knora-api
+  KNORA_API_REPO: dasch-swiss/knora-api
+  KNORA_API_BRANCH: main
+  KNORA_API_DIR: knora-api
+  
+  
 jobs:
   build:
     runs-on: macOS-10.15
@@ -84,11 +92,21 @@ jobs:
 
           echo "-- Docker is ready."
           docker version
-          
+      
+      - name: Checkout KNORA_API_REPO into KNORA_API_DIR
+        if: always()
+        uses: actions/checkout@v2
+        with:
+          repository: ${{ env.KNORA_API_REPO }}
+          ref: ${{ env.KNORA_API_BRANCH }}
+          path: ${{ env.KNORA_API_DIR }}
+
+      - name: Make init-db-test
+        if: always()
+        working-directory: ${{ env.KNORA_API_DIR }}
+        run: make init-db-test
+      
       - name: Make stack-up
         if: always()
-        run: |
-          # make init-db-test
-          # make stack-up
-          
-          
+        working-directory: ${{ env.KNORA_API_DIR }}
+        run: make stack-up
