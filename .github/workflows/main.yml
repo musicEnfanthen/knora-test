@@ -18,15 +18,16 @@ jobs:
       - name: Check and update Bazelisk
         if: always()
         run: |
-          bazelisk version
           if bazelisk version; then
-            echo "Hurray, already installed"
+            echo "Updating bazelisk"
+            npm update -g @bazel/bazelisk
+            bazelisk version
           else
-            echo "Needs to be installed"
+            echo "Installing bazelisk"
+            npm install -g @bazel/bazelisk
+            bazelisk version
           fi
-          # npm -g view @bazel/bazelisk
-          npm -g update @bazel/bazelisk
-      
+            
       - name: Check Docker
         if: always()
         run: |
