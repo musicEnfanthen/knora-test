@@ -18,19 +18,28 @@ jobs:
     steps:
       - name: Prerequisites   # cf. https://docs.knora.org/04-publishing-deployment/getting-started/
         run: echo "Installing prerequisites"
-        
-      - name: Check git
-        if: always()
-        run: git --version
-
+     
       - name: Check and update homebrew 
         if: always()
-        run: brew update
+        run: | 
+          if [[ -z "$(brew --version)" ]] ; then
+            # install brew
+          fi
+          brew --version
+          brew update
+     
+      - name: Check git
+        if: always()
+        run: |
+          if [[ -z "$(git --version)" ]] ; then
+            brew install git
+          fi
+          git --version
 
       - name: Check and update Bazelisk
         if: always()
         run: |         
-          if brew leaves | grep bazelisk; then
+          if [[ $(brew leaves | grep bazelisk) ]]; then
             echo "Updating bazelisk"
             brew upgrade bazelisk
           else
@@ -46,12 +55,6 @@ jobs:
           # brew cask install AdoptOpenJDK/openjdk/adoptopenjdk11
           export JAVA_HOME=`/usr/libexec/java_home -v 11`
           java -version
-      
-      - uses: actions/setup-java@v1
-        with:
-          java-version: '11'
-          java-package: jdk # (jre, jdk, or jdk+fx) - defaults to jdk
-      - run: java -version
       
       - name: Install expect
         if: always()
