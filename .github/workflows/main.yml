@@ -12,7 +12,7 @@ jobs:
         run: echo "Installing prerequisites"
         
       - name: Check git
-        run: git -v
+        run: git --version
 
       - name: Check homebrew
         run: |
