@@ -5,13 +5,13 @@ set -euo pipefail
 ###############################
 # General
 
-m = "Installing prerequisites.
+message="Installing prerequisites.
 
 Cf. 
 - https://docs.knora.org/04-publishing-deployment/getting-started/
 - https://github.com/dasch-swiss/knora-api"
 
-echo $m
+echo $message
 
 ###############################
 # Homebrew
