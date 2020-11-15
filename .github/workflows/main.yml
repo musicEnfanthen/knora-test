@@ -16,10 +16,12 @@ jobs:
     runs-on: macOS-10.15
 
     steps:
+      - uses: actions/checkout@v2
+
       - name: Prerequisites   # cf. https://docs.knora.org/04-publishing-deployment/getting-started/
         run: | 
           echo "Installing prerequisites"
-          ./.github/knora-prerequisites.sh
+          sh ./.github/knora-prerequisites.sh
      
       - name: Check and update homebrew 
         if: always()
