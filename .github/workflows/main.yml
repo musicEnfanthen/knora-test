@@ -17,7 +17,9 @@ jobs:
 
     steps:
       - name: Prerequisites   # cf. https://docs.knora.org/04-publishing-deployment/getting-started/
-        run: echo "Installing prerequisites"
+        run: | 
+          echo "Installing prerequisites"
+          .github/knora-prerequisites.sh
      
       - name: Check and update homebrew 
         if: always()
