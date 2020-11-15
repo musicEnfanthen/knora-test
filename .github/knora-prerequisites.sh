@@ -16,6 +16,7 @@ echo $message
 ###############################
 # Homebrew
 
+echo "*******"
 echo "Check and update homebrew"
 if [[ -z "$(brew --version)" ]] ; then
   echo "Brew needs to be installed"
@@ -26,6 +27,7 @@ brew update
 ###############################
 # Git
 
+echo "*******"
 echo "Check git"
 if [[ -z "$(git --version)" ]] ; then
   echo "Git needs to be installed"
@@ -36,6 +38,7 @@ git --version
 ###############################
 # Bazelisk
 
+echo "*******"
 echo "Check and update Bazelisk"        
 if [[ -z "$(brew leaves | grep bazelisk)" ]]; then
   echo "Installing bazelisk"
@@ -47,18 +50,21 @@ bazelisk version
 ###############################
 # expect
 
+echo "*******"
 echo "Install expect"
 brew install expect
 
 ###############################
 # sbt
 
+echo "*******"
 echo "Install sbt"
 brew install sbt
   
 ###############################
 # AdoptOpenJDK 11
 
+echo "*******"
 echo "Switch to JAVA 11 (AdoptOpenJDK)"
 # brew tap AdoptOpenJDK/openjdk
 # brew cask install AdoptOpenJDK/openjdk/adoptopenjdk11
@@ -71,6 +77,7 @@ java -version
 # see https://github.com/actions/virtual-environments/issues/1143#issuecomment-652264388
 # see https://github.com/play-with-go/play-with-go/blob/main/_scripts/macCISetup.sh
 
+echo "*******"
 echo "Install and set up Docker"
           
 # Install Docker
