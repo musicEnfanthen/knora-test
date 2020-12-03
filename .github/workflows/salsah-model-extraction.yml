@@ -27,6 +27,22 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+
+      - name: Check for existing JSON file
+        working-directory: ${{ github.workspace }}/${{ env.SCRIPT_DIR }}
+        run: |
+          count=$(ls -1 *.json 2>/dev/null | wc -l)         
+          if [ $count -ge 1 ]; then
+            echo "### Need to archive $count old file(s)..."
+            for file in *.json; do 
+              echo "Moving $file into archive"
+              mv "$file" archive/
+            done
+          fi
+          
+      - name: Verify
+        run: |
+          ls -R
           
       - name: Run extraction script
         working-directory: ${{ github.workspace }}/${{ env.SCRIPT_DIR }}
@@ -41,29 +57,30 @@ jobs:
           count=$(ls -1 *.json 2>/dev/null | wc -l)
           echo "Found $count JSON files"
           
-          if [ $count -gt 1 ]; then
-            echo "### Need to archive older files"
-            for file in *.json; do 
-              echo "OLD_JSON_FILE=$file" >> $GITHUB_ENV
-              echo "Old Json File:"
-              echo $OLD_JSON_FILE
-            done
-            # mv artifacts/$CLI_BUILD/Anton\ Webern\ Gesamtausgabe_*.json $GITHUB_WORKSPACE/$SCRIPT_DIR/archive
-          else
-            echo "### No other file here..."
-            for file in *.json; do 
-              echo "NEW_JSON_FILE=$file" >> $GITHUB_ENV
-              echo "New Json File:"
-              echo $NEW_JSON_FILE 
-            done
-          fi
-        
-      - name: Verify
+      - name: Check git status before commit
         run: |
-          echo "Old Json File:"
-          echo $OLD_JSON_FILE
-          echo "New Json File:"
-          echo $NEW_JSON_FILE
+          git config --get remote.origin.url
+          git status
+          
+      - name: Configure git
+        run: |
+          echo "Configuring git"
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+    
+      - name: Commit files
+        run: |
+          echo "Running git commit"
+          git add .
+          git commit -m "Auto-commit of SALSAH model extraction from ${{ github.repository }}@${{ github.sha }}"
+
+      - name: Check git status after commit
+        run: |
+          git config --get remote.origin.url
+          git status
+
+      - name: Push changes to gh-pages
+        run: git push origin HEAD:main
           
 
 # TODO: upload artifact
