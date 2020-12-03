@@ -46,9 +46,6 @@ jobs:
       - name: Run extraction script
         working-directory: ${{ github.workspace }}/${{ env.SCRIPT_DIR }}
         run: python SalsahModelToJson.py
-
-      - name: Verify
-        run: ls -R
       
       - name: Check git status before commit
         run: |
@@ -73,7 +70,3 @@ jobs:
       - name: Congratulations
         if: success()
         run: echo "🎉 New SALSAH model extraction completed 🎊"
-
-          
-
-# TODO: upload artifact
