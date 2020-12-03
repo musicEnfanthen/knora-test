@@ -6,6 +6,8 @@ on:
 # globals
 env:
   SCRIPT_DIR: 1_salsah-model-extraction
+  OLD_JSON_FILE: ""
+  NEW_JSON_FILE: ""
 
 
 jobs:
@@ -39,11 +41,21 @@ jobs:
           count=$(ls -1 *.json 2>/dev/null | wc -l)
           echo "Found $count JSON files"
           
-          if [ $count > 1 ]; then
+          if [ $count -gt 1 ]; then
             echo "### Need to archive older files"
+            for file in *.json; do 
+              echo "OLD_JSON_FILE=$file" >> $GITHUB_ENV
+              echo "Old Json File:"
+              echo $OLD_JSON_FILE
+            done
             # mv artifacts/$CLI_BUILD/Anton\ Webern\ Gesamtausgabe_*.json $GITHUB_WORKSPACE/$SCRIPT_DIR/archive
           else
             echo "### No other file here..."
+            for file in *.json; do 
+              echo "NEW_JSON_FILE=$file" >> $GITHUB_ENV
+              echo "New Json File:"
+              echo $NEW_JSON_FILE
+            done
           fi
           
 
