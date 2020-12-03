@@ -28,6 +28,9 @@ jobs:
           python -m pip install --upgrade pip
           # pip install langdetect
 
+      - name: Verify
+        run: ls -R
+
       - name: Run extraction script
         working-directory: ${{ github.workspace }}/{{ env.SCRIPT_DIR }}
         run: | 
