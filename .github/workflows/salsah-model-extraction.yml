@@ -31,5 +31,18 @@ jobs:
 
       - name: Verify
         run: ls -R
+      
+      - name: Commit file
+        run: |
+          count=$(ls -1 *.json 2>/dev/null | wc -l)
+          echo "Found $count JSON files"
+          
+          if [ $count > 1 ]; then
+            echo "### Need to archive older files"
+            # mv artifacts/$CLI_BUILD/Anton\ Webern\ Gesamtausgabe_*.json $GITHUB_WORKSPACE/$SCRIPT_DIR/archive
+          else
+            echo "### No other file here..."
+          fi
+          
 
 # TODO: upload artifact
