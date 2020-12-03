@@ -33,6 +33,7 @@ jobs:
         run: ls -R
       
       - name: Commit file
+        working-directory: ${{ github.workspace }}/${{ env.SCRIPT_DIR }}
         run: |
           count=$(ls -1 *.json 2>/dev/null | wc -l)
           echo "Found $count JSON files"
