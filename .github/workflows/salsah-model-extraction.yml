@@ -27,10 +27,7 @@ jobs:
           
       - name: Run extraction script
         working-directory: ${{ github.workspace }}/${{ env.SCRIPT_DIR }}
-        run: | 
-          pwd
-          ls -alh
-          python SalsahModelToJson.py
+        run: python SalsahModelToJson.py
 
       - name: Verify
         run: ls -R
