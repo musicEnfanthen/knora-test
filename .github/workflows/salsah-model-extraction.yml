@@ -54,9 +54,16 @@ jobs:
             for file in *.json; do 
               echo "NEW_JSON_FILE=$file" >> $GITHUB_ENV
               echo "New Json File:"
-              echo $NEW_JSON_FILE
+              echo $NEW_JSON_FILE 
             done
           fi
+        
+      - name: Verify
+        run: |
+          echo "Old Json File:"
+          echo $OLD_JSON_FILE
+          echo "New Json File:"
+          echo $NEW_JSON_FILE
           
 
 # TODO: upload artifact
