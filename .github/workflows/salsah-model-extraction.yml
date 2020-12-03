@@ -6,8 +6,7 @@ on:
 # globals
 env:
   SCRIPT_DIR: 1_salsah-model-extraction
-  OLD_JSON_FILE: ""
-  NEW_JSON_FILE: ""
+  ARCHIVE_DIR: archive
 
 
 jobs:
@@ -34,15 +33,15 @@ jobs:
           count=$(ls -1 *.json 2>/dev/null | wc -l)         
           if [ $count -ge 1 ]; then
             echo "### Need to archive $count old file(s)..."
+            if [ ! -d $ARCHIVE_DIR/ ]; then
+              echo "Creating $ARCHIVE_DIR/ folder"
+              mkdir -p $ARCHIVE_DIR/
+            fi
             for file in *.json; do 
-              echo "Moving $file into archive"
-              mv "$file" archive/
+              echo "Moving $file into $ARCHIVE_DIR/"
+              mv "$file" $ARCHIVE_DIR/
             done
           fi
-          
-      - name: Verify
-        run: |
-          ls -R
           
       - name: Run extraction script
         working-directory: ${{ github.workspace }}/${{ env.SCRIPT_DIR }}
@@ -51,12 +50,6 @@ jobs:
       - name: Verify
         run: ls -R
       
-      - name: Commit file
-        working-directory: ${{ github.workspace }}/${{ env.SCRIPT_DIR }}
-        run: |
-          count=$(ls -1 *.json 2>/dev/null | wc -l)
-          echo "Found $count JSON files"
-          
       - name: Check git status before commit
         run: |
           git config --get remote.origin.url
@@ -74,13 +67,13 @@ jobs:
           git add .
           git commit -m "Auto-commit of SALSAH model extraction from ${{ github.repository }}@${{ github.sha }}"
 
-      - name: Check git status after commit
-        run: |
-          git config --get remote.origin.url
-          git status
-
-      - name: Push changes to gh-pages
+      - name: Push changes
         run: git push origin HEAD:main
+    
+      - name: Congratulations
+        if: ${{ success()
+        run: echo "🎉 New SALSAH model extraction completed 🎊"
+
           
 
 # TODO: upload artifact
