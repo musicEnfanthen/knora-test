@@ -1,4 +1,4 @@
-name: Test
+name: Create Ontology with DSP-tools
 
 on:
   workflow_dispatch: # trigger manually
