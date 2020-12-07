@@ -48,6 +48,11 @@ jobs:
         working-directory: ${{ env.DSP_TOOLS_DIR }}
         run: pip install dsp-tools
 
+      - name: Verify
+        working-directory: ${{ env.DSP_TOOLS_DIR }}
+        run: ls -R
+
+
       - name: Validate ontology
         working-directory: ${{ env.DSP_TOOLS_DIR }}
         run: dsp-tools create ../1_salsah-model-extraction/Anton\ Webern\ Gesamtausgabe_20201203.json --validate
