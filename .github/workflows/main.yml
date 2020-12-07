@@ -5,10 +5,10 @@ on:
 
 # globals
 env:
-  # knora-api
-  KNORA_API_REPO: dasch-swiss/knora-api
-  KNORA_API_BRANCH: main
-  KNORA_API_DIR: knora-api
+  # dsp-api
+  DSP_API_REPO: dasch-swiss/dsp-api
+  DSP_API_BRANCH: main
+  DSP_API_DIR: dsp-api
   
   
 jobs:
@@ -21,17 +21,17 @@ jobs:
       - name: Install prerequisites   # cf. https://docs.knora.org/04-publishing-deployment/getting-started/
         run: sh ./.github/knora-prerequisites.sh
       
-      - name: Checkout KNORA_API_REPO into KNORA_API_DIR
+      - name: Checkout DSP_API_REPO into DSP_API_DIR
         uses: actions/checkout@v2
         with:
-          repository: ${{ env.KNORA_API_REPO }}
-          ref: ${{ env.KNORA_API_BRANCH }}
-          path: ${{ env.KNORA_API_DIR }}
+          repository: ${{ env.DSP_API_REPO }}
+          ref: ${{ env.DSP_API_BRANCH }}
+          path: ${{ env.DSP_API_DIR }}
 
       - name: Make init-db-test
-        working-directory: ${{ env.KNORA_API_DIR }}
+        working-directory: ${{ env.DSP_API_DIR }}
         run: make init-db-test
       
       - name: Make stack-up
-        working-directory: ${{ env.KNORA_API_DIR }}
+        working-directory: ${{ env.DSP_API_DIR }}
         run: make stack-up
