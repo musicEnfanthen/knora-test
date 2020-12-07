@@ -8,12 +8,12 @@ env:
   # dsp-api
   DSP_API_REPO: musicEnfanthen/dsp-api
   DSP_API_BRANCH: main
-  DSP_API_DIR: dsp-api
+  DSP_API_DIR: dsp-api-dir
 
   # dsp-tools
   DSP_TOOLS_REPO: musicEnfanthen/dsp-tools
   DSP_TOOLS_BRANCH: main
-  DSP_TOOLS_DIR: dsp-tools
+  DSP_TOOLS_DIR: dsp-tools-dir
   
   
 jobs:
