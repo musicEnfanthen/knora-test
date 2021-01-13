@@ -2008,7 +2008,7 @@
                             {
                                 "propname": "textincipit",
                                 "comments": {
-                                    "ca": "Incipit eines Textes, Briefes, Liedtextes"
+                                    "de": "Incipit eines Textes, Briefes, Liedtextes"
                                 },
                                 "cardinality": "0-1"
                             },
@@ -2840,7 +2840,7 @@
                             {
                                 "propname": "transcription_rt",
                                 "comments": {
-                                    "da": "Transkription eines Textes"
+                                    "de": "Transkription eines Textes"
                                 },
                                 "cardinality": "0-n"
                             },
