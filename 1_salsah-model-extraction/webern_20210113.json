@@ -1,7 +1,7 @@
 {
     "prefixes": {},
     "project": {
-        "shortcode": "0806",
+        "shortcode": "",
         "shortname": "webern",
         "longname": "Anton Webern Gesamtausgabe",
         "descriptions": "This is the special vocabulary for the Anton Webern Edition.",

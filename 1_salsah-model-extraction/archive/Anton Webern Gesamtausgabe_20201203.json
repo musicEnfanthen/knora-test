@@ -2511,7 +2511,7 @@
                             {
                                 "propname": "sourceDesc_pagination_rt",
                                 "comments": {
-                                    "id": "Paginierung"
+                                    "de": "Paginierung"
                                 },
                                 "cardinality": "0-n"
                             },
