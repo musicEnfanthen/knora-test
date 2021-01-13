@@ -1,7 +1,7 @@
 {
     "prefixes": {},
     "project": {
-        "shortcode": "",
+        "shortcode": "0806",
         "shortname": "webern",
         "longname": "Anton Webern Gesamtausgabe",
         "descriptions": "This is the special vocabulary for the Anton Webern Edition.",
@@ -2511,7 +2511,7 @@
                             {
                                 "propname": "sourceDesc_pagination_rt",
                                 "comments": {
-                                    "de": "Paginierung"
+                                    "id": "Paginierung"
                                 },
                                 "cardinality": "0-n"
                             },
@@ -2840,7 +2840,7 @@
                             {
                                 "propname": "transcription_rt",
                                 "comments": {
-                                    "da": "Transkription eines Textes"
+                                    "de": "Transkription eines Textes"
                                 },
                                 "cardinality": "0-n"
                             },
