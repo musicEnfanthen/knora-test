@@ -546,7 +546,9 @@
                 "properties": [
                     {
                         "name": "Ereignis",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Ereignis"
@@ -556,7 +558,9 @@
                     },
                     {
                         "name": "Ereignisart",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "ListValue",
                         "labels": {
                             "de": "Ereignisart"
@@ -568,7 +572,9 @@
                     },
                     {
                         "name": "Datum",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "DateValue",
                         "labels": {
                             "de": "Datum",
@@ -581,7 +587,9 @@
                     },
                     {
                         "name": "Tageszeit / Uhrzeit",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Tageszeit / Uhrzeit"
@@ -591,7 +599,9 @@
                     },
                     {
                         "name": "Ort",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Ort",
@@ -606,7 +616,9 @@
                     },
                     {
                         "name": "Ort (GeoNames)",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "GeonameValue",
                         "labels": {
                             "de": "Ort (GeoNames)"
@@ -616,7 +628,9 @@
                     },
                     {
                         "name": "Literaturnachweis",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Literaturnachweis"
@@ -626,7 +640,9 @@
                     },
                     {
                         "name": "Korrespondenznachweis",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Korrespondenznachweis"
@@ -636,7 +652,9 @@
                     },
                     {
                         "name": "andere Quellen",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "andere Quellen"
@@ -646,7 +664,9 @@
                     },
                     {
                         "name": "Kommentar (Richtext)",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Kommentar (Richtext)"
@@ -656,7 +676,9 @@
                     },
                     {
                         "name": "Titel",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Titel",
@@ -672,7 +694,9 @@
                     },
                     {
                         "name": "Art",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "ListValue",
                         "labels": {
                             "de": "Art"
@@ -684,7 +708,9 @@
                     },
                     {
                         "name": "Creator",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Creator",
@@ -698,7 +724,9 @@
                     },
                     {
                         "name": "Verfasser",
-                        "super": "hasValue",
+                        "super": [
+                            "hasLinkTo"
+                        ],
                         "object": "LinkValue",
                         "labels": {
                             "de": "Verfasser"
@@ -711,7 +739,9 @@
                     },
                     {
                         "name": "Beitragender",
-                        "super": "hasValue",
+                        "super": [
+                            "hasLinkTo"
+                        ],
                         "object": "LinkValue",
                         "labels": {
                             "de": "Beitragender"
@@ -724,7 +754,9 @@
                     },
                     {
                         "name": "Absenderadresse",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Absenderadresse"
@@ -734,7 +766,9 @@
                     },
                     {
                         "name": "Schreib-/Absendeort",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "GeonameValue",
                         "labels": {
                             "de": "Schreib-/Absendeort"
@@ -744,7 +778,9 @@
                     },
                     {
                         "name": "autographe Datierung",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "autographe Datierung"
@@ -754,7 +790,9 @@
                     },
                     {
                         "name": "Schreibdatum",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "DateValue",
                         "labels": {
                             "de": "Schreibdatum"
@@ -764,7 +802,9 @@
                     },
                     {
                         "name": "Absendedatum",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "DateValue",
                         "labels": {
                             "de": "Absendedatum"
@@ -774,7 +814,9 @@
                     },
                     {
                         "name": "Empf\u00e4nger",
-                        "super": "hasValue",
+                        "super": [
+                            "hasLinkTo"
+                        ],
                         "object": "LinkValue",
                         "labels": {
                             "de": "Empf\u00e4nger"
@@ -787,7 +829,9 @@
                     },
                     {
                         "name": "Empf\u00e4ngeradresse",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Empf\u00e4ngeradresse"
@@ -797,7 +841,9 @@
                     },
                     {
                         "name": "Empfangsort",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "GeonameValue",
                         "labels": {
                             "de": "Empfangsort"
@@ -809,7 +855,9 @@
                     },
                     {
                         "name": "Empfangsdatum",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "DateValue",
                         "labels": {
                             "de": "Empfangsdatum"
@@ -819,7 +867,9 @@
                     },
                     {
                         "name": "Standort des physischen Originals",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Standort des physischen Originals"
@@ -829,7 +879,9 @@
                     },
                     {
                         "name": "Reproduktion",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Reproduktion"
@@ -839,7 +891,9 @@
                     },
                     {
                         "name": "Beschreibung (Richtext)",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Beschreibung (Richtext)"
@@ -849,7 +903,9 @@
                     },
                     {
                         "name": "Incipit",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Incipit"
@@ -859,7 +915,9 @@
                     },
                     {
                         "name": "Inhalt",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Inhalt"
@@ -869,7 +927,9 @@
                     },
                     {
                         "name": "Transkription",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Transkription"
@@ -879,7 +939,9 @@
                     },
                     {
                         "name": "Kontextmaterial",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Kontextmaterial"
@@ -889,7 +951,9 @@
                     },
                     {
                         "name": "Quelle (Richtext)",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Quelle (Richtext)"
@@ -899,7 +963,9 @@
                     },
                     {
                         "name": "AWG-ID",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "AWG-ID"
@@ -909,7 +975,9 @@
                     },
                     {
                         "name": "Moldenhauer-Nummer",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "IntValue",
                         "labels": {
                             "de": "Moldenhauer-Nummer"
@@ -919,7 +987,9 @@
                     },
                     {
                         "name": "Datum der Komposition",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "DateValue",
                         "labels": {
                             "de": "Datum der Komposition"
@@ -929,7 +999,9 @@
                     },
                     {
                         "name": "Auff\u00fchrungen",
-                        "super": "hasValue",
+                        "super": [
+                            "hasLinkTo"
+                        ],
                         "object": "LinkValue",
                         "labels": {
                             "de": "Auff\u00fchrungen"
@@ -942,7 +1014,9 @@
                     },
                     {
                         "name": "Datum der Erstpublikation",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "DateValue",
                         "labels": {
                             "de": "Datum der Erstpublikation"
@@ -952,7 +1026,9 @@
                     },
                     {
                         "name": "Erstverlag",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Erstverlag"
@@ -962,7 +1038,9 @@
                     },
                     {
                         "name": "Besetzung",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Besetzung"
@@ -972,7 +1050,9 @@
                     },
                     {
                         "name": "weitere, f\u00fcr die Edition nicht relevante Quelle",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "weitere, f\u00fcr die Edition nicht relevante Quelle"
@@ -982,7 +1062,9 @@
                     },
                     {
                         "name": "Textquelle",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Textquelle"
@@ -992,7 +1074,9 @@
                     },
                     {
                         "name": "Opus",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "IntValue",
                         "labels": {
                             "de": "Opus"
@@ -1002,7 +1086,9 @@
                     },
                     {
                         "name": "Erstverlag (Richtext)",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Erstverlag (Richtext)"
@@ -1012,7 +1098,9 @@
                     },
                     {
                         "name": "Datum weitere Publikation",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "DateValue",
                         "labels": {
                             "de": "Datum weitere Publikation"
@@ -1022,7 +1110,9 @@
                     },
                     {
                         "name": "weiterer Verlag",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "weiterer Verlag"
@@ -1032,7 +1122,9 @@
                     },
                     {
                         "name": "hat Satz",
-                        "super": "hasValue",
+                        "super": [
+                            "hasLinkTo"
+                        ],
                         "object": "LinkValue",
                         "labels": {
                             "de": "hat Satz"
@@ -1045,7 +1137,9 @@
                     },
                     {
                         "name": "Vorstufe von",
-                        "super": "hasValue",
+                        "super": [
+                            "hasLinkTo"
+                        ],
                         "object": "LinkValue",
                         "labels": {
                             "de": "Vorstufe von"
@@ -1058,7 +1152,9 @@
                     },
                     {
                         "name": "Name",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Name"
@@ -1071,7 +1167,9 @@
                     },
                     {
                         "name": "Vorname",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Vorname",
@@ -1085,7 +1183,9 @@
                     },
                     {
                         "name": "Namensvariante",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Namensvariante"
@@ -1095,7 +1195,9 @@
                     },
                     {
                         "name": "Gemeinsame Normdatei (GND)",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Gemeinsame Normdatei (GND)"
@@ -1105,7 +1207,9 @@
                     },
                     {
                         "name": "Geburtsort",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Geburtsort"
@@ -1115,7 +1219,9 @@
                     },
                     {
                         "name": "Geburtsdatum",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "DateValue",
                         "labels": {
                             "de": "Geburtsdatum"
@@ -1125,7 +1231,9 @@
                     },
                     {
                         "name": "Sterbedatum",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "DateValue",
                         "labels": {
                             "de": "Sterbedatum"
@@ -1135,7 +1243,9 @@
                     },
                     {
                         "name": "Sterbeort",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Sterbeort"
@@ -1145,7 +1255,9 @@
                     },
                     {
                         "name": "Biographie",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Biographie"
@@ -1155,7 +1267,9 @@
                     },
                     {
                         "name": "Bezug zu Webern",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Bezug zu Webern"
@@ -1165,7 +1279,9 @@
                     },
                     {
                         "name": "Sigle",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Sigle"
@@ -1175,7 +1291,9 @@
                     },
                     {
                         "name": "Bezeichnung",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Bezeichnung"
@@ -1185,7 +1303,9 @@
                     },
                     {
                         "name": "Signatur",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Signatur"
@@ -1195,7 +1315,9 @@
                     },
                     {
                         "name": "interne Signatur (PSS)",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "interne Signatur (PSS)"
@@ -1205,7 +1327,9 @@
                     },
                     {
                         "name": "Quellenindex (Referenz)",
-                        "super": "hasValue",
+                        "super": [
+                            "hasLinkTo"
+                        ],
                         "object": "LinkValue",
                         "labels": {
                             "de": "Quellenindex (Referenz)"
@@ -1218,7 +1342,9 @@
                     },
                     {
                         "name": "Beschreibstoff",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Beschreibstoff"
@@ -1228,7 +1354,9 @@
                     },
                     {
                         "name": "Hauptschreibstoff (hlist)",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "ListValue",
                         "labels": {
                             "de": "Hauptschreibstoff (hlist)"
@@ -1240,7 +1368,9 @@
                     },
                     {
                         "name": "weitere Schreibstoffe (hlist)",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "ListValue",
                         "labels": {
                             "de": "weitere Schreibstoffe (hlist)"
@@ -1252,7 +1382,9 @@
                     },
                     {
                         "name": "autographer Titel",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "autographer Titel"
@@ -1262,7 +1394,9 @@
                     },
                     {
                         "name": "gesicherte Datierung",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "DateValue",
                         "labels": {
                             "de": "gesicherte Datierung"
@@ -1272,7 +1406,9 @@
                     },
                     {
                         "name": "erschlossene Datierung",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "DateValue",
                         "labels": {
                             "de": "erschlossene Datierung"
@@ -1282,7 +1418,9 @@
                     },
                     {
                         "name": "Paginierung",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Paginierung"
@@ -1292,7 +1430,9 @@
                     },
                     {
                         "name": "Taktzahlen",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Taktzahlen"
@@ -1302,7 +1442,9 @@
                     },
                     {
                         "name": "Instrumentenvorsatz",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Instrumentenvorsatz"
@@ -1312,7 +1454,9 @@
                     },
                     {
                         "name": "Eintragungen",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Eintragungen"
@@ -1322,7 +1466,9 @@
                     },
                     {
                         "name": "Korrekturen",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Korrekturen"
@@ -1332,7 +1478,9 @@
                     },
                     {
                         "name": "Versionsdatum",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "DateValue",
                         "labels": {
                             "de": "Versionsdatum"
@@ -1342,7 +1490,9 @@
                     },
                     {
                         "name": "ist ein Teil von",
-                        "super": "hasValue",
+                        "super": [
+                            "hasLinkTo"
+                        ],
                         "object": "LinkValue",
                         "labels": {
                             "de": "ist ein Teil von",
@@ -1355,7 +1505,9 @@
                     },
                     {
                         "name": "Sequenznummer",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "IntValue",
                         "labels": {
                             "de": "Sequenznummer",
@@ -1371,7 +1523,9 @@
                     },
                     {
                         "name": "RISM-Sigle",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "RISM-Sigle"
@@ -1381,7 +1535,9 @@
                     },
                     {
                         "name": "ist ein Teil von (Quellenindex)",
-                        "super": "hasValue",
+                        "super": [
+                            "hasLinkTo"
+                        ],
                         "object": "LinkValue",
                         "labels": {
                             "de": "ist ein Teil von (Quellenindex)"
@@ -1393,7 +1549,9 @@
                     },
                     {
                         "name": "besitzende Institution",
-                        "super": "hasValue",
+                        "super": [
+                            "hasLinkTo"
+                        ],
                         "object": "LinkValue",
                         "labels": {
                             "de": "besitzende Institution"
@@ -1405,7 +1563,9 @@
                     },
                     {
                         "name": "Moldenhauer-Nummer (Referenz)",
-                        "super": "hasValue",
+                        "super": [
+                            "hasLinkTo"
+                        ],
                         "object": "LinkValue",
                         "labels": {
                             "de": "Moldenhauer-Nummer (Referenz)"
@@ -1418,7 +1578,9 @@
                     },
                     {
                         "name": "Originaldateiname",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Originaldateiname"
@@ -1428,7 +1590,9 @@
                     },
                     {
                         "name": "abgedruckt in",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "abgedruckt in"
@@ -1438,7 +1602,9 @@
                     },
                     {
                         "name": "Kurztitel",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Kurztitel"
@@ -1448,7 +1614,9 @@
                     },
                     {
                         "name": "Typ",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "ListValue",
                         "labels": {
                             "de": "Typ"
@@ -1460,7 +1628,9 @@
                     },
                     {
                         "name": "unpubliziert_Typ",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "ListValue",
                         "labels": {
                             "de": "unpubliziert_Typ"
@@ -1472,7 +1642,9 @@
                     },
                     {
                         "name": "Autor",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Autor",
@@ -1488,7 +1660,9 @@
                     },
                     {
                         "name": "Titel_unselbst",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Titel_unselbst"
@@ -1498,7 +1672,9 @@
                     },
                     {
                         "name": "Titel_selbst (Verweis)",
-                        "super": "hasValue",
+                        "super": [
+                            "hasLinkTo"
+                        ],
                         "object": "LinkValue",
                         "labels": {
                             "de": "Titel_selbst (Verweis)"
@@ -1511,7 +1687,9 @@
                     },
                     {
                         "name": "Titel_selbst",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Titel_selbst"
@@ -1521,7 +1699,9 @@
                     },
                     {
                         "name": "Herausgeber",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Herausgeber"
@@ -1531,7 +1711,9 @@
                     },
                     {
                         "name": "Verlagsort",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Verlagsort"
@@ -1541,7 +1723,9 @@
                     },
                     {
                         "name": "Verlag",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Verlag"
@@ -1551,7 +1735,9 @@
                     },
                     {
                         "name": "Publikationsdatum",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "DateValue",
                         "labels": {
                             "de": "Publikationsdatum"
@@ -1561,7 +1747,9 @@
                     },
                     {
                         "name": "Z\u00e4hlung",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "ListValue",
                         "labels": {
                             "de": "Z\u00e4hlung"
@@ -1573,7 +1761,9 @@
                     },
                     {
                         "name": "Seitenangabe",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Seitenangabe"
@@ -1583,7 +1773,9 @@
                     },
                     {
                         "name": "Reihentitel",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Reihentitel"
@@ -1593,7 +1785,9 @@
                     },
                     {
                         "name": "Zusatz",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Zusatz"
@@ -1603,7 +1797,9 @@
                     },
                     {
                         "name": "Abstract",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Abstract"
@@ -1613,7 +1809,9 @@
                     },
                     {
                         "name": "Online-Zugang",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Online-Zugang"
@@ -1623,7 +1821,9 @@
                     },
                     {
                         "name": "verwendet in Bibliografie",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "ListValue",
                         "labels": {
                             "de": "verwendet in Bibliografie"
@@ -1635,7 +1835,9 @@
                     },
                     {
                         "name": "Status",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "ListValue",
                         "labels": {
                             "de": "Status"
@@ -1647,7 +1849,9 @@
                     },
                     {
                         "name": "Quelle",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Quelle"
@@ -1657,7 +1861,9 @@
                     },
                     {
                         "name": "Standort (swissbib)",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Standort (swissbib)"
@@ -1667,7 +1873,9 @@
                     },
                     {
                         "name": "Erscheinungsvermerk",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Erscheinungsvermerk"
@@ -1677,7 +1885,9 @@
                     },
                     {
                         "name": "Verlag (Referenz)",
-                        "super": "hasValue",
+                        "super": [
+                            "hasLinkTo"
+                        ],
                         "object": "LinkValue",
                         "labels": {
                             "de": "Verlag (Referenz)"
@@ -1690,7 +1900,9 @@
                     },
                     {
                         "name": "Erscheinungsdatum",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "DateValue",
                         "labels": {
                             "de": "Erscheinungsdatum"
@@ -1700,7 +1912,9 @@
                     },
                     {
                         "name": "Standort des konsultierten Exemplars",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Standort des konsultierten Exemplars"
@@ -1710,7 +1924,9 @@
                     },
                     {
                         "name": "Standort weiterer Exemplare",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Standort weiterer Exemplare"
@@ -1720,7 +1936,9 @@
                     },
                     {
                         "name": "Titel nach Vorlage",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Titel nach Vorlage"
@@ -1730,7 +1948,9 @@
                     },
                     {
                         "name": "Kommentar",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Kommentar",
@@ -1747,7 +1967,9 @@
                     },
                     {
                         "name": "Verleger",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Verleger",
@@ -1763,7 +1985,9 @@
                     },
                     {
                         "name": "Adresse",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Adresse",
@@ -1777,7 +2001,9 @@
                     },
                     {
                         "name": "Skizzenkommentar",
-                        "super": "hasValue",
+                        "super": [
+                            "hasValue"
+                        ],
                         "object": "TextValue",
                         "labels": {
                             "de": "Skizzenkommentar"
@@ -2008,7 +2234,7 @@
                             {
                                 "propname": "textincipit",
                                 "comments": {
-                                    "ca": "Incipit eines Textes, Briefes, Liedtextes"
+                                    "de": "Incipit eines Textes, Briefes, Liedtextes"
                                 },
                                 "cardinality": "0-1"
                             },
@@ -2511,7 +2737,7 @@
                             {
                                 "propname": "sourceDesc_pagination_rt",
                                 "comments": {
-                                    "id": "Paginierung"
+                                    "de": "Paginierung"
                                 },
                                 "cardinality": "0-n"
                             },
@@ -3235,7 +3461,7 @@
                             {
                                 "propname": "address",
                                 "comments": {
-                                    "no": "Adresse (Strassenname, Nummer etc.)"
+                                    "de": "Adresse (Strassenname, Nummer etc.)"
                                 },
                                 "cardinality": "0-n"
                             },

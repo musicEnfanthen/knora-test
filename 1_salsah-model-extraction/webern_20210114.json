@@ -2234,7 +2234,7 @@
                             {
                                 "propname": "textincipit",
                                 "comments": {
-                                    "de": "Incipit eines Textes, Briefes, Liedtextes"
+                                    "ca": "Incipit eines Textes, Briefes, Liedtextes"
                                 },
                                 "cardinality": "0-1"
                             },
@@ -2269,6 +2269,7 @@
                             {
                                 "propname": "source_rt",
                                 "comments": {
+                                    "de": "Eine zugeh\u00f6rige Ressource, von der die beschriebene Ressource abgeleitet ist. Die beschriebene Ressource kann ganz oder teilweise von der zugeh\u00f6rigen Ressource abgeleitet sein. Es wird empfohlen, die zugeh\u00f6rige Ressource mit Hilfe einer Zeichenkette zu identifizieren, die einem formalen Identifikationssystem entspricht.",
                                     "en": "A related resource from which the described resource is derived. The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system."
                                 },
                                 "cardinality": "0-n"
@@ -2346,6 +2347,7 @@
                             {
                                 "propname": "source_rt",
                                 "comments": {
+                                    "de": "Eine zugeh\u00f6rige Ressource, von der die beschriebene Ressource abgeleitet ist. Die beschriebene Ressource kann ganz oder teilweise von der zugeh\u00f6rigen Ressource abgeleitet sein. Es wird empfohlen, die zugeh\u00f6rige Ressource mit Hilfe einer Zeichenkette zu identifizieren, die einem formalen Identifikationssystem entspricht.",
                                     "en": "A related resource from which the described resource is derived. The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system."
                                 },
                                 "cardinality": "0-n"
@@ -2444,6 +2446,7 @@
                             {
                                 "propname": "source_rt",
                                 "comments": {
+                                    "de": "Eine zugeh\u00f6rige Ressource, von der die beschriebene Ressource abgeleitet ist. Die beschriebene Ressource kann ganz oder teilweise von der zugeh\u00f6rigen Ressource abgeleitet sein. Es wird empfohlen, die zugeh\u00f6rige Ressource mit Hilfe einer Zeichenkette zu identifizieren, die einem formalen Identifikationssystem entspricht.",
                                     "en": "A related resource from which the described resource is derived. The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system."
                                 },
                                 "cardinality": "1-n"
@@ -2514,6 +2517,7 @@
                             {
                                 "propname": "source_rt",
                                 "comments": {
+                                    "de": "Eine zugeh\u00f6rige Ressource, von der die beschriebene Ressource abgeleitet ist. Die beschriebene Ressource kann ganz oder teilweise von der zugeh\u00f6rigen Ressource abgeleitet sein. Es wird empfohlen, die zugeh\u00f6rige Ressource mit Hilfe einer Zeichenkette zu identifizieren, die einem formalen Identifikationssystem entspricht.",
                                     "en": "A related resource from which the described resource is derived. The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system."
                                 },
                                 "cardinality": "1-n"
@@ -2737,7 +2741,7 @@
                             {
                                 "propname": "sourceDesc_pagination_rt",
                                 "comments": {
-                                    "de": "Paginierung"
+                                    "id": "Paginierung"
                                 },
                                 "cardinality": "0-n"
                             },
@@ -3087,6 +3091,7 @@
                             {
                                 "propname": "source_rt",
                                 "comments": {
+                                    "de": "Eine zugeh\u00f6rige Ressource, von der die beschriebene Ressource abgeleitet ist. Die beschriebene Ressource kann ganz oder teilweise von der zugeh\u00f6rigen Ressource abgeleitet sein. Es wird empfohlen, die zugeh\u00f6rige Ressource mit Hilfe einer Zeichenkette zu identifizieren, die einem formalen Identifikationssystem entspricht.",
                                     "en": "A related resource from which the described resource is derived. The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system."
                                 },
                                 "cardinality": "0-n"
@@ -3359,7 +3364,7 @@
                             {
                                 "propname": "place_publisher",
                                 "comments": {
-                                    "de": "Verlagsort"
+                                    "no": "Verlagsort"
                                 },
                                 "cardinality": "1"
                             },
@@ -3461,7 +3466,7 @@
                             {
                                 "propname": "address",
                                 "comments": {
-                                    "de": "Adresse (Strassenname, Nummer etc.)"
+                                    "no": "Adresse (Strassenname, Nummer etc.)"
                                 },
                                 "cardinality": "0-n"
                             },
