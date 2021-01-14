@@ -2,7 +2,6 @@ import copy
 import json
 import requests
 from datetime import datetime
-from langdetect import detect
 from pprint import pprint
 from typing import List, Set, Dict, Tuple, Optional
 
@@ -231,7 +230,7 @@ class Converter:
                             for descriptionId in propertyId["description"]:
                                 tmpOnto["project"]["ontologies"][0]["resources"][-1]["cardinalities"][-1][
                                     "comments"].update({
-                                    detect(descriptionId["description"]): descriptionId["description"]
+                                    descriptionId["shortname"]: descriptionId["description"]
                                 })
             else:
                 continue
