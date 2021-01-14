@@ -2039,7 +2039,7 @@
                             {
                                 "propname": "date",
                                 "comments": {
-                                    "de": "Datum"
+                                    "id": "Datum"
                                 },
                                 "cardinality": "0-1"
                             },
@@ -2129,7 +2129,7 @@
                             {
                                 "propname": "date",
                                 "comments": {
-                                    "de": "Datum"
+                                    "id": "Datum"
                                 },
                                 "cardinality": "0-1"
                             },
@@ -2234,7 +2234,7 @@
                             {
                                 "propname": "textincipit",
                                 "comments": {
-                                    "de": "Incipit eines Textes, Briefes, Liedtextes"
+                                    "ca": "Incipit eines Textes, Briefes, Liedtextes"
                                 },
                                 "cardinality": "0-1"
                             },
@@ -2599,7 +2599,7 @@
                             {
                                 "propname": "date_death",
                                 "comments": {
-                                    "de": "Sterbedatum"
+                                    "id": "Sterbedatum"
                                 },
                                 "cardinality": "0-1"
                             },
@@ -2741,7 +2741,7 @@
                             {
                                 "propname": "sourceDesc_pagination_rt",
                                 "comments": {
-                                    "de": "Paginierung"
+                                    "id": "Paginierung"
                                 },
                                 "cardinality": "0-n"
                             },
@@ -2816,7 +2816,7 @@
                             {
                                 "propname": "transcription",
                                 "comments": {
-                                    "de": "Transkription"
+                                    "da": "Transkription"
                                 },
                                 "cardinality": "0-n"
                             },
@@ -2861,7 +2861,7 @@
                             {
                                 "propname": "date",
                                 "comments": {
-                                    "de": "Datum"
+                                    "id": "Datum"
                                 },
                                 "cardinality": "0-1"
                             },
@@ -3042,7 +3042,7 @@
                             {
                                 "propname": "date",
                                 "comments": {
-                                    "de": "Datum"
+                                    "id": "Datum"
                                 },
                                 "cardinality": "0-1"
                             },
@@ -3364,7 +3364,7 @@
                             {
                                 "propname": "place_publisher",
                                 "comments": {
-                                    "de": "Verlagsort"
+                                    "no": "Verlagsort"
                                 },
                                 "cardinality": "1"
                             },
@@ -3466,7 +3466,7 @@
                             {
                                 "propname": "address",
                                 "comments": {
-                                    "de": "Adresse (Strassenname, Nummer etc.)"
+                                    "no": "Adresse (Strassenname, Nummer etc.)"
                                 },
                                 "cardinality": "0-n"
                             },
