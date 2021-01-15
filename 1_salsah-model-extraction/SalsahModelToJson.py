@@ -192,7 +192,6 @@ class Converter:
                 req = requests.get('http://salsah.org/api/resourcetypes/', params=payload)
                 resourcetypes = req.json()
 
-
                 # Here we type in the "name"
                 for momResId in resourcetypes["resourcetypes"]:
                     tmpOnto["project"]["ontologies"][0]["resources"].append({
@@ -215,8 +214,6 @@ class Converter:
                     #     exit()
 
                     tmpOnto["project"]["ontologies"][0]["resources"][-1]["super"] = superMap[resTypeInfo["class"]] # Fill in the super of the ressource
-
-
 
                     for propertyId in resTypeInfo["properties"]:
                         tmpOnto["project"]["ontologies"][0]["resources"][-1]["cardinalities"].append({
@@ -258,7 +255,6 @@ class Converter:
             "searchbox": "Searchbox",
             "interval": "IntervalValue",
             "fileupload": "__FILEUPLOAD__"
-
         }  # Dict that maps the old guiname from salsa to the new guielement from knorapy
 
         objectMap = {
@@ -302,7 +298,6 @@ class Converter:
         result2 = req2.json()
         hlists = result2["hlists"]
 
-
         for vocabularies in salsahJson.salsahVocabularies["vocabularies"]:
             if project["id"] == vocabularies["project_id"]:
                 payload: dict = {
@@ -337,6 +332,7 @@ class Converter:
                                 tmpOnto["project"]["ontologies"][0]["properties"][-1]["labels"].update({
                                     labelId["shortname"]: labelId["label"]
                                 })
+
                         # finding property name plus its id in order to fill in guiname
                         for labelId in propertiesId["label"]:
                             if labelId["label"] == tmpOnto["project"]["ontologies"][0]["properties"][-1]["name"]:
@@ -349,8 +345,22 @@ class Converter:
 
                         for property in resTypeInfo["properties"]:
                             if "id" in property and property["id"] == propId:
-                                tmpOnto["project"]["ontologies"][0]["properties"][-1]["gui_element"] = guiEleMap[property["gui_name"]] # fill in gui_element
-                                if "attributes" in property and property["attributes"] != "" and property["attributes"] is not None:  # fill in all gui_attributes
+                                # fill in gui_element
+                                tmpOnto["project"]["ontologies"][0]["properties"][-1]["gui_element"] = guiEleMap[property["gui_name"]]
+
+                                # fill in object (has to happen before attributes)
+                                if "vt_name" in property and property["vt_name"] in objectMap:
+                                    tmpOnto["project"]["ontologies"][0]["properties"][-1]["object"] = objectMap[property["vt_name"]]
+
+                                    # fill in super attributes of the property. Default is "hasValue"
+                                    if objectMap[property["vt_name"]] in superMap:
+                                        tmpOnto["project"]["ontologies"][0]["properties"][-1]["super"].append(superMap[objectMap[property["vt_name"]]])
+                                    else:
+                                        tmpOnto["project"]["ontologies"][0]["properties"][-1]["super"].append("hasValue")
+
+                                # fill in all attributes (gui_attributes and resource pointer)
+                                if "attributes" in property and property["attributes"] != "" and property["attributes"] is not None:
+                                    # split attributes entry
                                     finalSplit = []
                                     tmpstr = property["attributes"]
                                     firstSplit = tmpstr.split(";")
@@ -374,14 +384,6 @@ class Converter:
                                         tmpOnto["project"]["ontologies"][0]["properties"][-1]["gui_attributes"].update({
                                             finalSplit[numEle][0]: finalSplit[numEle][1]
                                         })
-
-                                if "vt_name" in property and property["vt_name"] in objectMap:
-                                    tmpOnto["project"]["ontologies"][0]["properties"][-1]["object"] = objectMap[property["vt_name"]]  # fill in object
-
-                                    if objectMap[property["vt_name"]] in superMap:  # fill in the super of the property. Default is "hasValue"
-                                        tmpOnto["project"]["ontologies"][0]["properties"][-1]["super"].append(superMap[objectMap[property["vt_name"]]])
-                                    else:
-                                        tmpOnto["project"]["ontologies"][0]["properties"][-1]["super"].append("hasValue")
 
 
     # ==================================================================================================================
