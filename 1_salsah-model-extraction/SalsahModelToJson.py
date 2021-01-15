@@ -391,6 +391,23 @@ class Converter:
                                             numEleKey: numEleValue
                                         })
 
+                                        # fill in ResourcePointer / LinkValue types
+                                        if (numEleKey == "restypeid" and tmpOnto["project"]["ontologies"][0]["properties"][-1]["object"] == "LinkValue"):
+                                            # get resource type by value of restypeid
+                                            if numEleValue != '0':
+                                                req = requests.get(
+                                                    'https://salsah.org/api/resourcetypes/{}?lang=all'.format(
+                                                        numEleValue))
+                                                linkValueResType = req.json()
+                                                linkValueResTypeInfo = linkValueResType["restype_info"]
+                                                linkValueResName = linkValueResTypeInfo["name"]
+
+                                                # if LinkValue is from the same vocabulary, remove vocabulary prefix
+                                                if linkValueResName.startswith(vocabularies["shortname"], 0):
+                                                    linkValueResName = linkValueResName.removeprefix(vocabularies["shortname"])
+
+                                                # replace "LinkValue" with resolved resource type name
+                                                tmpOnto["project"]["ontologies"][0]["properties"][-1]["object"] = linkValueResName
 
     # ==================================================================================================================
 
