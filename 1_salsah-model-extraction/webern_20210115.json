@@ -1517,8 +1517,8 @@
                         },
                         "gui_element": "Spinbox",
                         "gui_attributes": {
-                            "min": "0",
-                            "max": "-1"
+                            "min": 0,
+                            "max": -1
                         }
                     },
                     {
