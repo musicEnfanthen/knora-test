@@ -368,21 +368,24 @@ class Converter:
                                         finalSplit.append(splits.split("="))
 
                                     for numEle in range(len(finalSplit)): #  instead of the list id, insert the name of the list via the id .replace("selection", "hlist")
+                                        numEleKey = finalSplit[numEle][0]
+                                        numEleValue = finalSplit[numEle][1]
 
-                                        if (finalSplit[numEle][0] == "selection" or finalSplit[numEle][0] == "hlist"):  # here the selections-id's are comvertet into the name
+                                        if (numEleKey == "selection" or numEleKey == "hlist"):  # here the selections-id's are converted into the name
+                                            numEleKey = "hlist"
+                                            # add selections
                                             for selectionId in selections:
-                                                if finalSplit[numEle][1] == selectionId["id"] and selectionId["name"] != "":
-                                                    finalSplit[numEle][1] = selectionId["name"]
-
+                                                if numEleValue == selectionId["id"] and selectionId["name"] != "":
+                                                    numEleValue = selectionId["name"]
+                                            # add hlists
                                             for hlistsId in hlists:
-                                                if finalSplit[numEle][1] == hlistsId["id"] and hlistsId["name"] != "":
-                                                    finalSplit[numEle][1] = hlistsId["name"]
+                                                if numEleValue == hlistsId["id"] and hlistsId["name"] != "":
+                                                    numEleValue = hlistsId["name"]
 
-                                            finalSplit[numEle][0] = "hlist"
 
-                                    for numEle in range(len(finalSplit)):
+                                        # fill in gui attributes (incl. hlists)
                                         tmpOnto["project"]["ontologies"][0]["properties"][-1]["gui_attributes"].update({
-                                            finalSplit[numEle][0]: finalSplit[numEle][1]
+                                            numEleKey: numEleValue
                                         })
 
 
