@@ -382,6 +382,9 @@ class Converter:
                                                 if numEleValue == hlistsId["id"] and hlistsId["name"] != "":
                                                     numEleValue = hlistsId["name"]
 
+                                        # convert string values to integers where necessary
+                                        if (numEleKey == "size" or numEleKey == "maxlength" or numEleKey == "numprops" or numEleKey == "cols" or numEleKey == "rows" ):
+                                            numEleValue = int(numEleValue)
 
                                         # fill in gui attributes (incl. hlists)
                                         tmpOnto["project"]["ontologies"][0]["properties"][-1]["gui_attributes"].update({
