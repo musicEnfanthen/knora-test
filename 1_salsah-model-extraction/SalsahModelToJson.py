@@ -384,7 +384,10 @@ class Converter:
 
                                         # convert gui attribute's string values to integers where necessary
                                         if (numEleKey == "size" or numEleKey == "maxlength" or numEleKey == "numprops" or numEleKey == "cols" or numEleKey == "rows" or numEleKey == "min" or numEleKey == "max"):
-                                            numEleValue = int(numEleValue)
+                                            try:
+                                                numEleValue = int(numEleValue)
+                                            except ValueError:
+                                                numEleValue = numEleValue
 
                                         # fill in gui attributes (incl. hlists)
                                         tmpOnto["project"]["ontologies"][0]["properties"][-1]["gui_attributes"].update({
