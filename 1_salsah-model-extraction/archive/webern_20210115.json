@@ -610,8 +610,8 @@
                         },
                         "gui_element": "SimpleText",
                         "gui_attributes": {
-                            "size": 60,
-                            "maxlength": 200
+                            "size": "60",
+                            "maxlength": "200"
                         }
                     },
                     {
@@ -688,8 +688,8 @@
                         },
                         "gui_element": "SimpleText",
                         "gui_attributes": {
-                            "size": 80,
-                            "maxlength": 255
+                            "size": "80",
+                            "maxlength": "255"
                         }
                     },
                     {
@@ -718,8 +718,8 @@
                         },
                         "gui_element": "SimpleText",
                         "gui_attributes": {
-                            "size": 60,
-                            "maxlength": 255
+                            "size": "60",
+                            "maxlength": "255"
                         }
                     },
                     {
@@ -727,14 +727,14 @@
                         "super": [
                             "hasLinkTo"
                         ],
-                        "object": ":person",
+                        "object": "LinkValue",
                         "labels": {
                             "de": "Verfasser"
                         },
                         "gui_element": "Searchbox",
                         "gui_attributes": {
                             "restypeid": "45",
-                            "numprops": 2
+                            "numprops": "2"
                         }
                     },
                     {
@@ -742,14 +742,14 @@
                         "super": [
                             "hasLinkTo"
                         ],
-                        "object": ":person",
+                        "object": "LinkValue",
                         "labels": {
                             "de": "Beitragender"
                         },
                         "gui_element": "Searchbox",
                         "gui_attributes": {
                             "restypeid": "45",
-                            "numprops": 2
+                            "numprops": "2"
                         }
                     },
                     {
@@ -817,14 +817,14 @@
                         "super": [
                             "hasLinkTo"
                         ],
-                        "object": ":person",
+                        "object": "LinkValue",
                         "labels": {
                             "de": "Empf\u00e4nger"
                         },
                         "gui_element": "Searchbox",
                         "gui_attributes": {
                             "restypeid": "45",
-                            "numprops": 2
+                            "numprops": "2"
                         }
                     },
                     {
@@ -1002,14 +1002,14 @@
                         "super": [
                             "hasLinkTo"
                         ],
-                        "object": ":chronology",
+                        "object": "LinkValue",
                         "labels": {
                             "de": "Auff\u00fchrungen"
                         },
                         "gui_element": "Searchbox",
                         "gui_attributes": {
                             "restypeid": "28",
-                            "numprops": 1
+                            "numprops": "1"
                         }
                     },
                     {
@@ -1125,14 +1125,14 @@
                         "super": [
                             "hasLinkTo"
                         ],
-                        "object": ":musical_piece",
+                        "object": "LinkValue",
                         "labels": {
                             "de": "hat Satz"
                         },
                         "gui_element": "Searchbox",
                         "gui_attributes": {
                             "restypeid": "36",
-                            "numprops": 1
+                            "numprops": "1"
                         }
                     },
                     {
@@ -1140,14 +1140,14 @@
                         "super": [
                             "hasLinkTo"
                         ],
-                        "object": ":opus",
+                        "object": "LinkValue",
                         "labels": {
                             "de": "Vorstufe von"
                         },
                         "gui_element": "Searchbox",
                         "gui_attributes": {
                             "restypeid": "43",
-                            "numprops": 1
+                            "numprops": "1"
                         }
                     },
                     {
@@ -1161,8 +1161,8 @@
                         },
                         "gui_element": "SimpleText",
                         "gui_attributes": {
-                            "size": 32,
-                            "maxlength": 32
+                            "size": "32",
+                            "maxlength": "32"
                         }
                     },
                     {
@@ -1177,8 +1177,8 @@
                         },
                         "gui_element": "SimpleText",
                         "gui_attributes": {
-                            "size": 32,
-                            "maxlength": 32
+                            "size": "32",
+                            "maxlength": "32"
                         }
                     },
                     {
@@ -1330,14 +1330,14 @@
                         "super": [
                             "hasLinkTo"
                         ],
-                        "object": ":sourceindex",
+                        "object": "LinkValue",
                         "labels": {
                             "de": "Quellenindex (Referenz)"
                         },
                         "gui_element": "Searchbox",
                         "gui_attributes": {
                             "restypeid": "50",
-                            "numprops": 2
+                            "numprops": "2"
                         }
                     },
                     {
@@ -1538,7 +1538,7 @@
                         "super": [
                             "hasLinkTo"
                         ],
-                        "object": ":sourceindex",
+                        "object": "LinkValue",
                         "labels": {
                             "de": "ist ein Teil von (Quellenindex)"
                         },
@@ -1552,7 +1552,7 @@
                         "super": [
                             "hasLinkTo"
                         ],
-                        "object": ":library",
+                        "object": "LinkValue",
                         "labels": {
                             "de": "besitzende Institution"
                         },
@@ -1566,14 +1566,14 @@
                         "super": [
                             "hasLinkTo"
                         ],
-                        "object": ":musical_piece",
+                        "object": "LinkValue",
                         "labels": {
                             "de": "Moldenhauer-Nummer (Referenz)"
                         },
                         "gui_element": "Searchbox",
                         "gui_attributes": {
                             "restypeid": "36",
-                            "numprops": 1
+                            "numprops": "1"
                         }
                     },
                     {
@@ -1654,8 +1654,8 @@
                         },
                         "gui_element": "SimpleText",
                         "gui_attributes": {
-                            "size": 60,
-                            "maxlength": 255
+                            "size": "60",
+                            "maxlength": "255"
                         }
                     },
                     {
@@ -1675,14 +1675,14 @@
                         "super": [
                             "hasLinkTo"
                         ],
-                        "object": ":bibliography",
+                        "object": "LinkValue",
                         "labels": {
                             "de": "Titel_selbst (Verweis)"
                         },
                         "gui_element": "Searchbox",
                         "gui_attributes": {
                             "restypeid": "126",
-                            "numprops": 1
+                            "numprops": "1"
                         }
                     },
                     {
@@ -1888,14 +1888,14 @@
                         "super": [
                             "hasLinkTo"
                         ],
-                        "object": ":publishing_house",
+                        "object": "LinkValue",
                         "labels": {
                             "de": "Verlag (Referenz)"
                         },
                         "gui_element": "Searchbox",
                         "gui_attributes": {
                             "restypeid": "181",
-                            "numprops": 2
+                            "numprops": "2"
                         }
                     },
                     {
@@ -1961,7 +1961,7 @@
                         "gui_element": "Textarea",
                         "gui_attributes": {
                             "width": "95%",
-                            "rows": 7,
+                            "rows": "7",
                             "wrap": "soft"
                         }
                     },
@@ -1979,8 +1979,8 @@
                         },
                         "gui_element": "SimpleText",
                         "gui_attributes": {
-                            "size": 60,
-                            "maxlength": 255
+                            "size": "60",
+                            "maxlength": "255"
                         }
                     },
                     {
@@ -1995,8 +1995,8 @@
                         },
                         "gui_element": "SimpleText",
                         "gui_attributes": {
-                            "size": 64,
-                            "maxlength": 64
+                            "size": "64",
+                            "maxlength": "64"
                         }
                     },
                     {
@@ -2833,7 +2833,7 @@
                                 "comments": {
                                     "de": "Diese Property bezeichnet die Position in einer geordneten Reihenfolge",
                                     "fr": "Cette \"property\" d\u00e9note la position dans un s\u00e9quence.",
-                                    "en": "This property stands for the position within a set of ordered items (resources)"
+                                    "en": "This property stands for the position within a set of rdered items (resoucres)"
                                 },
                                 "cardinality": "1"
                             },
@@ -2995,7 +2995,7 @@
                                 "comments": {
                                     "de": "Diese Property bezeichnet die Position in einer geordneten Reihenfolge",
                                     "fr": "Cette \"property\" d\u00e9note la position dans un s\u00e9quence.",
-                                    "en": "This property stands for the position within a set of ordered items (resources)"
+                                    "en": "This property stands for the position within a set of rdered items (resoucres)"
                                 },
                                 "cardinality": "0-1"
                             },
@@ -3320,7 +3320,7 @@
                                 "comments": {
                                     "de": "Diese Property bezeichnet die Position in einer geordneten Reihenfolge",
                                     "fr": "Cette \"property\" d\u00e9note la position dans un s\u00e9quence.",
-                                    "en": "This property stands for the position within a set of ordered items (resources)"
+                                    "en": "This property stands for the position within a set of rdered items (resoucres)"
                                 },
                                 "cardinality": "1"
                             },
@@ -3530,7 +3530,7 @@
                                 "comments": {
                                     "de": "Diese Property bezeichnet die Position in einer geordneten Reihenfolge",
                                     "fr": "Cette \"property\" d\u00e9note la position dans un s\u00e9quence.",
-                                    "en": "This property stands for the position within a set of ordered items (resources)"
+                                    "en": "This property stands for the position within a set of rdered items (resoucres)"
                                 },
                                 "cardinality": "1"
                             },
@@ -3615,7 +3615,7 @@
                                 "comments": {
                                     "de": "Diese Property bezeichnet die Position in einer geordneten Reihenfolge",
                                     "fr": "Cette \"property\" d\u00e9note la position dans un s\u00e9quence.",
-                                    "en": "This property stands for the position within a set of ordered items (resources)"
+                                    "en": "This property stands for the position within a set of rdered items (resoucres)"
                                 },
                                 "cardinality": "1"
                             },
