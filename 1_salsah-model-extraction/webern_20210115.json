@@ -2824,7 +2824,7 @@
                                 "propname": "part_of",
                                 "comments": {
                                     "de": "Diese Property bezeichnet eine Verbindung zu einer anderen Resource, in dem ausgesagt wird, dass die vorliegende Resource ein integraler Teil der anderen Resource ist. Zum Beispiel ist eine Buchseite ein integraler Bestandteil genau eines Buches.",
-                                    "en": "This property represents a connection to another resource where the given resource is an integral part of. Es an example a page is an integral part of a book."
+                                    "en": "This property represents a connection to another resource where the given resource is an integral part of. As an example a page is an integral part of a book."
                                 },
                                 "cardinality": "1"
                             },
@@ -2922,7 +2922,7 @@
                                 "propname": "part_of",
                                 "comments": {
                                     "de": "Diese Property bezeichnet eine Verbindung zu einer anderen Resource, in dem ausgesagt wird, dass die vorliegende Resource ein integraler Teil der anderen Resource ist. Zum Beispiel ist eine Buchseite ein integraler Bestandteil genau eines Buches.",
-                                    "en": "This property represents a connection to another resource where the given resource is an integral part of. Es an example a page is an integral part of a book."
+                                    "en": "This property represents a connection to another resource where the given resource is an integral part of. As an example a page is an integral part of a book."
                                 },
                                 "cardinality": "0-1"
                             },
@@ -2986,7 +2986,7 @@
                                 "propname": "part_of",
                                 "comments": {
                                     "de": "Diese Property bezeichnet eine Verbindung zu einer anderen Resource, in dem ausgesagt wird, dass die vorliegende Resource ein integraler Teil der anderen Resource ist. Zum Beispiel ist eine Buchseite ein integraler Bestandteil genau eines Buches.",
-                                    "en": "This property represents a connection to another resource where the given resource is an integral part of. Es an example a page is an integral part of a book."
+                                    "en": "This property represents a connection to another resource where the given resource is an integral part of. As an example a page is an integral part of a book."
                                 },
                                 "cardinality": "1"
                             },
@@ -3311,7 +3311,7 @@
                                 "propname": "part_of",
                                 "comments": {
                                     "de": "Diese Property bezeichnet eine Verbindung zu einer anderen Resource, in dem ausgesagt wird, dass die vorliegende Resource ein integraler Teil der anderen Resource ist. Zum Beispiel ist eine Buchseite ein integraler Bestandteil genau eines Buches.",
-                                    "en": "This property represents a connection to another resource where the given resource is an integral part of. Es an example a page is an integral part of a book."
+                                    "en": "This property represents a connection to another resource where the given resource is an integral part of. As an example a page is an integral part of a book."
                                 },
                                 "cardinality": "1"
                             },
@@ -3521,7 +3521,7 @@
                                 "propname": "part_of",
                                 "comments": {
                                     "de": "Diese Property bezeichnet eine Verbindung zu einer anderen Resource, in dem ausgesagt wird, dass die vorliegende Resource ein integraler Teil der anderen Resource ist. Zum Beispiel ist eine Buchseite ein integraler Bestandteil genau eines Buches.",
-                                    "en": "This property represents a connection to another resource where the given resource is an integral part of. Es an example a page is an integral part of a book."
+                                    "en": "This property represents a connection to another resource where the given resource is an integral part of. As an example a page is an integral part of a book."
                                 },
                                 "cardinality": "1"
                             },
@@ -3606,7 +3606,7 @@
                                 "propname": "part_of",
                                 "comments": {
                                     "de": "Diese Property bezeichnet eine Verbindung zu einer anderen Resource, in dem ausgesagt wird, dass die vorliegende Resource ein integraler Teil der anderen Resource ist. Zum Beispiel ist eine Buchseite ein integraler Bestandteil genau eines Buches.",
-                                    "en": "This property represents a connection to another resource where the given resource is an integral part of. Es an example a page is an integral part of a book."
+                                    "en": "This property represents a connection to another resource where the given resource is an integral part of. As an example a page is an integral part of a book."
                                 },
                                 "cardinality": "1"
                             },
