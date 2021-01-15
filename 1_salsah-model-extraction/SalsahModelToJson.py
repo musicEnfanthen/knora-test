@@ -219,16 +219,8 @@ class Converter:
                         tmpOnto["project"]["ontologies"][0]["resources"][-1]["cardinalities"].append({
                             "propname": propertyId["name"],
                             # "gui_order": "",  # TODO gui_order not yet implemented by knora.
-                            "comments": {},
                             "cardinality": propertyId["occurrence"]
                         })
-                        # Fill in the descriptions
-                        if propertyId["description"] is not None and isinstance(propertyId["description"], list):
-                            for descriptionId in propertyId["description"]:
-                                tmpOnto["project"]["ontologies"][0]["resources"][-1]["cardinalities"][-1][
-                                    "comments"].update({
-                                    descriptionId["shortname"]: descriptionId["description"]
-                                })
             else:
                 continue
 
@@ -321,6 +313,7 @@ class Converter:
                                 "super": [],
                                 "object": "",
                                 "labels": {},
+                                "comments": {},
                                 "gui_element": "",
                                 "gui_attributes": {}
                             })
@@ -345,6 +338,13 @@ class Converter:
 
                         for property in resTypeInfo["properties"]:
                             if "id" in property and property["id"] == propId:
+                                # fill in the description of the properties as comments
+                                if property["description"] is not None and isinstance(property["description"], list):
+                                     for descriptionId in property["description"]:
+                                         tmpOnto["project"]["ontologies"][0]["properties"][-1]["comments"].update({
+                                             descriptionId["shortname"]: descriptionId["description"]
+                                         })
+
                                 # fill in gui_element
                                 tmpOnto["project"]["ontologies"][0]["properties"][-1]["gui_element"] = guiEleMap[property["gui_name"]]
 
