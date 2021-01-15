@@ -553,6 +553,9 @@
                         "labels": {
                             "de": "Ereignis"
                         },
+                        "comments": {
+                            "de": "Ein Ereignis mit Relevanz f\u00fcr A. Webern und/oder sein Werk."
+                        },
                         "gui_element": "Richtext",
                         "gui_attributes": {}
                     },
@@ -564,6 +567,9 @@
                         "object": "ListValue",
                         "labels": {
                             "de": "Ereignisart"
+                        },
+                        "comments": {
+                            "de": "Art eines chronologischen Ereignisses"
                         },
                         "gui_element": "Pulldown",
                         "gui_attributes": {
@@ -582,6 +588,9 @@
                             "it": "Data",
                             "en": "Date"
                         },
+                        "comments": {
+                            "de": "Datum"
+                        },
                         "gui_element": "Date",
                         "gui_attributes": {}
                     },
@@ -593,6 +602,9 @@
                         "object": "TextValue",
                         "labels": {
                             "de": "Tageszeit / Uhrzeit"
+                        },
+                        "comments": {
+                            "de": "Tages- oder Uhrzeit eines Ereignisses"
                         },
                         "gui_element": "SimpleText",
                         "gui_attributes": {}
@@ -607,6 +619,9 @@
                             "de": "Ort",
                             "fr": "Lieu",
                             "it": "Localit\u00e0"
+                        },
+                        "comments": {
+                            "de": "Ort, wo ein Ereignis stattgefunden hat."
                         },
                         "gui_element": "SimpleText",
                         "gui_attributes": {
@@ -623,6 +638,9 @@
                         "labels": {
                             "de": "Ort (GeoNames)"
                         },
+                        "comments": {
+                            "de": "Geonames-Anbindung f\u00fcr einen Ort, wo ein Ereignis stattgefunden hat."
+                        },
                         "gui_element": "Geonames",
                         "gui_attributes": {}
                     },
@@ -634,6 +652,9 @@
                         "object": "TextValue",
                         "labels": {
                             "de": "Literaturnachweis"
+                        },
+                        "comments": {
+                            "de": "Literaturnachweise zu einem gegebenen Objekt"
                         },
                         "gui_element": "Richtext",
                         "gui_attributes": {}
@@ -647,6 +668,9 @@
                         "labels": {
                             "de": "Korrespondenznachweis"
                         },
+                        "comments": {
+                            "de": "Nachweis in Korrespondez von/zu oder \u00fcber Anton Webern."
+                        },
                         "gui_element": "Richtext",
                         "gui_attributes": {}
                     },
@@ -659,6 +683,9 @@
                         "labels": {
                             "de": "andere Quellen"
                         },
+                        "comments": {
+                            "de": "andere Quellen (als Literatur oder Korrespondenz) zu einem gegebenen Objekt"
+                        },
                         "gui_element": "Richtext",
                         "gui_attributes": {}
                     },
@@ -670,6 +697,9 @@
                         "object": "TextValue",
                         "labels": {
                             "de": "Kommentar (Richtext)"
+                        },
+                        "comments": {
+                            "de": "Unstrukturierte Bemerkungen zu einem Objekt"
                         },
                         "gui_element": "Richtext",
                         "gui_attributes": {}
@@ -686,6 +716,7 @@
                             "it": "Titolo",
                             "en": "Title"
                         },
+                        "comments": {},
                         "gui_element": "SimpleText",
                         "gui_attributes": {
                             "size": 80,
@@ -700,6 +731,9 @@
                         "object": "ListValue",
                         "labels": {
                             "de": "Art"
+                        },
+                        "comments": {
+                            "de": "Art/Gattung einer Korrespondenz (dc:type)"
                         },
                         "gui_element": "Pulldown",
                         "gui_attributes": {
@@ -716,6 +750,7 @@
                             "de": "Creator",
                             "en": "Creator"
                         },
+                        "comments": {},
                         "gui_element": "SimpleText",
                         "gui_attributes": {
                             "size": 60,
@@ -730,6 +765,9 @@
                         "object": ":person",
                         "labels": {
                             "de": "Verfasser"
+                        },
+                        "comments": {
+                            "de": "Verfasser einer Korrespondenz"
                         },
                         "gui_element": "Searchbox",
                         "gui_attributes": {
@@ -746,6 +784,9 @@
                         "labels": {
                             "de": "Beitragender"
                         },
+                        "comments": {
+                            "de": "Verfasser einer Korrespondenz"
+                        },
                         "gui_element": "Searchbox",
                         "gui_attributes": {
                             "restypeid": "45",
@@ -761,6 +802,9 @@
                         "labels": {
                             "de": "Absenderadresse"
                         },
+                        "comments": {
+                            "de": "die autographe Adresse des Absenders einer Korrespondenz"
+                        },
                         "gui_element": "Richtext",
                         "gui_attributes": {}
                     },
@@ -772,6 +816,9 @@
                         "object": "GeonameValue",
                         "labels": {
                             "de": "Schreib-/Absendeort"
+                        },
+                        "comments": {
+                            "de": "Ortsangabe zum Absender einer Korrespondenz (ResPointer)"
                         },
                         "gui_element": "Geonames",
                         "gui_attributes": {}
@@ -785,6 +832,9 @@
                         "labels": {
                             "de": "autographe Datierung"
                         },
+                        "comments": {
+                            "de": "autographe Datierung in einer Quelle"
+                        },
                         "gui_element": "Richtext",
                         "gui_attributes": {}
                     },
@@ -796,6 +846,9 @@
                         "object": "DateValue",
                         "labels": {
                             "de": "Schreibdatum"
+                        },
+                        "comments": {
+                            "de": "Datum des Abfassens einer Korrespondenz"
                         },
                         "gui_element": "Date",
                         "gui_attributes": {}
@@ -809,6 +862,9 @@
                         "labels": {
                             "de": "Absendedatum"
                         },
+                        "comments": {
+                            "de": "Datum des Absendens einer Korrespondenz"
+                        },
                         "gui_element": "Date",
                         "gui_attributes": {}
                     },
@@ -820,6 +876,9 @@
                         "object": ":person",
                         "labels": {
                             "de": "Empf\u00e4nger"
+                        },
+                        "comments": {
+                            "de": "Empf\u00e4nger einer Korrespondenz"
                         },
                         "gui_element": "Searchbox",
                         "gui_attributes": {
@@ -836,6 +895,9 @@
                         "labels": {
                             "de": "Empf\u00e4ngeradresse"
                         },
+                        "comments": {
+                            "de": "die autographe Adresse des Empf\u00e4ngers einer Korrespondenz"
+                        },
                         "gui_element": "Richtext",
                         "gui_attributes": {}
                     },
@@ -847,6 +909,9 @@
                         "object": "GeonameValue",
                         "labels": {
                             "de": "Empfangsort"
+                        },
+                        "comments": {
+                            "de": "Ortsangabe zum Empf\u00e4nger einer Korrespondenz (ResPointer)"
                         },
                         "gui_element": "Geonames",
                         "gui_attributes": {
@@ -862,6 +927,9 @@
                         "labels": {
                             "de": "Empfangsdatum"
                         },
+                        "comments": {
+                            "de": "Datum des Empfangs einer Korrespondenz"
+                        },
                         "gui_element": "Date",
                         "gui_attributes": {}
                     },
@@ -873,6 +941,9 @@
                         "object": "TextValue",
                         "labels": {
                             "de": "Standort des physischen Originals"
+                        },
+                        "comments": {
+                            "de": "Der Ort, wo das physische Original einer Quelle aufbewahrt wird"
                         },
                         "gui_element": "Richtext",
                         "gui_attributes": {}
@@ -886,6 +957,9 @@
                         "labels": {
                             "de": "Reproduktion"
                         },
+                        "comments": {
+                            "de": "Beschreibt den Standort (physisch, Web) einer Reproduktion einer Quelle"
+                        },
                         "gui_element": "Richtext",
                         "gui_attributes": {}
                     },
@@ -897,6 +971,9 @@
                         "object": "TextValue",
                         "labels": {
                             "de": "Beschreibung (Richtext)"
+                        },
+                        "comments": {
+                            "de": "Beschreibung"
                         },
                         "gui_element": "Richtext",
                         "gui_attributes": {}
@@ -910,6 +987,9 @@
                         "labels": {
                             "de": "Incipit"
                         },
+                        "comments": {
+                            "de": "Incipit eines Textes, Briefes, Liedtextes"
+                        },
                         "gui_element": "SimpleText",
                         "gui_attributes": {}
                     },
@@ -920,6 +1000,9 @@
                         ],
                         "object": "TextValue",
                         "labels": {
+                            "de": "Inhalt"
+                        },
+                        "comments": {
                             "de": "Inhalt"
                         },
                         "gui_element": "Richtext",
@@ -934,6 +1017,9 @@
                         "labels": {
                             "de": "Transkription"
                         },
+                        "comments": {
+                            "de": "Transkription eines Textes"
+                        },
                         "gui_element": "Richtext",
                         "gui_attributes": {}
                     },
@@ -945,6 +1031,9 @@
                         "object": "TextValue",
                         "labels": {
                             "de": "Kontextmaterial"
+                        },
+                        "comments": {
+                            "de": "Kontextmaterial zu einer gegebenen Quelle"
                         },
                         "gui_element": "Richtext",
                         "gui_attributes": {}
@@ -958,6 +1047,10 @@
                         "labels": {
                             "de": "Quelle (Richtext)"
                         },
+                        "comments": {
+                            "de": "Eine zugeh\u00f6rige Ressource, von der die beschriebene Ressource abgeleitet ist. Die beschriebene Ressource kann ganz oder teilweise von der zugeh\u00f6rigen Ressource abgeleitet sein. Es wird empfohlen, die zugeh\u00f6rige Ressource mit Hilfe einer Zeichenkette zu identifizieren, die einem formalen Identifikationssystem entspricht.",
+                            "en": "A related resource from which the described resource is derived. The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system."
+                        },
                         "gui_element": "Richtext",
                         "gui_attributes": {}
                     },
@@ -969,6 +1062,9 @@
                         "object": "TextValue",
                         "labels": {
                             "de": "AWG-ID"
+                        },
+                        "comments": {
+                            "de": "Die AWG-ID identifiziert ein St\u00fcck eindeutig (jenseits von Moldenhauer-Nummern)."
                         },
                         "gui_element": "SimpleText",
                         "gui_attributes": {}
@@ -982,6 +1078,9 @@
                         "labels": {
                             "de": "Moldenhauer-Nummer"
                         },
+                        "comments": {
+                            "de": "Die Moldenhauer-Nummer identifiziert ein St\u00fcck eindeutig"
+                        },
                         "gui_element": "SimpleText",
                         "gui_attributes": {}
                     },
@@ -994,6 +1093,9 @@
                         "labels": {
                             "de": "Datum der Komposition"
                         },
+                        "comments": {
+                            "de": "Datum der Komposition eines St\u00fccks"
+                        },
                         "gui_element": "Date",
                         "gui_attributes": {}
                     },
@@ -1005,6 +1107,9 @@
                         "object": ":chronology",
                         "labels": {
                             "de": "Auff\u00fchrungen"
+                        },
+                        "comments": {
+                            "de": "Auff\u00fchrungen eines St\u00fccks"
                         },
                         "gui_element": "Searchbox",
                         "gui_attributes": {
@@ -1021,6 +1126,9 @@
                         "labels": {
                             "de": "Datum der Erstpublikation"
                         },
+                        "comments": {
+                            "de": "Datum der Ver\u00f6ffentlichung eines St\u00fccks im Erstverlag"
+                        },
                         "gui_element": "Date",
                         "gui_attributes": {}
                     },
@@ -1032,6 +1140,9 @@
                         "object": "TextValue",
                         "labels": {
                             "de": "Erstverlag"
+                        },
+                        "comments": {
+                            "de": "Verlag, in dem ein St\u00fcck zum ersten Mal ver\u00f6ffentlicht wurde"
                         },
                         "gui_element": "SimpleText",
                         "gui_attributes": {}
@@ -1045,6 +1156,9 @@
                         "labels": {
                             "de": "Besetzung"
                         },
+                        "comments": {
+                            "de": "Besetzung des St\u00fccks"
+                        },
                         "gui_element": "Richtext",
                         "gui_attributes": {}
                     },
@@ -1056,6 +1170,9 @@
                         "object": "TextValue",
                         "labels": {
                             "de": "weitere, f\u00fcr die Edition nicht relevante Quelle"
+                        },
+                        "comments": {
+                            "de": "Quelle zu einen Musikst\u00fcck, die f\u00fcr die Edition nicht relevant ist (posthumer Druck, etc.)"
                         },
                         "gui_element": "Richtext",
                         "gui_attributes": {}
@@ -1069,6 +1186,9 @@
                         "labels": {
                             "de": "Textquelle"
                         },
+                        "comments": {
+                            "de": "Angabe einer textuellen Quelle"
+                        },
                         "gui_element": "Richtext",
                         "gui_attributes": {}
                     },
@@ -1080,6 +1200,9 @@
                         "object": "IntValue",
                         "labels": {
                             "de": "Opus"
+                        },
+                        "comments": {
+                            "de": "Opus-Nummer eines ver\u00f6ffentlichten Werkes"
                         },
                         "gui_element": "SimpleText",
                         "gui_attributes": {}
@@ -1093,6 +1216,9 @@
                         "labels": {
                             "de": "Erstverlag (Richtext)"
                         },
+                        "comments": {
+                            "de": "Verlag der Erstpublikation"
+                        },
                         "gui_element": "Richtext",
                         "gui_attributes": {}
                     },
@@ -1103,6 +1229,9 @@
                         ],
                         "object": "DateValue",
                         "labels": {
+                            "de": "Datum weitere Publikation"
+                        },
+                        "comments": {
                             "de": "Datum weitere Publikation"
                         },
                         "gui_element": "Date",
@@ -1117,6 +1246,9 @@
                         "labels": {
                             "de": "weiterer Verlag"
                         },
+                        "comments": {
+                            "de": "weiterer Verlag"
+                        },
                         "gui_element": "Richtext",
                         "gui_attributes": {}
                     },
@@ -1128,6 +1260,9 @@
                         "object": ":musical_piece",
                         "labels": {
                             "de": "hat Satz"
+                        },
+                        "comments": {
+                            "de": "Satzbezeichnung: Sequenz und Verweis auf Musikst\u00fcck  (zu Opus und Pr\u00e4-Opus)"
                         },
                         "gui_element": "Searchbox",
                         "gui_attributes": {
@@ -1144,6 +1279,9 @@
                         "labels": {
                             "de": "Vorstufe von"
                         },
+                        "comments": {
+                            "de": "Nennung der autorisierten Fassung (Webern-Opus)"
+                        },
                         "gui_element": "Searchbox",
                         "gui_attributes": {
                             "restypeid": "43",
@@ -1158,6 +1296,10 @@
                         "object": "TextValue",
                         "labels": {
                             "de": "Name"
+                        },
+                        "comments": {
+                            "de": "Nachname einer Person",
+                            "en": "Last name of a person"
                         },
                         "gui_element": "SimpleText",
                         "gui_attributes": {
@@ -1175,6 +1317,10 @@
                             "de": "Vorname",
                             "en": "First name"
                         },
+                        "comments": {
+                            "de": "Vorname einer Person",
+                            "en": "First name of a person"
+                        },
                         "gui_element": "SimpleText",
                         "gui_attributes": {
                             "size": 32,
@@ -1190,6 +1336,9 @@
                         "labels": {
                             "de": "Namensvariante"
                         },
+                        "comments": {
+                            "de": "Namensvarianten (K\u00fcnstlername, andere Schreibweisen etc.)"
+                        },
                         "gui_element": "Richtext",
                         "gui_attributes": {}
                     },
@@ -1202,6 +1351,9 @@
                         "labels": {
                             "de": "Gemeinsame Normdatei (GND)"
                         },
+                        "comments": {
+                            "de": "Verkn\u00fcpfung zur GND"
+                        },
                         "gui_element": "Richtext",
                         "gui_attributes": {}
                     },
@@ -1212,6 +1364,9 @@
                         ],
                         "object": "TextValue",
                         "labels": {
+                            "de": "Geburtsort"
+                        },
+                        "comments": {
                             "de": "Geburtsort"
                         },
                         "gui_element": "SimpleText",
@@ -1226,6 +1381,9 @@
                         "labels": {
                             "de": "Geburtsdatum"
                         },
+                        "comments": {
+                            "de": "Geburtsdatum"
+                        },
                         "gui_element": "Date",
                         "gui_attributes": {}
                     },
@@ -1236,6 +1394,9 @@
                         ],
                         "object": "DateValue",
                         "labels": {
+                            "de": "Sterbedatum"
+                        },
+                        "comments": {
                             "de": "Sterbedatum"
                         },
                         "gui_element": "Date",
@@ -1250,6 +1411,9 @@
                         "labels": {
                             "de": "Sterbeort"
                         },
+                        "comments": {
+                            "de": "Sterbeort"
+                        },
                         "gui_element": "SimpleText",
                         "gui_attributes": {}
                     },
@@ -1262,6 +1426,9 @@
                         "labels": {
                             "de": "Biographie"
                         },
+                        "comments": {
+                            "de": "berufliche, soziale und familienbezogene Informationen"
+                        },
                         "gui_element": "Richtext",
                         "gui_attributes": {}
                     },
@@ -1272,6 +1439,9 @@
                         ],
                         "object": "TextValue",
                         "labels": {
+                            "de": "Bezug zu Webern"
+                        },
+                        "comments": {
                             "de": "Bezug zu Webern"
                         },
                         "gui_element": "Richtext",
@@ -1286,6 +1456,9 @@
                         "labels": {
                             "de": "Sigle"
                         },
+                        "comments": {
+                            "de": "verwendete Quellensigle in Bezug auf ein Musikst\u00fcck"
+                        },
                         "gui_element": "SimpleText",
                         "gui_attributes": {}
                     },
@@ -1297,6 +1470,9 @@
                         "object": "TextValue",
                         "labels": {
                             "de": "Bezeichnung"
+                        },
+                        "comments": {
+                            "de": "Identifizierende Bezeichnung einer Quellenbeschreibung"
                         },
                         "gui_element": "Richtext",
                         "gui_attributes": {}
@@ -1310,6 +1486,9 @@
                         "labels": {
                             "de": "Signatur"
                         },
+                        "comments": {
+                            "de": "Signatur (eindeutig)"
+                        },
                         "gui_element": "SimpleText",
                         "gui_attributes": {}
                     },
@@ -1322,6 +1501,9 @@
                         "labels": {
                             "de": "interne Signatur (PSS)"
                         },
+                        "comments": {
+                            "de": "interne Signatur (eindeutig) der Paul Sacher Stiftung"
+                        },
                         "gui_element": "SimpleText",
                         "gui_attributes": {}
                     },
@@ -1333,6 +1515,9 @@
                         "object": ":sourceindex",
                         "labels": {
                             "de": "Quellenindex (Referenz)"
+                        },
+                        "comments": {
+                            "de": "Verweis auf einen Quellenindex"
                         },
                         "gui_element": "Searchbox",
                         "gui_attributes": {
@@ -1349,6 +1534,9 @@
                         "labels": {
                             "de": "Beschreibstoff"
                         },
+                        "comments": {
+                            "de": "Beschreibung des Papiers"
+                        },
                         "gui_element": "Richtext",
                         "gui_attributes": {}
                     },
@@ -1360,6 +1548,9 @@
                         "object": "ListValue",
                         "labels": {
                             "de": "Hauptschreibstoff (hlist)"
+                        },
+                        "comments": {
+                            "de": "Beschreibung des Hauptschreibwerkzeugs"
                         },
                         "gui_element": "Pulldown",
                         "gui_attributes": {
@@ -1375,6 +1566,9 @@
                         "labels": {
                             "de": "weitere Schreibstoffe (hlist)"
                         },
+                        "comments": {
+                            "de": "Beschreibung weiterer vorkommender Schreibwerkzeuge"
+                        },
                         "gui_element": "Pulldown",
                         "gui_attributes": {
                             "hlist": "fontfamily"
@@ -1389,6 +1583,9 @@
                         "labels": {
                             "de": "autographer Titel"
                         },
+                        "comments": {
+                            "de": "autographer Titel in einer Quellenbeschreibung"
+                        },
                         "gui_element": "Richtext",
                         "gui_attributes": {}
                     },
@@ -1401,6 +1598,9 @@
                         "labels": {
                             "de": "gesicherte Datierung"
                         },
+                        "comments": {
+                            "de": "authentische Datierung"
+                        },
                         "gui_element": "Date",
                         "gui_attributes": {}
                     },
@@ -1411,6 +1611,9 @@
                         ],
                         "object": "DateValue",
                         "labels": {
+                            "de": "erschlossene Datierung"
+                        },
+                        "comments": {
                             "de": "erschlossene Datierung"
                         },
                         "gui_element": "Date",
@@ -1425,6 +1628,9 @@
                         "labels": {
                             "de": "Paginierung"
                         },
+                        "comments": {
+                            "de": "Paginierung"
+                        },
                         "gui_element": "Richtext",
                         "gui_attributes": {}
                     },
@@ -1437,6 +1643,9 @@
                         "labels": {
                             "de": "Taktzahlen"
                         },
+                        "comments": {
+                            "de": "autographe Taktzahlen in einer Quelle"
+                        },
                         "gui_element": "Richtext",
                         "gui_attributes": {}
                     },
@@ -1447,6 +1656,9 @@
                         ],
                         "object": "TextValue",
                         "labels": {
+                            "de": "Instrumentenvorsatz"
+                        },
+                        "comments": {
                             "de": "Instrumentenvorsatz"
                         },
                         "gui_element": "Richtext",
@@ -1461,6 +1673,9 @@
                         "labels": {
                             "de": "Eintragungen"
                         },
+                        "comments": {
+                            "de": "Eintragungen in einer Quelle"
+                        },
                         "gui_element": "Richtext",
                         "gui_attributes": {}
                     },
@@ -1473,6 +1688,9 @@
                         "labels": {
                             "de": "Korrekturen"
                         },
+                        "comments": {
+                            "de": "autographe Korrekturspuren in einer Quelle"
+                        },
                         "gui_element": "Richtext",
                         "gui_attributes": {}
                     },
@@ -1483,6 +1701,9 @@
                         ],
                         "object": "DateValue",
                         "labels": {
+                            "de": "Versionsdatum"
+                        },
+                        "comments": {
                             "de": "Versionsdatum"
                         },
                         "gui_element": "Date",
@@ -1500,6 +1721,10 @@
                             "it": "e una parte di",
                             "en": "is a part of"
                         },
+                        "comments": {
+                            "de": "Diese Property bezeichnet eine Verbindung zu einer anderen Resource, in dem ausgesagt wird, dass die vorliegende Resource ein integraler Teil der anderen Resource ist. Zum Beispiel ist eine Buchseite ein integraler Bestandteil genau eines Buches.",
+                            "en": "This property represents a connection to another resource where the given resource is an integral part of. As an example a page is an integral part of a book."
+                        },
                         "gui_element": "Searchbox",
                         "gui_attributes": {}
                     },
@@ -1514,6 +1739,11 @@
                             "fr": "Num\u00e9ro de S\u00e9quence",
                             "it": "Numero di scala",
                             "en": "Sequence number"
+                        },
+                        "comments": {
+                            "de": "Diese Property bezeichnet die Position in einer geordneten Reihenfolge",
+                            "fr": "Cette \"property\" d\u00e9note la position dans un s\u00e9quence.",
+                            "en": "This property stands for the position within a set of ordered items (resources)"
                         },
                         "gui_element": "Spinbox",
                         "gui_attributes": {
@@ -1530,6 +1760,9 @@
                         "labels": {
                             "de": "RISM-Sigle"
                         },
+                        "comments": {
+                            "de": "Repr\u00e4sentiert das RISM-Sigle einer Bibliothek."
+                        },
                         "gui_element": "SimpleText",
                         "gui_attributes": {}
                     },
@@ -1541,6 +1774,9 @@
                         "object": ":sourceindex",
                         "labels": {
                             "de": "ist ein Teil von (Quellenindex)"
+                        },
+                        "comments": {
+                            "de": "Diese Property bezeichnet eine Verbindung zu einer anderen Resource, in dem ausgesagt wird, dass die vorliegende Resource ein integraler Teil eines Quellenindex ist. Zum Beispiel ist ein Quellenindex ein integraler Bestandteil genau eines anderen Quellenindexes."
                         },
                         "gui_element": "Searchbox",
                         "gui_attributes": {
@@ -1556,6 +1792,9 @@
                         "labels": {
                             "de": "besitzende Institution"
                         },
+                        "comments": {
+                            "de": "bezeichnet eine besitzende Institution \n\nowl:equivalentProperty dbo:owningOrganisation"
+                        },
                         "gui_element": "Searchbox",
                         "gui_attributes": {
                             "restypeid": "49"
@@ -1569,6 +1808,9 @@
                         "object": ":musical_piece",
                         "labels": {
                             "de": "Moldenhauer-Nummer (Referenz)"
+                        },
+                        "comments": {
+                            "de": "Bezug zu einer Moldenhauernummer"
                         },
                         "gui_element": "Searchbox",
                         "gui_attributes": {
@@ -1585,6 +1827,9 @@
                         "labels": {
                             "de": "Originaldateiname"
                         },
+                        "comments": {
+                            "de": "gibt den originalen Namen einer Scan-Datei an"
+                        },
                         "gui_element": "SimpleText",
                         "gui_attributes": {}
                     },
@@ -1596,6 +1841,9 @@
                         "object": "TextValue",
                         "labels": {
                             "de": "abgedruckt in"
+                        },
+                        "comments": {
+                            "de": "Bibliographischer Nachweis von Abdrucken eines Musikst\u00fccks"
                         },
                         "gui_element": "Richtext",
                         "gui_attributes": {}
@@ -1609,6 +1857,9 @@
                         "labels": {
                             "de": "Kurztitel"
                         },
+                        "comments": {
+                            "de": "Kurztitel f\u00fcr bibliografierte Literatur"
+                        },
                         "gui_element": "SimpleText",
                         "gui_attributes": {}
                     },
@@ -1620,6 +1871,9 @@
                         "object": "ListValue",
                         "labels": {
                             "de": "Typ"
+                        },
+                        "comments": {
+                            "de": "Typ einer Bibliografieangabe"
                         },
                         "gui_element": "Pulldown",
                         "gui_attributes": {
@@ -1634,6 +1888,9 @@
                         "object": "ListValue",
                         "labels": {
                             "de": "unpubliziert_Typ"
+                        },
+                        "comments": {
+                            "de": "Typ einer unpublizierten Literaturangabe"
                         },
                         "gui_element": "Pulldown",
                         "gui_attributes": {
@@ -1652,6 +1909,10 @@
                             "it": "Autore",
                             "en": "Author"
                         },
+                        "comments": {
+                            "de": "Ein Autor (lat. auctor \u201eUrheber\u201c, \u201eSch\u00f6pfer\u201c, \u201eF\u00f6rderer\u201c, \u201eVeranlasser\u201c) ist der Verfasser oder geistige Urheber eines Werkes. Dabei handelt es sich meist um Werke der Literatur im weitesten Sinn (Schriftsteller, Fachbuch-, Lehrbuch-, Sachbuch-, Drehbuch-, Fernseh-, Opern- oder B\u00fchnenautor). Seltener wird, mit einem deutlich juristischen Beiklang, als Autor der Urheber eines Werkes der nichtliterarischen Kunst (etwa Musik, Fotografie, Filmkunst) und der Wissenschaft verstanden (vgl. auch Softwareautoren, Gesetzesautoren). Un\u00fcblich scheint es auch zu sein, konkrete Poesie, visuelle Poesie oder Wortbilder als von Autoren geschaffen zu bezeichnen. (Wikipedia http://de.wikipedia.org/wiki/Autor)",
+                            "en": "An author or authress (sometimes, in reference to a woman author, authoress) is defined both as \"the person who originates or gives existence to anything\" and that authorship determines responsibility for what is created. (Wikipedia http://en.wikipedia.org/wiki/Author)"
+                        },
                         "gui_element": "SimpleText",
                         "gui_attributes": {
                             "size": 60,
@@ -1667,6 +1928,9 @@
                         "labels": {
                             "de": "Titel_unselbst"
                         },
+                        "comments": {
+                            "de": "Titelaufnahme unselbst\u00e4ndiger Literatur"
+                        },
                         "gui_element": "Richtext",
                         "gui_attributes": {}
                     },
@@ -1678,6 +1942,9 @@
                         "object": ":bibliography",
                         "labels": {
                             "de": "Titel_selbst (Verweis)"
+                        },
+                        "comments": {
+                            "de": "ResourcePointer auf eine selbst\u00e4ndige Literaturangabe"
                         },
                         "gui_element": "Searchbox",
                         "gui_attributes": {
@@ -1694,6 +1961,9 @@
                         "labels": {
                             "de": "Titel_selbst"
                         },
+                        "comments": {
+                            "de": "Titelaufnahme selbst\u00e4ndiger Literatur"
+                        },
                         "gui_element": "Richtext",
                         "gui_attributes": {}
                     },
@@ -1704,6 +1974,9 @@
                         ],
                         "object": "TextValue",
                         "labels": {
+                            "de": "Herausgeber"
+                        },
+                        "comments": {
                             "de": "Herausgeber"
                         },
                         "gui_element": "SimpleText",
@@ -1718,6 +1991,9 @@
                         "labels": {
                             "de": "Verlagsort"
                         },
+                        "comments": {
+                            "de": "Verlagsort"
+                        },
                         "gui_element": "SimpleText",
                         "gui_attributes": {}
                     },
@@ -1728,6 +2004,9 @@
                         ],
                         "object": "TextValue",
                         "labels": {
+                            "de": "Verlag"
+                        },
+                        "comments": {
                             "de": "Verlag"
                         },
                         "gui_element": "SimpleText",
@@ -1742,6 +2021,9 @@
                         "labels": {
                             "de": "Publikationsdatum"
                         },
+                        "comments": {
+                            "de": "Publikationsdatum einer Ver\u00f6ffentlichung"
+                        },
                         "gui_element": "Date",
                         "gui_attributes": {}
                     },
@@ -1753,6 +2035,9 @@
                         "object": "ListValue",
                         "labels": {
                             "de": "Z\u00e4hlung"
+                        },
+                        "comments": {
+                            "de": "Gibt die Art der Z\u00e4hlung an (Blatt, Seite, Spalte, Zeile)"
                         },
                         "gui_element": "Pulldown",
                         "gui_attributes": {
@@ -1768,6 +2053,9 @@
                         "labels": {
                             "de": "Seitenangabe"
                         },
+                        "comments": {
+                            "de": "Seitenangabe f\u00fcr bibliografierte Literatur"
+                        },
                         "gui_element": "SimpleText",
                         "gui_attributes": {}
                     },
@@ -1779,6 +2067,9 @@
                         "object": "TextValue",
                         "labels": {
                             "de": "Reihentitel"
+                        },
+                        "comments": {
+                            "de": "Titelaufnahme f\u00fcr Reihen"
                         },
                         "gui_element": "Richtext",
                         "gui_attributes": {}
@@ -1792,6 +2083,9 @@
                         "labels": {
                             "de": "Zusatz"
                         },
+                        "comments": {
+                            "de": "zus\u00e4tzliche Angaben in einer Bibliografie"
+                        },
                         "gui_element": "Richtext",
                         "gui_attributes": {}
                     },
@@ -1803,6 +2097,9 @@
                         "object": "TextValue",
                         "labels": {
                             "de": "Abstract"
+                        },
+                        "comments": {
+                            "de": "Abstract f\u00fcr eine bibliografierte Literatur"
                         },
                         "gui_element": "Richtext",
                         "gui_attributes": {}
@@ -1816,6 +2113,9 @@
                         "labels": {
                             "de": "Online-Zugang"
                         },
+                        "comments": {
+                            "de": "URL f\u00fcr den Online-Zugang zu einer bibliografierten Literatur"
+                        },
                         "gui_element": "Richtext",
                         "gui_attributes": {}
                     },
@@ -1827,6 +2127,9 @@
                         "object": "ListValue",
                         "labels": {
                             "de": "verwendet in Bibliografie"
+                        },
+                        "comments": {
+                            "de": "Auswahl einer Bibliografie, in der eine bestimmte Literaturangabe verwendet werden soll"
                         },
                         "gui_element": "Pulldown",
                         "gui_attributes": {
@@ -1842,6 +2145,9 @@
                         "labels": {
                             "de": "Status"
                         },
+                        "comments": {
+                            "de": "Status einer bibliografischen Angabe"
+                        },
                         "gui_element": "Pulldown",
                         "gui_attributes": {
                             "hlist": "bibl_stat_selection"
@@ -1856,6 +2162,9 @@
                         "labels": {
                             "de": "Quelle"
                         },
+                        "comments": {
+                            "de": "Quellenangabe zu einer bibliografierten Literatur"
+                        },
                         "gui_element": "Richtext",
                         "gui_attributes": {}
                     },
@@ -1867,6 +2176,9 @@
                         "object": "TextValue",
                         "labels": {
                             "de": "Standort (swissbib)"
+                        },
+                        "comments": {
+                            "de": "Standort einer bibliografierten Literatur in der Swissbib"
                         },
                         "gui_element": "Richtext",
                         "gui_attributes": {}
@@ -1880,6 +2192,9 @@
                         "labels": {
                             "de": "Erscheinungsvermerk"
                         },
+                        "comments": {
+                            "de": "Publikationsangaben zu einer Druckver\u00f6ffentlichung (Ort: Verlag, Jahr)"
+                        },
                         "gui_element": "SimpleText",
                         "gui_attributes": {}
                     },
@@ -1891,6 +2206,9 @@
                         "object": ":publishing_house",
                         "labels": {
                             "de": "Verlag (Referenz)"
+                        },
+                        "comments": {
+                            "de": "Referenz auf einen Verlag (Objekt)"
                         },
                         "gui_element": "Searchbox",
                         "gui_attributes": {
@@ -1907,6 +2225,9 @@
                         "labels": {
                             "de": "Erscheinungsdatum"
                         },
+                        "comments": {
+                            "de": "Datum einer Publikation"
+                        },
                         "gui_element": "Date",
                         "gui_attributes": {}
                     },
@@ -1918,6 +2239,9 @@
                         "object": "TextValue",
                         "labels": {
                             "de": "Standort des konsultierten Exemplars"
+                        },
+                        "comments": {
+                            "de": "Der Ort, wo das physische Original eines gedruckten Exemplars aufbewahrt wird, das f\u00fcr eine Quellenbeschreibung konsultiert wurde"
                         },
                         "gui_element": "Richtext",
                         "gui_attributes": {}
@@ -1931,6 +2255,9 @@
                         "labels": {
                             "de": "Standort weiterer Exemplare"
                         },
+                        "comments": {
+                            "de": "Der Ort, wo weitere physische Original eines Druckes aufbewahrt werden"
+                        },
                         "gui_element": "Richtext",
                         "gui_attributes": {}
                     },
@@ -1942,6 +2269,9 @@
                         "object": "TextValue",
                         "labels": {
                             "de": "Titel nach Vorlage"
+                        },
+                        "comments": {
+                            "de": "in eine Quellenbeschreibung aufgenommener Titel nach Vorlage eines Druckes "
                         },
                         "gui_element": "Richtext",
                         "gui_attributes": {}
@@ -1957,6 +2287,9 @@
                             "fr": "Commentaire",
                             "it": "Commento",
                             "en": "Comment"
+                        },
+                        "comments": {
+                            "de": "Unstrukturierte Bemerkungen zu einem Objekt"
                         },
                         "gui_element": "Textarea",
                         "gui_attributes": {
@@ -1977,6 +2310,11 @@
                             "it": "Casa editrice",
                             "en": "Publisher"
                         },
+                        "comments": {
+                            "de": "Ein Verlag ist ein Medienunternehmen, das Werke der Literatur, Kunst, Musik oder Wissenschaft vervielf\u00e4ltigt und verbreitet. Der Verkauf kann \u00fcber den Handel (Kunst-, Buchhandel etc.) oder durch den Verlag selbst erfolgen. Das Wort \u201everlegen\u201c bedeutet im Mittelhochdeutschen \u201eGeld ausgeben\u201c oder \u201eetwas auf seine Rechnung nehmen\u201c. (Wikipedia http://de.wikipedia.org/wiki/Verlag)",
+                            "fr": "Une maison d\u2019\u00e9dition est une entreprise ou une association dont l\u2019activit\u00e9 principale est la production et la diffusion de livres. L\u2019activit\u00e9 est donc li\u00e9e \u00e0 l\u2019\u00e9dition de documents. Trois formes d'entreprise dominent la profession : SA, SARL et entreprise personnelle. (Wikipedia http://fr.wikipedia.org/wiki/Maison_d%27\u00e9dition)",
+                            "en": "Publishing is the process of production and dissemination of literature or information \u2013 the activity of making information available for public view. In some cases authors may be their own publishers, meaning: originators and developers of content also provide media to deliver and display the content. (Wikipedia http://en.wikipedia.org/wiki/Publisher)"
+                        },
                         "gui_element": "SimpleText",
                         "gui_attributes": {
                             "size": 60,
@@ -1993,6 +2331,9 @@
                             "de": "Adresse",
                             "en": "Address"
                         },
+                        "comments": {
+                            "de": "Adresse (Strassenname, Nummer etc.)"
+                        },
                         "gui_element": "SimpleText",
                         "gui_attributes": {
                             "size": 64,
@@ -2007,6 +2348,9 @@
                         "object": "TextValue",
                         "labels": {
                             "de": "Skizzenkommentar"
+                        },
+                        "comments": {
+                            "de": "Ein Skizzenkommentar zu einer Skizzenedition"
                         },
                         "gui_element": "Richtext",
                         "gui_attributes": {}
@@ -2024,72 +2368,42 @@
                         "cardinalities": [
                             {
                                 "propname": "event_rt",
-                                "comments": {
-                                    "de": "Ein Ereignis mit Relevanz f\u00fcr A. Webern und/oder sein Werk."
-                                },
                                 "cardinality": "0-1"
                             },
                             {
                                 "propname": "chronology_type",
-                                "comments": {
-                                    "de": "Art eines chronologischen Ereignisses"
-                                },
                                 "cardinality": "1-n"
                             },
                             {
                                 "propname": "date",
-                                "comments": {
-                                    "de": "Datum"
-                                },
                                 "cardinality": "0-1"
                             },
                             {
                                 "propname": "daytime",
-                                "comments": {
-                                    "de": "Tages- oder Uhrzeit eines Ereignisses"
-                                },
                                 "cardinality": "0-1"
                             },
                             {
                                 "propname": "place",
-                                "comments": {
-                                    "de": "Ort, wo ein Ereignis stattgefunden hat."
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "placeGeo",
-                                "comments": {
-                                    "de": "Geonames-Anbindung f\u00fcr einen Ort, wo ein Ereignis stattgefunden hat."
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "literature_rt",
-                                "comments": {
-                                    "de": "Literaturnachweise zu einem gegebenen Objekt"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "correspondence_rt",
-                                "comments": {
-                                    "de": "Nachweis in Korrespondez von/zu oder \u00fcber Anton Webern."
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "further_sources_rt",
-                                "comments": {
-                                    "de": "andere Quellen (als Literatur oder Korrespondenz) zu einem gegebenen Objekt"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "comment_rt",
-                                "comments": {
-                                    "de": "Unstrukturierte Bemerkungen zu einem Objekt"
-                                },
                                 "cardinality": "0-n"
                             }
                         ]
@@ -2104,181 +2418,106 @@
                         "cardinalities": [
                             {
                                 "propname": "title",
-                                "comments": {},
                                 "cardinality": "1"
                             },
                             {
                                 "propname": "corresp_type",
-                                "comments": {
-                                    "de": "Art/Gattung einer Korrespondenz (dc:type)"
-                                },
                                 "cardinality": "0-1"
                             },
                             {
                                 "propname": "creator",
-                                "comments": {},
                                 "cardinality": "1"
                             },
                             {
                                 "propname": "place",
-                                "comments": {
-                                    "de": "Ort, wo ein Ereignis stattgefunden hat."
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "date",
-                                "comments": {
-                                    "de": "Datum"
-                                },
                                 "cardinality": "0-1"
                             },
                             {
                                 "propname": "corresp_writer",
-                                "comments": {
-                                    "de": "Verfasser einer Korrespondenz"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "corresp_contributor",
-                                "comments": {
-                                    "de": "Verfasser einer Korrespondenz"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "corresp_addressReturn",
-                                "comments": {
-                                    "de": "die autographe Adresse des Absenders einer Korrespondenz"
-                                },
                                 "cardinality": "0-1"
                             },
                             {
                                 "propname": "place_writer",
-                                "comments": {
-                                    "de": "Ortsangabe zum Absender einer Korrespondenz (ResPointer)"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "date_autograph_rt",
-                                "comments": {
-                                    "de": "autographe Datierung in einer Quelle"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "date_written",
-                                "comments": {
-                                    "de": "Datum des Abfassens einer Korrespondenz"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "date_sent",
-                                "comments": {
-                                    "de": "Datum des Absendens einer Korrespondenz"
-                                },
                                 "cardinality": "0-1"
                             },
                             {
                                 "propname": "corresp_recipient",
-                                "comments": {
-                                    "de": "Empf\u00e4nger einer Korrespondenz"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "corresp_addressRecipient",
-                                "comments": {
-                                    "de": "die autographe Adresse des Empf\u00e4ngers einer Korrespondenz"
-                                },
                                 "cardinality": "0-1"
                             },
                             {
                                 "propname": "place_recipient",
-                                "comments": {
-                                    "de": "Ortsangabe zum Empf\u00e4nger einer Korrespondenz (ResPointer)"
-                                },
                                 "cardinality": "0-1"
                             },
                             {
                                 "propname": "date_received",
-                                "comments": {
-                                    "de": "Datum des Empfangs einer Korrespondenz"
-                                },
                                 "cardinality": "0-1"
                             },
                             {
                                 "propname": "source_location_rt",
-                                "comments": {
-                                    "de": "Der Ort, wo das physische Original einer Quelle aufbewahrt wird"
-                                },
                                 "cardinality": "0-1"
                             },
                             {
                                 "propname": "reproduction",
-                                "comments": {
-                                    "de": "Beschreibt den Standort (physisch, Web) einer Reproduktion einer Quelle"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "description_rt",
-                                "comments": {
-                                    "de": "Beschreibung"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "textincipit",
-                                "comments": {
-                                    "de": "Incipit eines Textes, Briefes, Liedtextes"
-                                },
                                 "cardinality": "0-1"
                             },
                             {
                                 "propname": "content_rt",
-                                "comments": {
-                                    "de": "Inhalt"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "transcription_rt",
-                                "comments": {
-                                    "de": "Transkription eines Textes"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "literature_rt",
-                                "comments": {
-                                    "de": "Literaturnachweise zu einem gegebenen Objekt"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "context_rt",
-                                "comments": {
-                                    "de": "Kontextmaterial zu einer gegebenen Quelle"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "source_rt",
-                                "comments": {
-                                    "de": "Eine zugeh\u00f6rige Ressource, von der die beschriebene Ressource abgeleitet ist. Die beschriebene Ressource kann ganz oder teilweise von der zugeh\u00f6rigen Ressource abgeleitet sein. Es wird empfohlen, die zugeh\u00f6rige Ressource mit Hilfe einer Zeichenkette zu identifizieren, die einem formalen Identifikationssystem entspricht.",
-                                    "en": "A related resource from which the described resource is derived. The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system."
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "comment_rt",
-                                "comments": {
-                                    "de": "Unstrukturierte Bemerkungen zu einem Objekt"
-                                },
                                 "cardinality": "0-n"
                             }
                         ]
@@ -2292,85 +2531,50 @@
                         "cardinalities": [
                             {
                                 "propname": "mnr_plus",
-                                "comments": {
-                                    "de": "Die AWG-ID identifiziert ein St\u00fcck eindeutig (jenseits von Moldenhauer-Nummern)."
-                                },
                                 "cardinality": "1"
                             },
                             {
                                 "propname": "mnr",
-                                "comments": {
-                                    "de": "Die Moldenhauer-Nummer identifiziert ein St\u00fcck eindeutig"
-                                },
                                 "cardinality": "0-1"
                             },
                             {
                                 "propname": "title",
-                                "comments": {},
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "date_composition",
-                                "comments": {
-                                    "de": "Datum der Komposition eines St\u00fccks"
-                                },
                                 "cardinality": "0-1"
                             },
                             {
                                 "propname": "performance",
-                                "comments": {
-                                    "de": "Auff\u00fchrungen eines St\u00fccks"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "date_firstpublication",
-                                "comments": {
-                                    "de": "Datum der Ver\u00f6ffentlichung eines St\u00fccks im Erstverlag"
-                                },
                                 "cardinality": "0-1"
                             },
                             {
                                 "propname": "firstpublisher",
-                                "comments": {
-                                    "de": "Verlag, in dem ein St\u00fcck zum ersten Mal ver\u00f6ffentlicht wurde"
-                                },
                                 "cardinality": "0-1"
                             },
                             {
                                 "propname": "instrumentation_rt",
-                                "comments": {
-                                    "de": "Besetzung des St\u00fccks"
-                                },
                                 "cardinality": "0-1"
                             },
                             {
                                 "propname": "source_rt",
-                                "comments": {
-                                    "de": "Eine zugeh\u00f6rige Ressource, von der die beschriebene Ressource abgeleitet ist. Die beschriebene Ressource kann ganz oder teilweise von der zugeh\u00f6rigen Ressource abgeleitet sein. Es wird empfohlen, die zugeh\u00f6rige Ressource mit Hilfe einer Zeichenkette zu identifizieren, die einem formalen Identifikationssystem entspricht.",
-                                    "en": "A related resource from which the described resource is derived. The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system."
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "further_non-edition_source_rt",
-                                "comments": {
-                                    "de": "Quelle zu einen Musikst\u00fcck, die f\u00fcr die Edition nicht relevant ist (posthumer Druck, etc.)"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "textsource_rt",
-                                "comments": {
-                                    "de": "Angabe einer textuellen Quelle"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "comment_rt",
-                                "comments": {
-                                    "de": "Unstrukturierte Bemerkungen zu einem Objekt"
-                                },
                                 "cardinality": "0-n"
                             }
                         ]
@@ -2384,99 +2588,58 @@
                         "cardinalities": [
                             {
                                 "propname": "opus_num",
-                                "comments": {
-                                    "de": "Opus-Nummer eines ver\u00f6ffentlichten Werkes"
-                                },
                                 "cardinality": "1"
                             },
                             {
                                 "propname": "title",
-                                "comments": {},
                                 "cardinality": "1"
                             },
                             {
                                 "propname": "date_composition",
-                                "comments": {
-                                    "de": "Datum der Komposition eines St\u00fccks"
-                                },
                                 "cardinality": "1"
                             },
                             {
                                 "propname": "performance",
-                                "comments": {
-                                    "de": "Auff\u00fchrungen eines St\u00fccks"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "date_firstpublication",
-                                "comments": {
-                                    "de": "Datum der Ver\u00f6ffentlichung eines St\u00fccks im Erstverlag"
-                                },
                                 "cardinality": "1"
                             },
                             {
                                 "propname": "firstpublisher_rt",
-                                "comments": {
-                                    "de": "Verlag der Erstpublikation"
-                                },
                                 "cardinality": "1-n"
                             },
                             {
                                 "propname": "date_further_publication",
-                                "comments": {
-                                    "de": "Datum weitere Publikation"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "further_publisher_rt",
-                                "comments": {
-                                    "de": "weiterer Verlag"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "instrumentation_rt",
-                                "comments": {
-                                    "de": "Besetzung des St\u00fccks"
-                                },
                                 "cardinality": "1"
                             },
                             {
                                 "propname": "source_rt",
-                                "comments": {
-                                    "de": "Eine zugeh\u00f6rige Ressource, von der die beschriebene Ressource abgeleitet ist. Die beschriebene Ressource kann ganz oder teilweise von der zugeh\u00f6rigen Ressource abgeleitet sein. Es wird empfohlen, die zugeh\u00f6rige Ressource mit Hilfe einer Zeichenkette zu identifizieren, die einem formalen Identifikationssystem entspricht.",
-                                    "en": "A related resource from which the described resource is derived. The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system."
-                                },
                                 "cardinality": "1-n"
                             },
                             {
                                 "propname": "further_non-edition_source_rt",
-                                "comments": {
-                                    "de": "Quelle zu einen Musikst\u00fcck, die f\u00fcr die Edition nicht relevant ist (posthumer Druck, etc.)"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "textsource_rt",
-                                "comments": {
-                                    "de": "Angabe einer textuellen Quelle"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "has_movement",
-                                "comments": {
-                                    "de": "Satzbezeichnung: Sequenz und Verweis auf Musikst\u00fcck  (zu Opus und Pr\u00e4-Opus)"
-                                },
                                 "cardinality": "1-n"
                             },
                             {
                                 "propname": "comment_rt",
-                                "comments": {
-                                    "de": "Unstrukturierte Bemerkungen zu einem Objekt"
-                                },
                                 "cardinality": "0-n"
                             }
                         ]
@@ -2490,57 +2653,34 @@
                         "cardinalities": [
                             {
                                 "propname": "title",
-                                "comments": {},
                                 "cardinality": "1"
                             },
                             {
                                 "propname": "date_composition",
-                                "comments": {
-                                    "de": "Datum der Komposition eines St\u00fccks"
-                                },
                                 "cardinality": "1"
                             },
                             {
                                 "propname": "performance",
-                                "comments": {
-                                    "de": "Auff\u00fchrungen eines St\u00fccks"
-                                },
                                 "cardinality": "0-1"
                             },
                             {
                                 "propname": "instrumentation_rt",
-                                "comments": {
-                                    "de": "Besetzung des St\u00fccks"
-                                },
                                 "cardinality": "1"
                             },
                             {
                                 "propname": "source_rt",
-                                "comments": {
-                                    "de": "Eine zugeh\u00f6rige Ressource, von der die beschriebene Ressource abgeleitet ist. Die beschriebene Ressource kann ganz oder teilweise von der zugeh\u00f6rigen Ressource abgeleitet sein. Es wird empfohlen, die zugeh\u00f6rige Ressource mit Hilfe einer Zeichenkette zu identifizieren, die einem formalen Identifikationssystem entspricht.",
-                                    "en": "A related resource from which the described resource is derived. The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system."
-                                },
                                 "cardinality": "1-n"
                             },
                             {
                                 "propname": "comment_rt",
-                                "comments": {
-                                    "de": "Unstrukturierte Bemerkungen zu einem Objekt"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "has_movement",
-                                "comments": {
-                                    "de": "Satzbezeichnung: Sequenz und Verweis auf Musikst\u00fcck  (zu Opus und Pr\u00e4-Opus)"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "preopus_of",
-                                "comments": {
-                                    "de": "Nennung der autorisierten Fassung (Webern-Opus)"
-                                },
                                 "cardinality": "1"
                             }
                         ]
@@ -2554,81 +2694,46 @@
                         "cardinalities": [
                             {
                                 "propname": "lastname",
-                                "comments": {
-                                    "de": "Nachname einer Person",
-                                    "en": "Last name of a person"
-                                },
                                 "cardinality": "1"
                             },
                             {
                                 "propname": "firstname",
-                                "comments": {
-                                    "de": "Vorname einer Person",
-                                    "en": "First name of a person"
-                                },
                                 "cardinality": "1"
                             },
                             {
                                 "propname": "alt_name_rt",
-                                "comments": {
-                                    "de": "Namensvarianten (K\u00fcnstlername, andere Schreibweisen etc.)"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "gnd",
-                                "comments": {
-                                    "de": "Verkn\u00fcpfung zur GND"
-                                },
                                 "cardinality": "0-1"
                             },
                             {
                                 "propname": "place_birth",
-                                "comments": {
-                                    "de": "Geburtsort"
-                                },
                                 "cardinality": "0-1"
                             },
                             {
                                 "propname": "date_birth",
-                                "comments": {
-                                    "de": "Geburtsdatum"
-                                },
                                 "cardinality": "0-1"
                             },
                             {
                                 "propname": "date_death",
-                                "comments": {
-                                    "de": "Sterbedatum"
-                                },
                                 "cardinality": "0-1"
                             },
                             {
                                 "propname": "place_death",
-                                "comments": {
-                                    "de": "Sterbeort"
-                                },
                                 "cardinality": "0-1"
                             },
                             {
                                 "propname": "biography_rt",
-                                "comments": {
-                                    "de": "berufliche, soziale und familienbezogene Informationen"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "relation_webern_rt",
-                                "comments": {
-                                    "de": "Bezug zu Webern"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "comment_rt",
-                                "comments": {
-                                    "de": "Unstrukturierte Bemerkungen zu einem Objekt"
-                                },
                                 "cardinality": "0-n"
                             }
                         ]
@@ -2642,156 +2747,90 @@
                         "cardinalities": [
                             {
                                 "propname": "sourcedesc_siglum",
-                                "comments": {
-                                    "de": "verwendete Quellensigle in Bezug auf ein Musikst\u00fcck"
-                                },
                                 "cardinality": "1"
                             },
                             {
                                 "propname": "sourceDesc_label",
-                                "comments": {
-                                    "de": "Identifizierende Bezeichnung einer Quellenbeschreibung"
-                                },
                                 "cardinality": "1"
                             },
                             {
                                 "propname": "source_location_rt",
-                                "comments": {
-                                    "de": "Der Ort, wo das physische Original einer Quelle aufbewahrt wird"
-                                },
                                 "cardinality": "1"
                             },
                             {
                                 "propname": "signature",
-                                "comments": {
-                                    "de": "Signatur (eindeutig)"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "signature_internal",
-                                "comments": {
-                                    "de": "interne Signatur (eindeutig) der Paul Sacher Stiftung"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "ref_sourceIndex",
-                                "comments": {
-                                    "de": "Verweis auf einen Quellenindex"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "description_rt",
-                                "comments": {
-                                    "de": "Beschreibung"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "sourceDesc_papermaterial_rt",
-                                "comments": {
-                                    "de": "Beschreibung des Papiers"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "sourceDesc_writingmat_main_hl",
-                                "comments": {
-                                    "de": "Beschreibung des Hauptschreibwerkzeugs"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "sourceDesc_writingmat_further_hl",
-                                "comments": {
-                                    "de": "Beschreibung weiterer vorkommender Schreibwerkzeuge"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "sourceDesc_title_rt",
-                                "comments": {
-                                    "de": "autographer Titel in einer Quellenbeschreibung"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "date_autograph_rt",
-                                "comments": {
-                                    "de": "autographe Datierung in einer Quelle"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "date_authentic",
-                                "comments": {
-                                    "de": "authentische Datierung"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "date_estimated",
-                                "comments": {
-                                    "de": "erschlossene Datierung"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "sourceDesc_pagination_rt",
-                                "comments": {
-                                    "de": "Paginierung"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "sourceDesc_beat_rt",
-                                "comments": {
-                                    "de": "autographe Taktzahlen in einer Quelle"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "sourceDesc_instruments_rt",
-                                "comments": {
-                                    "de": "Instrumentenvorsatz"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "sourceDesc_annotations_rt",
-                                "comments": {
-                                    "de": "Eintragungen in einer Quelle"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "content_rt",
-                                "comments": {
-                                    "de": "Inhalt"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "sourceDesc_corrections_rt",
-                                "comments": {
-                                    "de": "autographe Korrekturspuren in einer Quelle"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "date_version",
-                                "comments": {
-                                    "de": "Versionsdatum"
-                                },
                                 "cardinality": "1"
                             },
                             {
                                 "propname": "comment_rt",
-                                "comments": {
-                                    "de": "Unstrukturierte Bemerkungen zu einem Objekt"
-                                },
                                 "cardinality": "0-n"
                             }
                         ]
@@ -2805,43 +2844,26 @@
                         "cardinalities": [
                             {
                                 "propname": "__location__",
-                                "comments": {},
                                 "cardinality": 1
                             },
                             {
                                 "propname": "title",
-                                "comments": {},
                                 "cardinality": "1"
                             },
                             {
                                 "propname": "transcription",
-                                "comments": {
-                                    "de": "Transkription"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "part_of",
-                                "comments": {
-                                    "de": "Diese Property bezeichnet eine Verbindung zu einer anderen Resource, in dem ausgesagt wird, dass die vorliegende Resource ein integraler Teil der anderen Resource ist. Zum Beispiel ist eine Buchseite ein integraler Bestandteil genau eines Buches.",
-                                    "en": "This property represents a connection to another resource where the given resource is an integral part of. As an example a page is an integral part of a book."
-                                },
                                 "cardinality": "1"
                             },
                             {
                                 "propname": "seqnum",
-                                "comments": {
-                                    "de": "Diese Property bezeichnet die Position in einer geordneten Reihenfolge",
-                                    "fr": "Cette \"property\" d\u00e9note la position dans un s\u00e9quence.",
-                                    "en": "This property stands for the position within a set of ordered items (resources)"
-                                },
                                 "cardinality": "1"
                             },
                             {
                                 "propname": "comment_rt",
-                                "comments": {
-                                    "de": "Unstrukturierte Bemerkungen zu einem Objekt"
-                                },
                                 "cardinality": "0-n"
                             }
                         ]
@@ -2855,21 +2877,14 @@
                         "cardinalities": [
                             {
                                 "propname": "title",
-                                "comments": {},
                                 "cardinality": "1"
                             },
                             {
                                 "propname": "date",
-                                "comments": {
-                                    "de": "Datum"
-                                },
                                 "cardinality": "0-1"
                             },
                             {
                                 "propname": "comment_rt",
-                                "comments": {
-                                    "de": "Unstrukturierte Bemerkungen zu einem Objekt"
-                                },
                                 "cardinality": "0-n"
                             }
                         ]
@@ -2883,16 +2898,10 @@
                         "cardinalities": [
                             {
                                 "propname": "rism_sigle",
-                                "comments": {
-                                    "de": "Repr\u00e4sentiert das RISM-Sigle einer Bibliothek."
-                                },
                                 "cardinality": "1"
                             },
                             {
                                 "propname": "description_rt",
-                                "comments": {
-                                    "de": "Beschreibung"
-                                },
                                 "cardinality": "0-1"
                             }
                         ]
@@ -2906,38 +2915,22 @@
                         "cardinalities": [
                             {
                                 "propname": "signature",
-                                "comments": {
-                                    "de": "Signatur (eindeutig)"
-                                },
                                 "cardinality": "1-n"
                             },
                             {
                                 "propname": "description_rt",
-                                "comments": {
-                                    "de": "Beschreibung"
-                                },
                                 "cardinality": "0-1"
                             },
                             {
                                 "propname": "part_of",
-                                "comments": {
-                                    "de": "Diese Property bezeichnet eine Verbindung zu einer anderen Resource, in dem ausgesagt wird, dass die vorliegende Resource ein integraler Teil der anderen Resource ist. Zum Beispiel ist eine Buchseite ein integraler Bestandteil genau eines Buches.",
-                                    "en": "This property represents a connection to another resource where the given resource is an integral part of. As an example a page is an integral part of a book."
-                                },
                                 "cardinality": "0-1"
                             },
                             {
                                 "propname": "part_of_sourceindex",
-                                "comments": {
-                                    "de": "Diese Property bezeichnet eine Verbindung zu einer anderen Resource, in dem ausgesagt wird, dass die vorliegende Resource ein integraler Teil eines Quellenindex ist. Zum Beispiel ist ein Quellenindex ein integraler Bestandteil genau eines anderen Quellenindexes."
-                                },
                                 "cardinality": "0-1"
                             },
                             {
                                 "propname": "owning_institution",
-                                "comments": {
-                                    "de": "bezeichnet eine besitzende Institution \n\nowl:equivalentProperty dbo:owningOrganisation"
-                                },
                                 "cardinality": "0-1"
                             }
                         ]
@@ -2951,59 +2944,34 @@
                         "cardinalities": [
                             {
                                 "propname": "__location__",
-                                "comments": {},
                                 "cardinality": 1
                             },
                             {
                                 "propname": "ref_mnr",
-                                "comments": {
-                                    "de": "Bezug zu einer Moldenhauernummer"
-                                },
                                 "cardinality": "1"
                             },
                             {
                                 "propname": "filepath_original",
-                                "comments": {
-                                    "de": "gibt den originalen Namen einer Scan-Datei an"
-                                },
                                 "cardinality": "1"
                             },
                             {
                                 "propname": "description_rt",
-                                "comments": {
-                                    "de": "Beschreibung"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "published_in",
-                                "comments": {
-                                    "de": "Bibliographischer Nachweis von Abdrucken eines Musikst\u00fccks"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "part_of",
-                                "comments": {
-                                    "de": "Diese Property bezeichnet eine Verbindung zu einer anderen Resource, in dem ausgesagt wird, dass die vorliegende Resource ein integraler Teil der anderen Resource ist. Zum Beispiel ist eine Buchseite ein integraler Bestandteil genau eines Buches.",
-                                    "en": "This property represents a connection to another resource where the given resource is an integral part of. As an example a page is an integral part of a book."
-                                },
                                 "cardinality": "1"
                             },
                             {
                                 "propname": "seqnum",
-                                "comments": {
-                                    "de": "Diese Property bezeichnet die Position in einer geordneten Reihenfolge",
-                                    "fr": "Cette \"property\" d\u00e9note la position dans un s\u00e9quence.",
-                                    "en": "This property stands for the position within a set of ordered items (resources)"
-                                },
                                 "cardinality": "0-1"
                             },
                             {
                                 "propname": "comment_rt",
-                                "comments": {
-                                    "de": "Unstrukturierte Bemerkungen zu einem Objekt"
-                                },
                                 "cardinality": "0-n"
                             }
                         ]
@@ -3017,90 +2985,54 @@
                         "cardinalities": [
                             {
                                 "propname": "title",
-                                "comments": {},
                                 "cardinality": "1"
                             },
                             {
                                 "propname": "corresp_type",
-                                "comments": {
-                                    "de": "Art/Gattung einer Korrespondenz (dc:type)"
-                                },
                                 "cardinality": "0-1"
                             },
                             {
                                 "propname": "creator",
-                                "comments": {},
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "place",
-                                "comments": {
-                                    "de": "Ort, wo ein Ereignis stattgefunden hat."
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "date",
-                                "comments": {
-                                    "de": "Datum"
-                                },
                                 "cardinality": "0-1"
                             },
                             {
                                 "propname": "source_location_rt",
-                                "comments": {
-                                    "de": "Der Ort, wo das physische Original einer Quelle aufbewahrt wird"
-                                },
                                 "cardinality": "0-1"
                             },
                             {
                                 "propname": "description_rt",
-                                "comments": {
-                                    "de": "Beschreibung"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "content_rt",
-                                "comments": {
-                                    "de": "Inhalt"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "transcription_rt",
-                                "comments": {
-                                    "de": "Transkription eines Textes"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "literature_rt",
-                                "comments": {
-                                    "de": "Literaturnachweise zu einem gegebenen Objekt"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "further_sources_rt",
-                                "comments": {
-                                    "de": "andere Quellen (als Literatur oder Korrespondenz) zu einem gegebenen Objekt"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "source_rt",
-                                "comments": {
-                                    "de": "Eine zugeh\u00f6rige Ressource, von der die beschriebene Ressource abgeleitet ist. Die beschriebene Ressource kann ganz oder teilweise von der zugeh\u00f6rigen Ressource abgeleitet sein. Es wird empfohlen, die zugeh\u00f6rige Ressource mit Hilfe einer Zeichenkette zu identifizieren, die einem formalen Identifikationssystem entspricht.",
-                                    "en": "A related resource from which the described resource is derived. The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system."
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "comment_rt",
-                                "comments": {
-                                    "de": "Unstrukturierte Bemerkungen zu einem Objekt"
-                                },
                                 "cardinality": "0-n"
                             }
                         ]
@@ -3114,164 +3046,94 @@
                         "cardinalities": [
                             {
                                 "propname": "bibl_title_short",
-                                "comments": {
-                                    "de": "Kurztitel f\u00fcr bibliografierte Literatur"
-                                },
                                 "cardinality": "1"
                             },
                             {
                                 "propname": "bibl_type",
-                                "comments": {
-                                    "de": "Typ einer Bibliografieangabe"
-                                },
                                 "cardinality": "0-1"
                             },
                             {
                                 "propname": "bibl_unpublished",
-                                "comments": {
-                                    "de": "Typ einer unpublizierten Literaturangabe"
-                                },
                                 "cardinality": "0-1"
                             },
                             {
                                 "propname": "author",
-                                "comments": {
-                                    "de": "Ein Autor (lat. auctor \u201eUrheber\u201c, \u201eSch\u00f6pfer\u201c, \u201eF\u00f6rderer\u201c, \u201eVeranlasser\u201c) ist der Verfasser oder geistige Urheber eines Werkes. Dabei handelt es sich meist um Werke der Literatur im weitesten Sinn (Schriftsteller, Fachbuch-, Lehrbuch-, Sachbuch-, Drehbuch-, Fernseh-, Opern- oder B\u00fchnenautor). Seltener wird, mit einem deutlich juristischen Beiklang, als Autor der Urheber eines Werkes der nichtliterarischen Kunst (etwa Musik, Fotografie, Filmkunst) und der Wissenschaft verstanden (vgl. auch Softwareautoren, Gesetzesautoren). Un\u00fcblich scheint es auch zu sein, konkrete Poesie, visuelle Poesie oder Wortbilder als von Autoren geschaffen zu bezeichnen. (Wikipedia http://de.wikipedia.org/wiki/Autor)",
-                                    "en": "An author or authress (sometimes, in reference to a woman author, authoress) is defined both as \"the person who originates or gives existence to anything\" and that authorship determines responsibility for what is created. (Wikipedia http://en.wikipedia.org/wiki/Author)"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "bibl_title_dependent_rt",
-                                "comments": {
-                                    "de": "Titelaufnahme unselbst\u00e4ndiger Literatur"
-                                },
                                 "cardinality": "0-1"
                             },
                             {
                                 "propname": "bibl_title_independent_rp",
-                                "comments": {
-                                    "de": "ResourcePointer auf eine selbst\u00e4ndige Literaturangabe"
-                                },
                                 "cardinality": "0-1"
                             },
                             {
                                 "propname": "bibl_title_independent_rt",
-                                "comments": {
-                                    "de": "Titelaufnahme selbst\u00e4ndiger Literatur"
-                                },
                                 "cardinality": "0-1"
                             },
                             {
                                 "propname": "editor",
-                                "comments": {
-                                    "de": "Herausgeber"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "place_publisher",
-                                "comments": {
-                                    "de": "Verlagsort"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "bibl_publisher",
-                                "comments": {
-                                    "de": "Verlag"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "ed_pubdate",
-                                "comments": {
-                                    "de": "Publikationsdatum einer Ver\u00f6ffentlichung"
-                                },
                                 "cardinality": "0-1"
                             },
                             {
                                 "propname": "bibl_pages_type",
-                                "comments": {
-                                    "de": "Gibt die Art der Z\u00e4hlung an (Blatt, Seite, Spalte, Zeile)"
-                                },
                                 "cardinality": "0-1"
                             },
                             {
                                 "propname": "bibl_pages",
-                                "comments": {
-                                    "de": "Seitenangabe f\u00fcr bibliografierte Literatur"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "bibl_title_series_rt",
-                                "comments": {
-                                    "de": "Titelaufnahme f\u00fcr Reihen"
-                                },
                                 "cardinality": "0-1"
                             },
                             {
                                 "propname": "bibl_addition_rt",
-                                "comments": {
-                                    "de": "zus\u00e4tzliche Angaben in einer Bibliografie"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "bibl_abstract_rt",
-                                "comments": {
-                                    "de": "Abstract f\u00fcr eine bibliografierte Literatur"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "bibl_online_rt",
-                                "comments": {
-                                    "de": "URL f\u00fcr den Online-Zugang zu einer bibliografierten Literatur"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "date_version",
-                                "comments": {
-                                    "de": "Versionsdatum"
-                                },
                                 "cardinality": "1"
                             },
                             {
                                 "propname": "bibl_usage",
-                                "comments": {
-                                    "de": "Auswahl einer Bibliografie, in der eine bestimmte Literaturangabe verwendet werden soll"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "bibl_status",
-                                "comments": {
-                                    "de": "Status einer bibliografischen Angabe"
-                                },
                                 "cardinality": "1"
                             },
                             {
                                 "propname": "bibl_source_rt",
-                                "comments": {
-                                    "de": "Quellenangabe zu einer bibliografierten Literatur"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "bibl_location_rt",
-                                "comments": {
-                                    "de": "Standort einer bibliografierten Literatur in der Swissbib"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "comment_rt",
-                                "comments": {
-                                    "de": "Unstrukturierte Bemerkungen zu einem Objekt"
-                                },
                                 "cardinality": "0-n"
                             }
                         ]
@@ -3285,50 +3147,30 @@
                         "cardinalities": [
                             {
                                 "propname": "__location__",
-                                "comments": {},
                                 "cardinality": 1
                             },
                             {
                                 "propname": "title",
-                                "comments": {},
                                 "cardinality": "1"
                             },
                             {
                                 "propname": "filepath_original",
-                                "comments": {
-                                    "de": "gibt den originalen Namen einer Scan-Datei an"
-                                },
                                 "cardinality": "1"
                             },
                             {
                                 "propname": "description_rt",
-                                "comments": {
-                                    "de": "Beschreibung"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "part_of",
-                                "comments": {
-                                    "de": "Diese Property bezeichnet eine Verbindung zu einer anderen Resource, in dem ausgesagt wird, dass die vorliegende Resource ein integraler Teil der anderen Resource ist. Zum Beispiel ist eine Buchseite ein integraler Bestandteil genau eines Buches.",
-                                    "en": "This property represents a connection to another resource where the given resource is an integral part of. As an example a page is an integral part of a book."
-                                },
                                 "cardinality": "1"
                             },
                             {
                                 "propname": "seqnum",
-                                "comments": {
-                                    "de": "Diese Property bezeichnet die Position in einer geordneten Reihenfolge",
-                                    "fr": "Cette \"property\" d\u00e9note la position dans un s\u00e9quence.",
-                                    "en": "This property stands for the position within a set of ordered items (resources)"
-                                },
                                 "cardinality": "1"
                             },
                             {
                                 "propname": "comment_rt",
-                                "comments": {
-                                    "de": "Unstrukturierte Bemerkungen zu einem Objekt"
-                                },
                                 "cardinality": "0-n"
                             }
                         ]
@@ -3342,93 +3184,54 @@
                         "cardinalities": [
                             {
                                 "propname": "sourcedesc_siglum",
-                                "comments": {
-                                    "de": "verwendete Quellensigle in Bezug auf ein Musikst\u00fcck"
-                                },
                                 "cardinality": "1"
                             },
                             {
                                 "propname": "sourceDesc_label",
-                                "comments": {
-                                    "de": "Identifizierende Bezeichnung einer Quellenbeschreibung"
-                                },
                                 "cardinality": "1"
                             },
                             {
                                 "propname": "sourceDesc_impresssum",
-                                "comments": {
-                                    "de": "Publikationsangaben zu einer Druckver\u00f6ffentlichung (Ort: Verlag, Jahr)"
-                                },
                                 "cardinality": "1"
                             },
                             {
                                 "propname": "place_publisher",
-                                "comments": {
-                                    "de": "Verlagsort"
-                                },
                                 "cardinality": "1"
                             },
                             {
                                 "propname": "placeGeo",
-                                "comments": {
-                                    "de": "Geonames-Anbindung f\u00fcr einen Ort, wo ein Ereignis stattgefunden hat."
-                                },
                                 "cardinality": "0-1"
                             },
                             {
                                 "propname": "ref_publisher",
-                                "comments": {
-                                    "de": "Referenz auf einen Verlag (Objekt)"
-                                },
                                 "cardinality": "0-1"
                             },
                             {
                                 "propname": "date_publication",
-                                "comments": {
-                                    "de": "Datum einer Publikation"
-                                },
                                 "cardinality": "1"
                             },
                             {
                                 "propname": "source_location_ED_used_rt",
-                                "comments": {
-                                    "de": "Der Ort, wo das physische Original eines gedruckten Exemplars aufbewahrt wird, das f\u00fcr eine Quellenbeschreibung konsultiert wurde"
-                                },
                                 "cardinality": "1"
                             },
                             {
                                 "propname": "source_location_ED_further_rt",
-                                "comments": {
-                                    "de": "Der Ort, wo weitere physische Original eines Druckes aufbewahrt werden"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "description_rt",
-                                "comments": {
-                                    "de": "Beschreibung"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "sourceDesc_ED_title",
-                                "comments": {
-                                    "de": "in eine Quellenbeschreibung aufgenommener Titel nach Vorlage eines Druckes "
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "content_rt",
-                                "comments": {
-                                    "de": "Inhalt"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "comment",
-                                "comments": {
-                                    "de": "Unstrukturierte Bemerkungen zu einem Objekt"
-                                },
                                 "cardinality": "0-n"
                             }
                         ]
@@ -3442,46 +3245,26 @@
                         "cardinalities": [
                             {
                                 "propname": "publisher",
-                                "comments": {
-                                    "de": "Ein Verlag ist ein Medienunternehmen, das Werke der Literatur, Kunst, Musik oder Wissenschaft vervielf\u00e4ltigt und verbreitet. Der Verkauf kann \u00fcber den Handel (Kunst-, Buchhandel etc.) oder durch den Verlag selbst erfolgen. Das Wort \u201everlegen\u201c bedeutet im Mittelhochdeutschen \u201eGeld ausgeben\u201c oder \u201eetwas auf seine Rechnung nehmen\u201c. (Wikipedia http://de.wikipedia.org/wiki/Verlag)",
-                                    "fr": "Une maison d\u2019\u00e9dition est une entreprise ou une association dont l\u2019activit\u00e9 principale est la production et la diffusion de livres. L\u2019activit\u00e9 est donc li\u00e9e \u00e0 l\u2019\u00e9dition de documents. Trois formes d'entreprise dominent la profession : SA, SARL et entreprise personnelle. (Wikipedia http://fr.wikipedia.org/wiki/Maison_d%27\u00e9dition)",
-                                    "en": "Publishing is the process of production and dissemination of literature or information \u2013 the activity of making information available for public view. In some cases authors may be their own publishers, meaning: originators and developers of content also provide media to deliver and display the content. (Wikipedia http://en.wikipedia.org/wiki/Publisher)"
-                                },
                                 "cardinality": "1"
                             },
                             {
                                 "propname": "alt_name_rt",
-                                "comments": {
-                                    "de": "Namensvarianten (K\u00fcnstlername, andere Schreibweisen etc.)"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "gnd",
-                                "comments": {
-                                    "de": "Verkn\u00fcpfung zur GND"
-                                },
                                 "cardinality": "0-1"
                             },
                             {
                                 "propname": "address",
-                                "comments": {
-                                    "de": "Adresse (Strassenname, Nummer etc.)"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "description_rt",
-                                "comments": {
-                                    "de": "Beschreibung"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "comment_rt",
-                                "comments": {
-                                    "de": "Unstrukturierte Bemerkungen zu einem Objekt"
-                                },
                                 "cardinality": "0-n"
                             }
                         ]
@@ -3495,50 +3278,30 @@
                         "cardinalities": [
                             {
                                 "propname": "__location__",
-                                "comments": {},
                                 "cardinality": 1
                             },
                             {
                                 "propname": "title",
-                                "comments": {},
                                 "cardinality": "1"
                             },
                             {
                                 "propname": "filepath_original",
-                                "comments": {
-                                    "de": "gibt den originalen Namen einer Scan-Datei an"
-                                },
                                 "cardinality": "1"
                             },
                             {
                                 "propname": "description_rt",
-                                "comments": {
-                                    "de": "Beschreibung"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "part_of",
-                                "comments": {
-                                    "de": "Diese Property bezeichnet eine Verbindung zu einer anderen Resource, in dem ausgesagt wird, dass die vorliegende Resource ein integraler Teil der anderen Resource ist. Zum Beispiel ist eine Buchseite ein integraler Bestandteil genau eines Buches.",
-                                    "en": "This property represents a connection to another resource where the given resource is an integral part of. As an example a page is an integral part of a book."
-                                },
                                 "cardinality": "1"
                             },
                             {
                                 "propname": "seqnum",
-                                "comments": {
-                                    "de": "Diese Property bezeichnet die Position in einer geordneten Reihenfolge",
-                                    "fr": "Cette \"property\" d\u00e9note la position dans un s\u00e9quence.",
-                                    "en": "This property stands for the position within a set of ordered items (resources)"
-                                },
                                 "cardinality": "1"
                             },
                             {
                                 "propname": "comment_rt",
-                                "comments": {
-                                    "de": "Unstrukturierte Bemerkungen zu einem Objekt"
-                                },
                                 "cardinality": "0-n"
                             }
                         ]
@@ -3552,21 +3315,14 @@
                         "cardinalities": [
                             {
                                 "propname": "title",
-                                "comments": {},
                                 "cardinality": "1"
                             },
                             {
                                 "propname": "sketch_commentary",
-                                "comments": {
-                                    "de": "Ein Skizzenkommentar zu einer Skizzenedition"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "comment_rt",
-                                "comments": {
-                                    "de": "Unstrukturierte Bemerkungen zu einem Objekt"
-                                },
                                 "cardinality": "0-n"
                             }
                         ]
@@ -3580,50 +3336,30 @@
                         "cardinalities": [
                             {
                                 "propname": "__location__",
-                                "comments": {},
                                 "cardinality": 1
                             },
                             {
                                 "propname": "title",
-                                "comments": {},
                                 "cardinality": "1"
                             },
                             {
                                 "propname": "filepath_original",
-                                "comments": {
-                                    "de": "gibt den originalen Namen einer Scan-Datei an"
-                                },
                                 "cardinality": "1"
                             },
                             {
                                 "propname": "description_rt",
-                                "comments": {
-                                    "de": "Beschreibung"
-                                },
                                 "cardinality": "0-n"
                             },
                             {
                                 "propname": "part_of",
-                                "comments": {
-                                    "de": "Diese Property bezeichnet eine Verbindung zu einer anderen Resource, in dem ausgesagt wird, dass die vorliegende Resource ein integraler Teil der anderen Resource ist. Zum Beispiel ist eine Buchseite ein integraler Bestandteil genau eines Buches.",
-                                    "en": "This property represents a connection to another resource where the given resource is an integral part of. As an example a page is an integral part of a book."
-                                },
                                 "cardinality": "1"
                             },
                             {
                                 "propname": "seqnum",
-                                "comments": {
-                                    "de": "Diese Property bezeichnet die Position in einer geordneten Reihenfolge",
-                                    "fr": "Cette \"property\" d\u00e9note la position dans un s\u00e9quence.",
-                                    "en": "This property stands for the position within a set of ordered items (resources)"
-                                },
                                 "cardinality": "1"
                             },
                             {
                                 "propname": "comment_rt",
-                                "comments": {
-                                    "de": "Unstrukturierte Bemerkungen zu einem Objekt"
-                                },
                                 "cardinality": "0-n"
                             }
                         ]
