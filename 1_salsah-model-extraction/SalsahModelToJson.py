@@ -87,10 +87,10 @@ class Converter:
                     'vocabulary': vocabulary["shortname"],
                     'lang': 'all'
                 }
+                # fetch selections
                 req = requests.get('http://salsah.org/api/selections/', params=payload)
-                result = req.json()
-
-                selections = result['selections']
+                selection_results = req.json()
+                selections = selection_results['selections']
 
                 # Let's make an empty list for the lists:
                 selections_container = []
@@ -126,12 +126,13 @@ class Converter:
                     'vocabulary': vocabulary["shortname"],
                     'lang': 'all'
                 }
+                # fetch hlists
                 req = requests.get('http://salsah.org/api/hlists', params=payload)
-                result = req.json()
+                hlist_results = req.json()
 
-                self.hlist_node_mapping.update(dict(map(lambda a: (a['id'], a['name']), result['hlists'])))
+                self.hlist_node_mapping.update(dict(map(lambda a: (a['id'], a['name']), hlist_results['hlists'])))
 
-                hlists = result['hlists']
+                hlists = hlist_results['hlists']
 
                 # pprint(selections_container)
                 # time.sleep(15)
@@ -285,13 +286,15 @@ class Converter:
 
         hlist_node_mapping = {}
 
+        # fetch selections
         req = requests.get('http://salsah.org/api/selections/')
-        result = req.json()
-        selections = result["selections"]
+        selection_results = req.json()
+        selections = selection_results["selections"]
 
+        # fetch hlists
         req2 = requests.get('http://salsah.org/api/hlists/')
-        result2 = req2.json()
-        hlists = result2["hlists"]
+        hlist_results = req2.json()
+        hlists = hlist_results["hlists"]
 
         for vocabulary in salsahJson.salsahVocabularies["vocabularies"]:
             if project["id"] == vocabulary["project_id"]:
