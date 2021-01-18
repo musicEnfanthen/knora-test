@@ -189,23 +189,26 @@ class Converter:
                     'vocabulary': vocabulary["shortname"],
                     'lang': 'all'
                 }
+                # fetch resourcetypes
                 req = requests.get('http://salsah.org/api/resourcetypes/', params=payload)
-                resourcetypes = req.json()
+                resourcetype_result = req.json()
+                resourcetypes = resourcetype_result["resourcetypes"]
 
                 # Here we type in the "name"
-                for momResId in resourcetypes["resourcetypes"]:
+                for resourcetype in resourcetypes:
                     tmpOnto["project"]["ontologies"][0]["resources"].append({
-                        "name": momResId["label"][0]["label"],
+                        "name": resourcetype["label"][0]["label"],
                         "super": "",
                         "labels": {},
                         "cardinalities": []
                     })
                     # Here we fill in the labels
-                    for label in momResId["label"]:
+                    for label in resourcetype["label"]:
                         tmpOnto["project"]["ontologies"][0]["resources"][-1]["labels"].update(
                             {label["shortname"]: label["label"]})
-                    # Here we fill in the cardinalities
-                    req = requests.get('https://salsah.org/api/resourcetypes/{}?lang=all'.format(momResId["id"]))
+
+                    # fetch restype_info
+                    req = requests.get('https://salsah.org/api/resourcetypes/{}?lang=all'.format(resourcetype["id"]))
                     resType = req.json()
                     resTypeInfo = resType["restype_info"]
 
@@ -296,13 +299,15 @@ class Converter:
                     'vocabulary': vocabulary["shortname"],
                     'lang': 'all'
                 }
+                # fetch resourcetypes
                 req = requests.get('http://salsah.org/api/resourcetypes/', params=payload)
-                resourcetypes = req.json()
+                resourcetype_results = req.json()
+                resourcetypes = resourcetype_results["resourcetypes"]
 
                 controlList.clear()  # The list needs to be cleared for every project
 
-                for momResId in resourcetypes["resourcetypes"]:
-                    for propertiesId in momResId["properties"]:
+                for resourcetype in resourcetypes:
+                    for propertiesId in resourcetype["properties"]:
                         # for labelId in propertiesId["label"]: - If you want for every language a single property
                         if propertiesId["label"][0]["label"] in controlList:
                             continue
@@ -332,7 +337,7 @@ class Converter:
                                 propId = propertiesId["id"]
 
                         req = requests.get(
-                            'https://salsah.org/api/resourcetypes/{}?lang=all'.format(momResId["id"]))
+                            'https://salsah.org/api/resourcetypes/{}?lang=all'.format(resourcetype["id"]))
                         resType = req.json()
                         resTypeInfo = resType["restype_info"]
 
