@@ -47,27 +47,27 @@ class Converter:
     # ==================================================================================================================
     # Fill the description - if present - into the empty ontology
     def fillDesc(self, project):
-        for vocabularies in salsahJson.salsahVocabularies["vocabularies"]:
-            if vocabularies["description"] and vocabularies["shortname"].lower() == project["shortname"].lower():
-                tmpOnto["project"]["descriptions"] = vocabularies["description"]
+        for vocabulary in salsahJson.salsahVocabularies["vocabularies"]:
+            if vocabulary["description"] and vocabulary["shortname"].lower() == project["shortname"].lower():
+                tmpOnto["project"]["descriptions"] = vocabulary["description"]
 
     # ==================================================================================================================
     # Fill in the vocabulary name and label
     def fillVocName(self, projects):
-        for vocabularies in salsahJson.salsahVocabularies["vocabularies"]:
-            if vocabularies["project_id"] == projects["id"]:
-                tmpOnto["project"]["ontologies"][0]["name"] = vocabularies["shortname"]
-                tmpOnto["project"]["ontologies"][0]["label"] = vocabularies["longname"]
+        for vocabulary in salsahJson.salsahVocabularies["vocabularies"]:
+            if vocabulary["project_id"] == projects["id"]:
+                tmpOnto["project"]["ontologies"][0]["name"] = vocabulary["shortname"]
+                tmpOnto["project"]["ontologies"][0]["label"] = vocabulary["longname"]
 
     # ==================================================================================================================
     # Function responsible to get the keywords of the corresponding project
     def fetchKeywords(self, project):
-        for vocabularies in salsahJson.salsahVocabularies["vocabularies"]:
-            if vocabularies["project_id"] == projects["id"]:
-
-                req = requests.get('https://www.salsah.org/api/projects/{}?lang=all'.format(vocabularies["shortname"]))
-
+        for vocabulary in salsahJson.salsahVocabularies["vocabularies"]:
+            if vocabulary["project_id"] == projects["id"]:
+                # fetch project_info
+                req = requests.get('https://www.salsah.org/api/projects/{}?lang=all'.format(vocabulary["shortname"]))
                 result = req.json()
+
                 if 'project_info' in result.keys():
                     project_info = result['project_info']
                     if project_info['keywords'] is not None:
@@ -81,10 +81,10 @@ class Converter:
     # ==================================================================================================================
     # Function that fetches the lists for a correspinding project
     def fetchLists(self, project):
-        for vocabularies in salsahJson.salsahVocabularies["vocabularies"]:
-            if vocabularies["project_id"] == projects["id"]:
+        for vocabulary in salsahJson.salsahVocabularies["vocabularies"]:
+            if vocabulary["project_id"] == projects["id"]:
                 payload: dict = {
-                    'vocabulary': vocabularies["shortname"],
+                    'vocabulary': vocabulary["shortname"],
                     'lang': 'all'
                 }
                 req = requests.get('http://salsah.org/api/selections/', params=payload)
@@ -123,7 +123,7 @@ class Converter:
                 # now we get the hierarchical lists (hlists)
                 #
                 payload = {
-                    'vocabulary': vocabularies["shortname"],
+                    'vocabulary': vocabulary["shortname"],
                     'lang': 'all'
                 }
                 req = requests.get('http://salsah.org/api/hlists', params=payload)
@@ -183,10 +183,10 @@ class Converter:
             "image": "StillImageRepresentation"
         }
 
-        for vocabularies in salsahJson.salsahVocabularies["vocabularies"]:
-            if project["id"] == vocabularies["project_id"]:
+        for vocabulary in salsahJson.salsahVocabularies["vocabularies"]:
+            if project["id"] == vocabulary["project_id"]:
                 payload: dict = {
-                    'vocabulary': vocabularies["shortname"],
+                    'vocabulary': vocabulary["shortname"],
                     'lang': 'all'
                 }
                 req = requests.get('http://salsah.org/api/resourcetypes/', params=payload)
@@ -290,10 +290,10 @@ class Converter:
         result2 = req2.json()
         hlists = result2["hlists"]
 
-        for vocabularies in salsahJson.salsahVocabularies["vocabularies"]:
-            if project["id"] == vocabularies["project_id"]:
+        for vocabulary in salsahJson.salsahVocabularies["vocabularies"]:
+            if project["id"] == vocabulary["project_id"]:
                 payload: dict = {
-                    'vocabulary': vocabularies["shortname"],
+                    'vocabulary': vocabulary["shortname"],
                     'lang': 'all'
                 }
                 req = requests.get('http://salsah.org/api/resourcetypes/', params=payload)
@@ -406,8 +406,8 @@ class Converter:
                                                 linkValueResName = linkValueResTypeInfo["name"]
 
                                                 # if LinkValue is from the same vocabulary, remove vocabulary prefix
-                                                if linkValueResName.startswith(vocabularies["shortname"], 0):
-                                                    linkValueResName = linkValueResName.removeprefix(vocabularies["shortname"])
+                                                if linkValueResName.startswith(vocabulary["shortname"], 0):
+                                                    linkValueResName = linkValueResName.removeprefix(vocabulary["shortname"])
 
                                                 # replace "LinkValue" with resolved resource type name
                                                 tmpOnto["project"]["ontologies"][0]["properties"][-1]["object"] = linkValueResName
