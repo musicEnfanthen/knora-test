@@ -231,10 +231,17 @@ class Converter:
                         pprint(resTypeInfo["class"])
                         #     exit()
 
-                    # fill in the cardinalities
+                    # fill in the cardinalities with propname and cardinality of occurences
                     for propertyId in resTypeInfo["properties"]:
+                        # check vocabulary of propertyId
+                        propertyName = ""
+                        if propertyId["vocabulary"].lower() is not None and propertyId["vocabulary"].lower() == project["shortname"].lower():
+                            propertyName = ":" + propertyId["name"]
+                        elif propertyId["vocabulary"].lower() is not None:
+                            propertyName = propertyId["vocabulary"].lower() + ":" + propertyId["name"]
+
                         tmpOnto["project"]["ontologies"][0]["resources"][-1]["cardinalities"].append({
-                            "propname": propertyId["name"],
+                            "propname": propertyName,
                             # "gui_order": "",  # TODO gui_order not yet implemented by knora.
                             "cardinality": propertyId["occurrence"]
                         })
