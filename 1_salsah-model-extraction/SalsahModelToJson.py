@@ -201,9 +201,11 @@ class Converter:
                         "name": resourcetype["label"][0]["label"],
                         "super": "",
                         "labels": {},
+                        "comments": {},
                         "cardinalities": []
                     })
-                    # Here we fill in the labels
+
+                    # fill in the labels
                     for label in resourcetype["label"]:
                         tmpOnto["project"]["ontologies"][0]["resources"][-1]["labels"].update(
                             {label["shortname"]: label["label"]})
@@ -213,12 +215,23 @@ class Converter:
                     resType = req.json()
                     resTypeInfo = resType["restype_info"]
 
-                    # if resTypeInfo["class"] not in superMap: #  here we fill in our superMap
-                    #     pprint(resTypeInfo["class"])
-                    #     exit()
+                    # fill in the description of the resources as comments
+                    if resTypeInfo["description"] is not None and isinstance(resTypeInfo["description"], list):
+                        for descriptionId in resTypeInfo["description"]:
+                            tmpOnto["project"]["ontologies"][0]["resources"][-1]["comments"].update({
+                                descriptionId["shortname"]: descriptionId["description"]
+                            })
 
-                    tmpOnto["project"]["ontologies"][0]["resources"][-1]["super"] = superMap[resTypeInfo["class"]] # Fill in the super of the ressource
+                    # fill in super attributes of the resource. Default is "Resource"
+                    if resTypeInfo["class"] is not None and resTypeInfo["class"] in superMap:
+                        tmpOnto["project"]["ontologies"][0]["resources"][-1]["super"] = superMap[resTypeInfo["class"]]
+                    else:
+                        # TODO: check if correct?
+                        # tmpOnto["project"]["ontologies"][0]["resources"][-1]["super"] = superMap["object"]
+                        pprint(resTypeInfo["class"])
+                        #     exit()
 
+                    # fill in the cardinalities
                     for propertyId in resTypeInfo["properties"]:
                         tmpOnto["project"]["ontologies"][0]["resources"][-1]["cardinalities"].append({
                             "propname": propertyId["name"],
