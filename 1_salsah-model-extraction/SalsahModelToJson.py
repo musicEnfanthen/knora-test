@@ -195,7 +195,7 @@ class Converter:
                 resourcetype_result = req.json()
                 resourcetypes = resourcetype_result["resourcetypes"]
 
-                # Here we type in the "name"
+                # prepare resources pattern
                 for resourcetype in resourcetypes:
                     tmpOnto["project"]["ontologies"][0]["resources"].append({
                         "name": resourcetype["label"][0]["label"],
@@ -250,7 +250,7 @@ class Converter:
 
     # ==================================================================================================================
     def fetchProperties(self, project):
-        controlList = []  # List to identify dublicates of properties. We dont want dublicates in the properties list
+        controlList = []  # List to identify duplicates of properties. We dont want duplicates in the properties list
         propId = 0  # Is needed to save the property Id to get the guiElement
         resId = 0  # Is needed to save the resource Id to get the guiElement
 
@@ -322,20 +322,27 @@ class Converter:
                     'vocabulary': vocabulary["shortname"],
                     'lang': 'all'
                 }
-                # fetch resourcetypes
+                # fetch all resourcetypes
                 req = requests.get('http://salsah.org/api/resourcetypes/', params=payload)
                 resourcetype_results = req.json()
                 resourcetypes = resourcetype_results["resourcetypes"]
 
-                controlList.clear()  # The list needs to be cleared for every project
+                controlList.clear()  # The list needs to be cleared for every project / vocabulary
 
                 for resourcetype in resourcetypes:
-                    for propertiesId in resourcetype["properties"]:
-                        # for labelId in propertiesId["label"]: - If you want for every language a single property
-                        if propertiesId["label"][0]["label"] in controlList:
+                    # fetch the single resourcetype info
+                    req = requests.get(
+                        'https://salsah.org/api/resourcetypes/{}?lang=all'.format(resourcetype["id"]))
+                    resType = req.json()
+                    resTypeInfo = resType["restype_info"]
+
+                    # loop through all properties of a resourcetype
+                    for property in resTypeInfo["properties"]:
+                        # check for duplicates
+                        if property["name"] in controlList:
                             continue
                         else:
-                            # Fill in the name of the property as well as getting the framework done
+                            # prepare properties pattern
                             tmpOnto["project"]["ontologies"][0]["properties"].append({
                                 "name": "",
                                 "super": [],
@@ -345,100 +352,109 @@ class Converter:
                                 "gui_element": "",
                                 "gui_attributes": {}
                             })
-                            tmpOnto["project"]["ontologies"][0]["properties"][-1]["name"] = propertiesId["label"][0]["label"]
-                            controlList.append(propertiesId["label"][0]["label"])
 
-                            # Fill in the labels of the properties - Its all the different language-names of the property
-                            for labelId in propertiesId["label"]:
-                                tmpOnto["project"]["ontologies"][0]["properties"][-1]["labels"].update({
-                                    labelId["shortname"]: labelId["label"]
-                                })
+                            # check vocabulary of property
+                            propertyName = ""
+                            if property["vocabulary"].lower() is not None and property["vocabulary"].lower() == project["shortname"].lower():
+                                propertyName = property["name"]
+                            elif property["vocabulary"].lower() is not None:
+                                propertyName = property["vocabulary"].lower() + ":" + property["name"]
+                            # fill in the name of the property
+                            tmpOnto["project"]["ontologies"][0]["properties"][-1]["name"] = propertyName
+                            controlList.append(property["name"])
 
-                        # finding property name plus its id in order to fill in guiname
-                        for labelId in propertiesId["label"]:
-                            if labelId["label"] == tmpOnto["project"]["ontologies"][0]["properties"][-1]["name"]:
-                                propId = propertiesId["id"]
+                            # fill in the labels of the properties
+                            for labelId in property["label"]:
+                                if property["name"] != "__location__":
+                                    tmpOnto["project"]["ontologies"][0]["properties"][-1]["labels"].update({
+                                        labelId["shortname"]: labelId["label"]
+                                    })
+                                else:
+                                    tmpOnto["project"]["ontologies"][0]["properties"][-1]["labels"].update({
+                                        "en": labelId
+                                    })
 
-                        req = requests.get(
-                            'https://salsah.org/api/resourcetypes/{}?lang=all'.format(resourcetype["id"]))
-                        resType = req.json()
-                        resTypeInfo = resType["restype_info"]
-
-                        for property in resTypeInfo["properties"]:
-                            if "id" in property and property["id"] == propId:
-                                # fill in the description of the properties as comments
-                                if property["description"] is not None and isinstance(property["description"], list):
-                                     for descriptionId in property["description"]:
+                            # fill in the descriptions of the property as comments
+                            if property["description"] is not None and isinstance(property["description"], list):
+                                 for descriptionId in property["description"]:
+                                     if property["name"] != "__location__":
                                          tmpOnto["project"]["ontologies"][0]["properties"][-1]["comments"].update({
                                              descriptionId["shortname"]: descriptionId["description"]
                                          })
+                                     else:
+                                         tmpOnto["project"]["ontologies"][0]["properties"][-1]["comments"].update({
+                                            "en": descriptionId
+                                         })
 
-                                # fill in gui_element
-                                tmpOnto["project"]["ontologies"][0]["properties"][-1]["gui_element"] = guiEleMap[property["gui_name"]]
+                            # fill in gui_element
+                            tmpOnto["project"]["ontologies"][0]["properties"][-1]["gui_element"] = guiEleMap[property["gui_name"]]
 
-                                # fill in object (has to happen before attributes)
-                                if "vt_name" in property and property["vt_name"] in objectMap:
-                                    tmpOnto["project"]["ontologies"][0]["properties"][-1]["object"] = objectMap[property["vt_name"]]
+                            # fill in object (has to happen before attributes)
+                            if "vt_name" in property and property["vt_name"] in objectMap:
+                                tmpOnto["project"]["ontologies"][0]["properties"][-1]["object"] = objectMap[property["vt_name"]]
 
-                                    # fill in super attributes of the property. Default is "hasValue"
-                                    if objectMap[property["vt_name"]] in superMap:
-                                        tmpOnto["project"]["ontologies"][0]["properties"][-1]["super"].append(superMap[objectMap[property["vt_name"]]])
-                                    else:
-                                        tmpOnto["project"]["ontologies"][0]["properties"][-1]["super"].append("hasValue")
+                                # fill in super attributes of the property. Default is "hasValue"
+                                if objectMap[property["vt_name"]] in superMap:
+                                    tmpOnto["project"]["ontologies"][0]["properties"][-1]["super"].append(superMap[objectMap[property["vt_name"]]])
+                                else:
+                                    tmpOnto["project"]["ontologies"][0]["properties"][-1]["super"].append("hasValue")
 
-                                # fill in all attributes (gui_attributes and resource pointer)
-                                if "attributes" in property and property["attributes"] != "" and property["attributes"] is not None:
-                                    # split attributes entry
-                                    finalSplit = []
-                                    tmpstr = property["attributes"]
-                                    firstSplit = tmpstr.split(";")
-                                    for splits in firstSplit:
-                                        finalSplit.append(splits.split("="))
+                            # fill in all attributes (gui_attributes and resource pointer)
+                            if "attributes" in property and property["attributes"] != "" and property["attributes"] is not None:
+                                # split attributes entry
+                                finalSplit = []
+                                tmpstr = property["attributes"]
+                                firstSplit = tmpstr.split(";")
+                                for splits in firstSplit:
+                                    finalSplit.append(splits.split("="))
 
-                                    for numEle in range(len(finalSplit)): #  instead of the list id, insert the name of the list via the id .replace("selection", "hlist")
-                                        numEleKey = finalSplit[numEle][0]
-                                        numEleValue = finalSplit[numEle][1]
+                                for numEle in range(len(finalSplit)): #  instead of the list id, insert the name of the list via the id .replace("selection", "hlist")
+                                    numEleKey = finalSplit[numEle][0]
+                                    numEleValue = finalSplit[numEle][1]
 
-                                        if (numEleKey == "selection" or numEleKey == "hlist"):  # here the selections-id's are converted into the name
-                                            numEleKey = "hlist"
-                                            # add selections
-                                            for selectionId in selections:
-                                                if numEleValue == selectionId["id"] and selectionId["name"] != "":
-                                                    numEleValue = selectionId["name"]
-                                            # add hlists
-                                            for hlistsId in hlists:
-                                                if numEleValue == hlistsId["id"] and hlistsId["name"] != "":
-                                                    numEleValue = hlistsId["name"]
+                                    if (numEleKey == "selection" or numEleKey == "hlist"):  # here the selections-id's are converted into the name
+                                        numEleKey = "hlist"
+                                        # add selections
+                                        for selectionId in selections:
+                                            if numEleValue == selectionId["id"] and selectionId["name"] != "":
+                                                numEleValue = selectionId["name"]
+                                        # add hlists
+                                        for hlistsId in hlists:
+                                            if numEleValue == hlistsId["id"] and hlistsId["name"] != "":
+                                                numEleValue = hlistsId["name"]
 
-                                        # convert gui attribute's string values to integers where necessary
-                                        if (numEleKey == "size" or numEleKey == "maxlength" or numEleKey == "numprops" or numEleKey == "cols" or numEleKey == "rows" or numEleKey == "min" or numEleKey == "max"):
-                                            try:
-                                                numEleValue = int(numEleValue)
-                                            except ValueError:
-                                                numEleValue = numEleValue
+                                    # convert gui attribute's string values to integers where necessary
+                                    if (numEleKey == "size" or numEleKey == "maxlength" or numEleKey == "numprops" or numEleKey == "cols" or numEleKey == "rows" or numEleKey == "min" or numEleKey == "max"):
+                                        try:
+                                            numEleValue = int(numEleValue)
+                                        except ValueError:
+                                            numEleValue = numEleValue
 
-                                        # fill in gui attributes (incl. hlists)
-                                        tmpOnto["project"]["ontologies"][0]["properties"][-1]["gui_attributes"].update({
-                                            numEleKey: numEleValue
-                                        })
+                                    # fill in gui attributes (incl. hlists)
+                                    tmpOnto["project"]["ontologies"][0]["properties"][-1]["gui_attributes"].update({
+                                        numEleKey: numEleValue
+                                    })
 
-                                        # fill in ResourcePointer / LinkValue types
-                                        if (numEleKey == "restypeid" and tmpOnto["project"]["ontologies"][0]["properties"][-1]["object"] == "LinkValue"):
-                                            # get resource type by value of restypeid
-                                            if numEleValue != '0':
-                                                req = requests.get(
-                                                    'https://salsah.org/api/resourcetypes/{}?lang=all'.format(
-                                                        numEleValue))
-                                                linkValueResType = req.json()
-                                                linkValueResTypeInfo = linkValueResType["restype_info"]
-                                                linkValueResName = linkValueResTypeInfo["name"]
+                                    # fill in ResourcePointer / LinkValue types
+                                    if (numEleKey == "restypeid" and tmpOnto["project"]["ontologies"][0]["properties"][-1]["object"] == "LinkValue"):
+                                        # get resource type by value of restypeid
+                                        if numEleValue != '0':
+                                            req = requests.get(
+                                                'https://salsah.org/api/resourcetypes/{}?lang=all'.format(
+                                                    numEleValue))
+                                            linkValueResType = req.json()
+                                            linkValueResTypeInfo = linkValueResType["restype_info"]
+                                            linkValueResName = linkValueResTypeInfo["name"]
 
-                                                # if LinkValue is from the same vocabulary, remove vocabulary prefix
-                                                if linkValueResName.startswith(vocabulary["shortname"], 0):
-                                                    linkValueResName = linkValueResName.removeprefix(vocabulary["shortname"])
+                                            # if LinkValue is from the same vocabulary, remove vocabulary prefix
+                                            if linkValueResName.startswith(vocabulary["shortname"], 0):
+                                                linkValueResName = linkValueResName.removeprefix(vocabulary["shortname"])
 
-                                                # replace "LinkValue" with resolved resource type name
-                                                tmpOnto["project"]["ontologies"][0]["properties"][-1]["object"] = linkValueResName
+                                            # replace "LinkValue" with resolved resource type name
+                                            tmpOnto["project"]["ontologies"][0]["properties"][-1]["object"] = linkValueResName
+
+                            if tmpOnto["project"]["ontologies"][0]["properties"][-1]["object"] == "LinkValue":
+                                print(property)
 
     # ==================================================================================================================
 
