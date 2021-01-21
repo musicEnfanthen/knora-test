@@ -270,7 +270,7 @@ class Converter:
             "hlist": "Pulldown",
             "searchbox": "Searchbox",
             "interval": "IntervalValue",
-            "fileupload": "__FILEUPLOAD__"
+            "fileupload": "Fileupload"
         }  # Dict that maps the old guiname from salsa to the new guielement from knorapy
 
         objectMap = {
