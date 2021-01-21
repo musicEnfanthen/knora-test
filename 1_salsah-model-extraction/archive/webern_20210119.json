@@ -2374,43 +2374,43 @@
                         },
                         "cardinalities": [
                             {
-                                "propname": "event_rt",
+                                "propname": ":event_rt",
                                 "cardinality": "0-1"
                             },
                             {
-                                "propname": "chronology_type",
+                                "propname": ":chronology_type",
                                 "cardinality": "1-n"
                             },
                             {
-                                "propname": "date",
+                                "propname": "dc:date",
                                 "cardinality": "0-1"
                             },
                             {
-                                "propname": "daytime",
+                                "propname": ":daytime",
                                 "cardinality": "0-1"
                             },
                             {
-                                "propname": "place",
+                                "propname": ":place",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "placeGeo",
+                                "propname": ":placeGeo",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "literature_rt",
+                                "propname": ":literature_rt",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "correspondence_rt",
+                                "propname": ":correspondence_rt",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "further_sources_rt",
+                                "propname": ":further_sources_rt",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "comment_rt",
+                                "propname": "salsah:comment_rt",
                                 "cardinality": "0-n"
                             }
                         ]
@@ -2432,107 +2432,107 @@
                         },
                         "cardinalities": [
                             {
-                                "propname": "title",
+                                "propname": "dc:title",
                                 "cardinality": "1"
                             },
                             {
-                                "propname": "corresp_type",
+                                "propname": ":corresp_type",
                                 "cardinality": "0-1"
                             },
                             {
-                                "propname": "creator",
+                                "propname": "dc:creator",
                                 "cardinality": "1"
                             },
                             {
-                                "propname": "place",
+                                "propname": ":place",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "date",
+                                "propname": "dc:date",
                                 "cardinality": "0-1"
                             },
                             {
-                                "propname": "corresp_writer",
+                                "propname": ":corresp_writer",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "corresp_contributor",
+                                "propname": ":corresp_contributor",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "corresp_addressReturn",
+                                "propname": ":corresp_addressReturn",
                                 "cardinality": "0-1"
                             },
                             {
-                                "propname": "place_writer",
+                                "propname": ":place_writer",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "date_autograph_rt",
+                                "propname": ":date_autograph_rt",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "date_written",
+                                "propname": ":date_written",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "date_sent",
+                                "propname": ":date_sent",
                                 "cardinality": "0-1"
                             },
                             {
-                                "propname": "corresp_recipient",
+                                "propname": ":corresp_recipient",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "corresp_addressRecipient",
+                                "propname": ":corresp_addressRecipient",
                                 "cardinality": "0-1"
                             },
                             {
-                                "propname": "place_recipient",
+                                "propname": ":place_recipient",
                                 "cardinality": "0-1"
                             },
                             {
-                                "propname": "date_received",
+                                "propname": ":date_received",
                                 "cardinality": "0-1"
                             },
                             {
-                                "propname": "source_location_rt",
+                                "propname": ":source_location_rt",
                                 "cardinality": "0-1"
                             },
                             {
-                                "propname": "reproduction",
+                                "propname": ":reproduction",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "description_rt",
+                                "propname": "dc:description_rt",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "textincipit",
+                                "propname": ":textincipit",
                                 "cardinality": "0-1"
                             },
                             {
-                                "propname": "content_rt",
+                                "propname": ":content_rt",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "transcription_rt",
+                                "propname": ":transcription_rt",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "literature_rt",
+                                "propname": ":literature_rt",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "context_rt",
+                                "propname": ":context_rt",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "source_rt",
+                                "propname": "dc:source_rt",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "comment_rt",
+                                "propname": "salsah:comment_rt",
                                 "cardinality": "0-n"
                             }
                         ]
@@ -2554,51 +2554,51 @@
                         },
                         "cardinalities": [
                             {
-                                "propname": "mnr_plus",
+                                "propname": ":mnr_plus",
                                 "cardinality": "1"
                             },
                             {
-                                "propname": "mnr",
+                                "propname": ":mnr",
                                 "cardinality": "0-1"
                             },
                             {
-                                "propname": "title",
+                                "propname": "dc:title",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "date_composition",
+                                "propname": ":date_composition",
                                 "cardinality": "0-1"
                             },
                             {
-                                "propname": "performance",
+                                "propname": ":performance",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "date_firstpublication",
+                                "propname": ":date_firstpublication",
                                 "cardinality": "0-1"
                             },
                             {
-                                "propname": "firstpublisher",
+                                "propname": ":firstpublisher",
                                 "cardinality": "0-1"
                             },
                             {
-                                "propname": "instrumentation_rt",
+                                "propname": ":instrumentation_rt",
                                 "cardinality": "0-1"
                             },
                             {
-                                "propname": "source_rt",
+                                "propname": "dc:source_rt",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "further_non-edition_source_rt",
+                                "propname": ":further_non_edition_source_rt",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "textsource_rt",
+                                "propname": ":textsource_rt",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "comment_rt",
+                                "propname": "salsah:comment_rt",
                                 "cardinality": "0-n"
                             }
                         ]
@@ -2620,59 +2620,59 @@
                         },
                         "cardinalities": [
                             {
-                                "propname": "opus_num",
+                                "propname": ":opus_num",
                                 "cardinality": "1"
                             },
                             {
-                                "propname": "title",
+                                "propname": "dc:title",
                                 "cardinality": "1"
                             },
                             {
-                                "propname": "date_composition",
+                                "propname": ":date_composition",
                                 "cardinality": "1"
                             },
                             {
-                                "propname": "performance",
+                                "propname": ":performance",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "date_firstpublication",
+                                "propname": ":date_firstpublication",
                                 "cardinality": "1"
                             },
                             {
-                                "propname": "firstpublisher_rt",
+                                "propname": ":firstpublisher_rt",
                                 "cardinality": "1-n"
                             },
                             {
-                                "propname": "date_further_publication",
+                                "propname": ":date_further_publication",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "further_publisher_rt",
+                                "propname": ":further_publisher_rt",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "instrumentation_rt",
+                                "propname": ":instrumentation_rt",
                                 "cardinality": "1"
                             },
                             {
-                                "propname": "source_rt",
+                                "propname": "dc:source_rt",
                                 "cardinality": "1-n"
                             },
                             {
-                                "propname": "further_non-edition_source_rt",
+                                "propname": ":further_non_edition_source_rt",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "textsource_rt",
+                                "propname": ":textsource_rt",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "has_movement",
+                                "propname": ":has_movement",
                                 "cardinality": "1-n"
                             },
                             {
-                                "propname": "comment_rt",
+                                "propname": "salsah:comment_rt",
                                 "cardinality": "0-n"
                             }
                         ]
@@ -2694,35 +2694,35 @@
                         },
                         "cardinalities": [
                             {
-                                "propname": "title",
+                                "propname": "dc:title",
                                 "cardinality": "1"
                             },
                             {
-                                "propname": "date_composition",
+                                "propname": ":date_composition",
                                 "cardinality": "1"
                             },
                             {
-                                "propname": "performance",
+                                "propname": ":performance",
                                 "cardinality": "0-1"
                             },
                             {
-                                "propname": "instrumentation_rt",
+                                "propname": ":instrumentation_rt",
                                 "cardinality": "1"
                             },
                             {
-                                "propname": "source_rt",
+                                "propname": "dc:source_rt",
                                 "cardinality": "1-n"
                             },
                             {
-                                "propname": "comment_rt",
+                                "propname": "salsah:comment_rt",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "has_movement",
+                                "propname": ":has_movement",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "preopus_of",
+                                "propname": ":preopus_of",
                                 "cardinality": "1"
                             }
                         ]
@@ -2744,47 +2744,47 @@
                         },
                         "cardinalities": [
                             {
-                                "propname": "lastname",
+                                "propname": "salsah:lastname",
                                 "cardinality": "1"
                             },
                             {
-                                "propname": "firstname",
+                                "propname": "salsah:firstname",
                                 "cardinality": "1"
                             },
                             {
-                                "propname": "alt_name_rt",
+                                "propname": ":alt_name_rt",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "gnd",
+                                "propname": ":gnd",
                                 "cardinality": "0-1"
                             },
                             {
-                                "propname": "place_birth",
+                                "propname": ":place_birth",
                                 "cardinality": "0-1"
                             },
                             {
-                                "propname": "date_birth",
+                                "propname": ":date_birth",
                                 "cardinality": "0-1"
                             },
                             {
-                                "propname": "date_death",
+                                "propname": ":date_death",
                                 "cardinality": "0-1"
                             },
                             {
-                                "propname": "place_death",
+                                "propname": ":place_death",
                                 "cardinality": "0-1"
                             },
                             {
-                                "propname": "biography_rt",
+                                "propname": ":biography_rt",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "relation_webern_rt",
+                                "propname": ":relation_webern_rt",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "comment_rt",
+                                "propname": "salsah:comment_rt",
                                 "cardinality": "0-n"
                             }
                         ]
@@ -2806,91 +2806,91 @@
                         },
                         "cardinalities": [
                             {
-                                "propname": "sourcedesc_siglum",
+                                "propname": ":sourcedesc_siglum",
                                 "cardinality": "1"
                             },
                             {
-                                "propname": "sourceDesc_label",
+                                "propname": ":sourceDesc_label",
                                 "cardinality": "1"
                             },
                             {
-                                "propname": "source_location_rt",
+                                "propname": ":source_location_rt",
                                 "cardinality": "1"
                             },
                             {
-                                "propname": "signature",
+                                "propname": ":signature",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "signature_internal",
+                                "propname": ":signature_internal",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "ref_sourceIndex",
+                                "propname": ":ref_sourceIndex",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "description_rt",
+                                "propname": "dc:description_rt",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "sourceDesc_papermaterial_rt",
+                                "propname": ":sourceDesc_papermaterial_rt",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "sourceDesc_writingmat_main_hl",
+                                "propname": ":sourceDesc_writingmat_main_hl",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "sourceDesc_writingmat_further_hl",
+                                "propname": ":sourceDesc_writingmat_further_hl",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "sourceDesc_title_rt",
+                                "propname": ":sourceDesc_title_rt",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "date_autograph_rt",
+                                "propname": ":date_autograph_rt",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "date_authentic",
+                                "propname": ":date_authentic",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "date_estimated",
+                                "propname": ":date_estimated",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "sourceDesc_pagination_rt",
+                                "propname": ":sourceDesc_pagination_rt",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "sourceDesc_beat_rt",
+                                "propname": ":sourceDesc_beat_rt",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "sourceDesc_instruments_rt",
+                                "propname": ":sourceDesc_instruments_rt",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "sourceDesc_annotations_rt",
+                                "propname": ":sourceDesc_annotations_rt",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "content_rt",
+                                "propname": ":content_rt",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "sourceDesc_corrections_rt",
+                                "propname": ":sourceDesc_corrections_rt",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "date_version",
+                                "propname": ":date_version",
                                 "cardinality": "1"
                             },
                             {
-                                "propname": "comment_rt",
+                                "propname": "salsah:comment_rt",
                                 "cardinality": "0-n"
                             }
                         ]
@@ -2912,27 +2912,27 @@
                         },
                         "cardinalities": [
                             {
-                                "propname": "__location__",
+                                "propname": "salsah:__location__",
                                 "cardinality": 1
                             },
                             {
-                                "propname": "title",
+                                "propname": "dc:title",
                                 "cardinality": "1"
                             },
                             {
-                                "propname": "transcription",
+                                "propname": "salsah:transcription",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "part_of",
+                                "propname": "salsah:part_of",
                                 "cardinality": "1"
                             },
                             {
-                                "propname": "seqnum",
+                                "propname": "salsah:seqnum",
                                 "cardinality": "1"
                             },
                             {
-                                "propname": "comment_rt",
+                                "propname": "salsah:comment_rt",
                                 "cardinality": "0-n"
                             }
                         ]
@@ -2954,15 +2954,15 @@
                         },
                         "cardinalities": [
                             {
-                                "propname": "title",
+                                "propname": "dc:title",
                                 "cardinality": "1"
                             },
                             {
-                                "propname": "date",
+                                "propname": "dc:date",
                                 "cardinality": "0-1"
                             },
                             {
-                                "propname": "comment_rt",
+                                "propname": "salsah:comment_rt",
                                 "cardinality": "0-n"
                             }
                         ]
@@ -2984,11 +2984,11 @@
                         },
                         "cardinalities": [
                             {
-                                "propname": "rism_sigle",
+                                "propname": ":rism_sigle",
                                 "cardinality": "1"
                             },
                             {
-                                "propname": "description_rt",
+                                "propname": "dc:description_rt",
                                 "cardinality": "0-1"
                             }
                         ]
@@ -3010,23 +3010,23 @@
                         },
                         "cardinalities": [
                             {
-                                "propname": "signature",
+                                "propname": ":signature",
                                 "cardinality": "1-n"
                             },
                             {
-                                "propname": "description_rt",
+                                "propname": "dc:description_rt",
                                 "cardinality": "0-1"
                             },
                             {
-                                "propname": "part_of",
+                                "propname": "salsah:part_of",
                                 "cardinality": "0-1"
                             },
                             {
-                                "propname": "part_of_convolute",
+                                "propname": ":part_of_convolute",
                                 "cardinality": "0-1"
                             },
                             {
-                                "propname": "owning_institution",
+                                "propname": ":owning_institution",
                                 "cardinality": "0-1"
                             }
                         ]
@@ -3048,35 +3048,35 @@
                         },
                         "cardinalities": [
                             {
-                                "propname": "__location__",
+                                "propname": "salsah:__location__",
                                 "cardinality": 1
                             },
                             {
-                                "propname": "ref_mnr",
+                                "propname": ":ref_mnr",
                                 "cardinality": "1"
                             },
                             {
-                                "propname": "filepath_original",
+                                "propname": ":filepath_original",
                                 "cardinality": "1"
                             },
                             {
-                                "propname": "description_rt",
+                                "propname": "dc:description_rt",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "published_in",
+                                "propname": ":published_in",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "part_of",
+                                "propname": "salsah:part_of",
                                 "cardinality": "1"
                             },
                             {
-                                "propname": "seqnum",
+                                "propname": "salsah:seqnum",
                                 "cardinality": "0-1"
                             },
                             {
-                                "propname": "comment_rt",
+                                "propname": "salsah:comment_rt",
                                 "cardinality": "0-n"
                             }
                         ]
@@ -3098,55 +3098,55 @@
                         },
                         "cardinalities": [
                             {
-                                "propname": "title",
+                                "propname": "dc:title",
                                 "cardinality": "1"
                             },
                             {
-                                "propname": "corresp_type",
+                                "propname": ":corresp_type",
                                 "cardinality": "0-1"
                             },
                             {
-                                "propname": "creator",
+                                "propname": "dc:creator",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "place",
+                                "propname": ":place",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "date",
+                                "propname": "dc:date",
                                 "cardinality": "0-1"
                             },
                             {
-                                "propname": "source_location_rt",
+                                "propname": ":source_location_rt",
                                 "cardinality": "0-1"
                             },
                             {
-                                "propname": "description_rt",
+                                "propname": "dc:description_rt",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "content_rt",
+                                "propname": ":content_rt",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "transcription_rt",
+                                "propname": ":transcription_rt",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "literature_rt",
+                                "propname": ":literature_rt",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "further_sources_rt",
+                                "propname": ":further_sources_rt",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "source_rt",
+                                "propname": "dc:source_rt",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "comment_rt",
+                                "propname": "salsah:comment_rt",
                                 "cardinality": "0-n"
                             }
                         ]
@@ -3168,95 +3168,95 @@
                         },
                         "cardinalities": [
                             {
-                                "propname": "bibl_title_short",
+                                "propname": ":bibl_title_short",
                                 "cardinality": "1"
                             },
                             {
-                                "propname": "bibl_type",
+                                "propname": ":bibl_type",
                                 "cardinality": "0-1"
                             },
                             {
-                                "propname": "bibl_unpublished",
+                                "propname": ":bibl_unpublished",
                                 "cardinality": "0-1"
                             },
                             {
-                                "propname": "author",
+                                "propname": "dc:author",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "bibl_title_dependent_rt",
+                                "propname": ":bibl_title_dependent_rt",
                                 "cardinality": "0-1"
                             },
                             {
-                                "propname": "bibl_title_independent_rp",
+                                "propname": ":bibl_title_independent_rp",
                                 "cardinality": "0-1"
                             },
                             {
-                                "propname": "bibl_title_independent_rt",
+                                "propname": ":bibl_title_independent_rt",
                                 "cardinality": "0-1"
                             },
                             {
-                                "propname": "editor",
+                                "propname": ":editor",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "place_publisher",
+                                "propname": ":place_publisher",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "bibl_publisher",
+                                "propname": ":bibl_publisher",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "ed_pubdate",
+                                "propname": ":ed_pubdate",
                                 "cardinality": "0-1"
                             },
                             {
-                                "propname": "bibl_pages_type",
+                                "propname": ":bibl_pages_type",
                                 "cardinality": "0-1"
                             },
                             {
-                                "propname": "bibl_pages",
+                                "propname": ":bibl_pages",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "bibl_title_series_rt",
+                                "propname": ":bibl_title_series_rt",
                                 "cardinality": "0-1"
                             },
                             {
-                                "propname": "bibl_addition_rt",
+                                "propname": ":bibl_addition_rt",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "bibl_abstract_rt",
+                                "propname": ":bibl_abstract_rt",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "bibl_online_rt",
+                                "propname": ":bibl_online_rt",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "date_version",
+                                "propname": ":date_version",
                                 "cardinality": "1"
                             },
                             {
-                                "propname": "bibl_usage",
+                                "propname": ":bibl_usage",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "bibl_status",
+                                "propname": ":bibl_status",
                                 "cardinality": "1"
                             },
                             {
-                                "propname": "bibl_source_rt",
+                                "propname": ":bibl_source_rt",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "bibl_location_rt",
+                                "propname": ":bibl_location_rt",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "comment_rt",
+                                "propname": "salsah:comment_rt",
                                 "cardinality": "0-n"
                             }
                         ]
@@ -3278,31 +3278,31 @@
                         },
                         "cardinalities": [
                             {
-                                "propname": "__location__",
+                                "propname": "salsah:__location__",
                                 "cardinality": 1
                             },
                             {
-                                "propname": "title",
+                                "propname": "dc:title",
                                 "cardinality": "1"
                             },
                             {
-                                "propname": "filepath_original",
+                                "propname": ":filepath_original",
                                 "cardinality": "1"
                             },
                             {
-                                "propname": "description_rt",
+                                "propname": "dc:description_rt",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "part_of",
+                                "propname": "salsah:part_of",
                                 "cardinality": "1"
                             },
                             {
-                                "propname": "seqnum",
+                                "propname": "salsah:seqnum",
                                 "cardinality": "1"
                             },
                             {
-                                "propname": "comment_rt",
+                                "propname": "salsah:comment_rt",
                                 "cardinality": "0-n"
                             }
                         ]
@@ -3324,55 +3324,55 @@
                         },
                         "cardinalities": [
                             {
-                                "propname": "sourcedesc_siglum",
+                                "propname": ":sourcedesc_siglum",
                                 "cardinality": "1"
                             },
                             {
-                                "propname": "sourceDesc_label",
+                                "propname": ":sourceDesc_label",
                                 "cardinality": "1"
                             },
                             {
-                                "propname": "sourceDesc_impresssum",
+                                "propname": ":sourceDesc_impresssum",
                                 "cardinality": "1"
                             },
                             {
-                                "propname": "place_publisher",
+                                "propname": ":place_publisher",
                                 "cardinality": "1"
                             },
                             {
-                                "propname": "placeGeo",
+                                "propname": ":placeGeo",
                                 "cardinality": "0-1"
                             },
                             {
-                                "propname": "ref_publisher",
+                                "propname": ":ref_publisher",
                                 "cardinality": "0-1"
                             },
                             {
-                                "propname": "date_publication",
+                                "propname": ":date_publication",
                                 "cardinality": "1"
                             },
                             {
-                                "propname": "source_location_ED_used_rt",
+                                "propname": ":source_location_ED_used_rt",
                                 "cardinality": "1"
                             },
                             {
-                                "propname": "source_location_ED_further_rt",
+                                "propname": ":source_location_ED_further_rt",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "description_rt",
+                                "propname": "dc:description_rt",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "sourceDesc_ED_title",
+                                "propname": ":sourceDesc_ED_title",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "content_rt",
+                                "propname": ":content_rt",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "comment",
+                                "propname": "salsah:comment",
                                 "cardinality": "0-n"
                             }
                         ]
@@ -3394,27 +3394,27 @@
                         },
                         "cardinalities": [
                             {
-                                "propname": "publisher",
+                                "propname": "dc:publisher",
                                 "cardinality": "1"
                             },
                             {
-                                "propname": "alt_name_rt",
+                                "propname": ":alt_name_rt",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "gnd",
+                                "propname": ":gnd",
                                 "cardinality": "0-1"
                             },
                             {
-                                "propname": "address",
+                                "propname": "salsah:address",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "description_rt",
+                                "propname": "dc:description_rt",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "comment_rt",
+                                "propname": "salsah:comment_rt",
                                 "cardinality": "0-n"
                             }
                         ]
@@ -3436,31 +3436,31 @@
                         },
                         "cardinalities": [
                             {
-                                "propname": "__location__",
+                                "propname": "salsah:__location__",
                                 "cardinality": 1
                             },
                             {
-                                "propname": "title",
+                                "propname": "dc:title",
                                 "cardinality": "1"
                             },
                             {
-                                "propname": "filepath_original",
+                                "propname": ":filepath_original",
                                 "cardinality": "1"
                             },
                             {
-                                "propname": "description_rt",
+                                "propname": "dc:description_rt",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "part_of",
+                                "propname": "salsah:part_of",
                                 "cardinality": "1"
                             },
                             {
-                                "propname": "seqnum",
+                                "propname": "salsah:seqnum",
                                 "cardinality": "1"
                             },
                             {
-                                "propname": "comment_rt",
+                                "propname": "salsah:comment_rt",
                                 "cardinality": "0-n"
                             }
                         ]
@@ -3482,15 +3482,15 @@
                         },
                         "cardinalities": [
                             {
-                                "propname": "title",
+                                "propname": "dc:title",
                                 "cardinality": "1"
                             },
                             {
-                                "propname": "sketch_commentary",
+                                "propname": ":sketch_commentary",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "comment_rt",
+                                "propname": "salsah:comment_rt",
                                 "cardinality": "0-n"
                             }
                         ]
@@ -3512,31 +3512,31 @@
                         },
                         "cardinalities": [
                             {
-                                "propname": "__location__",
+                                "propname": "salsah:__location__",
                                 "cardinality": 1
                             },
                             {
-                                "propname": "title",
+                                "propname": "dc:title",
                                 "cardinality": "1"
                             },
                             {
-                                "propname": "filepath_original",
+                                "propname": ":filepath_original",
                                 "cardinality": "1"
                             },
                             {
-                                "propname": "description_rt",
+                                "propname": "dc:description_rt",
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "part_of",
+                                "propname": "salsah:part_of",
                                 "cardinality": "1"
                             },
                             {
-                                "propname": "seqnum",
+                                "propname": "salsah:seqnum",
                                 "cardinality": "1"
                             },
                             {
-                                "propname": "comment_rt",
+                                "propname": "salsah:comment_rt",
                                 "cardinality": "0-n"
                             }
                         ]

@@ -545,7 +545,7 @@
                 "label": "Anton Webern Edition",
                 "properties": [
                     {
-                        "name": "Ereignis",
+                        "name": "event_rt",
                         "super": [
                             "hasValue"
                         ],
@@ -560,7 +560,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Ereignisart",
+                        "name": "chronology_type",
                         "super": [
                             "hasValue"
                         ],
@@ -577,7 +577,7 @@
                         }
                     },
                     {
-                        "name": "Datum",
+                        "name": "dc:date",
                         "super": [
                             "hasValue"
                         ],
@@ -595,7 +595,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Tageszeit / Uhrzeit",
+                        "name": "daytime",
                         "super": [
                             "hasValue"
                         ],
@@ -610,7 +610,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Ort",
+                        "name": "place",
                         "super": [
                             "hasValue"
                         ],
@@ -630,7 +630,7 @@
                         }
                     },
                     {
-                        "name": "Ort (GeoNames)",
+                        "name": "placeGeo",
                         "super": [
                             "hasValue"
                         ],
@@ -645,7 +645,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Literaturnachweis",
+                        "name": "literature_rt",
                         "super": [
                             "hasValue"
                         ],
@@ -660,7 +660,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Korrespondenznachweis",
+                        "name": "correspondence_rt",
                         "super": [
                             "hasValue"
                         ],
@@ -675,7 +675,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "andere Quellen",
+                        "name": "further_sources_rt",
                         "super": [
                             "hasValue"
                         ],
@@ -690,7 +690,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Kommentar (Richtext)",
+                        "name": "salsah:comment_rt",
                         "super": [
                             "hasValue"
                         ],
@@ -705,7 +705,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Titel",
+                        "name": "dc:title",
                         "super": [
                             "hasValue"
                         ],
@@ -724,7 +724,7 @@
                         }
                     },
                     {
-                        "name": "Art",
+                        "name": "corresp_type",
                         "super": [
                             "hasValue"
                         ],
@@ -741,7 +741,7 @@
                         }
                     },
                     {
-                        "name": "Creator",
+                        "name": "dc:creator",
                         "super": [
                             "hasValue"
                         ],
@@ -758,7 +758,7 @@
                         }
                     },
                     {
-                        "name": "Verfasser",
+                        "name": "corresp_writer",
                         "super": [
                             "hasLinkTo"
                         ],
@@ -776,7 +776,7 @@
                         }
                     },
                     {
-                        "name": "Beitragender",
+                        "name": "corresp_contributor",
                         "super": [
                             "hasLinkTo"
                         ],
@@ -794,7 +794,7 @@
                         }
                     },
                     {
-                        "name": "Absenderadresse",
+                        "name": "corresp_addressReturn",
                         "super": [
                             "hasValue"
                         ],
@@ -809,7 +809,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Schreib-/Absendeort",
+                        "name": "place_writer",
                         "super": [
                             "hasValue"
                         ],
@@ -824,7 +824,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "autographe Datierung",
+                        "name": "date_autograph_rt",
                         "super": [
                             "hasValue"
                         ],
@@ -839,7 +839,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Schreibdatum",
+                        "name": "date_written",
                         "super": [
                             "hasValue"
                         ],
@@ -854,7 +854,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Absendedatum",
+                        "name": "date_sent",
                         "super": [
                             "hasValue"
                         ],
@@ -869,7 +869,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Empf\u00e4nger",
+                        "name": "corresp_recipient",
                         "super": [
                             "hasLinkTo"
                         ],
@@ -887,7 +887,7 @@
                         }
                     },
                     {
-                        "name": "Empf\u00e4ngeradresse",
+                        "name": "corresp_addressRecipient",
                         "super": [
                             "hasValue"
                         ],
@@ -902,7 +902,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Empfangsort",
+                        "name": "place_recipient",
                         "super": [
                             "hasValue"
                         ],
@@ -919,7 +919,7 @@
                         }
                     },
                     {
-                        "name": "Empfangsdatum",
+                        "name": "date_received",
                         "super": [
                             "hasValue"
                         ],
@@ -934,7 +934,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Standort des physischen Originals",
+                        "name": "source_location_rt",
                         "super": [
                             "hasValue"
                         ],
@@ -949,7 +949,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Reproduktion",
+                        "name": "reproduction",
                         "super": [
                             "hasValue"
                         ],
@@ -964,7 +964,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Beschreibung (Richtext)",
+                        "name": "dc:description_rt",
                         "super": [
                             "hasValue"
                         ],
@@ -979,7 +979,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Incipit",
+                        "name": "textincipit",
                         "super": [
                             "hasValue"
                         ],
@@ -994,7 +994,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Inhalt",
+                        "name": "content_rt",
                         "super": [
                             "hasValue"
                         ],
@@ -1009,7 +1009,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Transkription",
+                        "name": "transcription_rt",
                         "super": [
                             "hasValue"
                         ],
@@ -1024,7 +1024,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Kontextmaterial",
+                        "name": "context_rt",
                         "super": [
                             "hasValue"
                         ],
@@ -1039,7 +1039,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Quelle (Richtext)",
+                        "name": "dc:source_rt",
                         "super": [
                             "hasValue"
                         ],
@@ -1055,7 +1055,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "AWG-ID",
+                        "name": "mnr_plus",
                         "super": [
                             "hasValue"
                         ],
@@ -1070,7 +1070,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Moldenhauer-Nummer",
+                        "name": "mnr",
                         "super": [
                             "hasValue"
                         ],
@@ -1085,7 +1085,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Datum der Komposition",
+                        "name": "date_composition",
                         "super": [
                             "hasValue"
                         ],
@@ -1100,7 +1100,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Auff\u00fchrungen",
+                        "name": "performance",
                         "super": [
                             "hasLinkTo"
                         ],
@@ -1118,7 +1118,7 @@
                         }
                     },
                     {
-                        "name": "Datum der Erstpublikation",
+                        "name": "date_firstpublication",
                         "super": [
                             "hasValue"
                         ],
@@ -1133,7 +1133,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Erstverlag",
+                        "name": "firstpublisher",
                         "super": [
                             "hasValue"
                         ],
@@ -1148,7 +1148,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Besetzung",
+                        "name": "instrumentation_rt",
                         "super": [
                             "hasValue"
                         ],
@@ -1163,7 +1163,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "weitere, f\u00fcr die Edition nicht relevante Quelle",
+                        "name": "further_non_edition_source_rt",
                         "super": [
                             "hasValue"
                         ],
@@ -1178,7 +1178,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Textquelle",
+                        "name": "textsource_rt",
                         "super": [
                             "hasValue"
                         ],
@@ -1193,7 +1193,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Opus",
+                        "name": "opus_num",
                         "super": [
                             "hasValue"
                         ],
@@ -1208,7 +1208,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Erstverlag (Richtext)",
+                        "name": "firstpublisher_rt",
                         "super": [
                             "hasValue"
                         ],
@@ -1223,7 +1223,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Datum weitere Publikation",
+                        "name": "date_further_publication",
                         "super": [
                             "hasValue"
                         ],
@@ -1238,7 +1238,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "weiterer Verlag",
+                        "name": "further_publisher_rt",
                         "super": [
                             "hasValue"
                         ],
@@ -1253,7 +1253,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "hat Satz",
+                        "name": "has_movement",
                         "super": [
                             "hasLinkTo"
                         ],
@@ -1271,7 +1271,7 @@
                         }
                     },
                     {
-                        "name": "Vorstufe von",
+                        "name": "preopus_of",
                         "super": [
                             "hasLinkTo"
                         ],
@@ -1289,7 +1289,7 @@
                         }
                     },
                     {
-                        "name": "Name",
+                        "name": "salsah:lastname",
                         "super": [
                             "hasValue"
                         ],
@@ -1308,7 +1308,7 @@
                         }
                     },
                     {
-                        "name": "Vorname",
+                        "name": "salsah:firstname",
                         "super": [
                             "hasValue"
                         ],
@@ -1328,7 +1328,7 @@
                         }
                     },
                     {
-                        "name": "Namensvariante",
+                        "name": "alt_name_rt",
                         "super": [
                             "hasValue"
                         ],
@@ -1343,7 +1343,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Gemeinsame Normdatei (GND)",
+                        "name": "gnd",
                         "super": [
                             "hasValue"
                         ],
@@ -1358,7 +1358,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Geburtsort",
+                        "name": "place_birth",
                         "super": [
                             "hasValue"
                         ],
@@ -1373,7 +1373,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Geburtsdatum",
+                        "name": "date_birth",
                         "super": [
                             "hasValue"
                         ],
@@ -1388,7 +1388,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Sterbedatum",
+                        "name": "date_death",
                         "super": [
                             "hasValue"
                         ],
@@ -1403,7 +1403,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Sterbeort",
+                        "name": "place_death",
                         "super": [
                             "hasValue"
                         ],
@@ -1418,7 +1418,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Biographie",
+                        "name": "biography_rt",
                         "super": [
                             "hasValue"
                         ],
@@ -1433,7 +1433,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Bezug zu Webern",
+                        "name": "relation_webern_rt",
                         "super": [
                             "hasValue"
                         ],
@@ -1448,7 +1448,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Sigle",
+                        "name": "sourcedesc_siglum",
                         "super": [
                             "hasValue"
                         ],
@@ -1463,7 +1463,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Bezeichnung",
+                        "name": "sourceDesc_label",
                         "super": [
                             "hasValue"
                         ],
@@ -1478,7 +1478,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Signatur",
+                        "name": "signature",
                         "super": [
                             "hasValue"
                         ],
@@ -1493,7 +1493,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "interne Signatur (PSS)",
+                        "name": "signature_internal",
                         "super": [
                             "hasValue"
                         ],
@@ -1508,7 +1508,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Quellenindex (Referenz)",
+                        "name": "ref_sourceIndex",
                         "super": [
                             "hasLinkTo"
                         ],
@@ -1526,7 +1526,7 @@
                         }
                     },
                     {
-                        "name": "Beschreibstoff",
+                        "name": "sourceDesc_papermaterial_rt",
                         "super": [
                             "hasValue"
                         ],
@@ -1541,7 +1541,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Hauptschreibstoff (hlist)",
+                        "name": "sourceDesc_writingmat_main_hl",
                         "super": [
                             "hasValue"
                         ],
@@ -1558,7 +1558,7 @@
                         }
                     },
                     {
-                        "name": "weitere Schreibstoffe (hlist)",
+                        "name": "sourceDesc_writingmat_further_hl",
                         "super": [
                             "hasValue"
                         ],
@@ -1575,7 +1575,7 @@
                         }
                     },
                     {
-                        "name": "autographer Titel",
+                        "name": "sourceDesc_title_rt",
                         "super": [
                             "hasValue"
                         ],
@@ -1590,7 +1590,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "gesicherte Datierung",
+                        "name": "date_authentic",
                         "super": [
                             "hasValue"
                         ],
@@ -1605,7 +1605,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "erschlossene Datierung",
+                        "name": "date_estimated",
                         "super": [
                             "hasValue"
                         ],
@@ -1620,7 +1620,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Paginierung",
+                        "name": "sourceDesc_pagination_rt",
                         "super": [
                             "hasValue"
                         ],
@@ -1635,7 +1635,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Taktzahlen",
+                        "name": "sourceDesc_beat_rt",
                         "super": [
                             "hasValue"
                         ],
@@ -1650,7 +1650,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Instrumentenvorsatz",
+                        "name": "sourceDesc_instruments_rt",
                         "super": [
                             "hasValue"
                         ],
@@ -1665,7 +1665,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Eintragungen",
+                        "name": "sourceDesc_annotations_rt",
                         "super": [
                             "hasValue"
                         ],
@@ -1680,7 +1680,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Korrekturen",
+                        "name": "sourceDesc_corrections_rt",
                         "super": [
                             "hasValue"
                         ],
@@ -1695,7 +1695,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Versionsdatum",
+                        "name": "date_version",
                         "super": [
                             "hasValue"
                         ],
@@ -1710,7 +1710,36 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "ist ein Teil von",
+                        "name": "salsah:__location__",
+                        "super": [],
+                        "object": "",
+                        "labels": {
+                            "en": "N"
+                        },
+                        "comments": {},
+                        "gui_element": "__FILEUPLOAD__",
+                        "gui_attributes": {}
+                    },
+                    {
+                        "name": "salsah:transcription",
+                        "super": [
+                            "hasLinkTo"
+                        ],
+                        "object": "salsah:transcription_area",
+                        "labels": {
+                            "de": "Transkription"
+                        },
+                        "comments": {
+                            "de": "Transkription"
+                        },
+                        "gui_element": "Searchbox",
+                        "gui_attributes": {
+                            "restypeid": "30",
+                            "numprops": 1
+                        }
+                    },
+                    {
+                        "name": "salsah:part_of",
                         "super": [
                             "hasLinkTo"
                         ],
@@ -1729,7 +1758,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Sequenznummer",
+                        "name": "salsah:seqnum",
                         "super": [
                             "hasValue"
                         ],
@@ -1752,7 +1781,7 @@
                         }
                     },
                     {
-                        "name": "RISM-Sigle",
+                        "name": "rism_sigle",
                         "super": [
                             "hasValue"
                         ],
@@ -1767,7 +1796,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "ist ein Teil von (Konvolut)",
+                        "name": "part_of_convolute",
                         "super": [
                             "hasLinkTo"
                         ],
@@ -1784,7 +1813,7 @@
                         }
                     },
                     {
-                        "name": "besitzende Institution",
+                        "name": "owning_institution",
                         "super": [
                             "hasLinkTo"
                         ],
@@ -1801,7 +1830,7 @@
                         }
                     },
                     {
-                        "name": "Moldenhauer-Nummer (Referenz)",
+                        "name": "ref_mnr",
                         "super": [
                             "hasLinkTo"
                         ],
@@ -1819,7 +1848,7 @@
                         }
                     },
                     {
-                        "name": "Originaldateiname",
+                        "name": "filepath_original",
                         "super": [
                             "hasValue"
                         ],
@@ -1834,7 +1863,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "abgedruckt in",
+                        "name": "published_in",
                         "super": [
                             "hasValue"
                         ],
@@ -1849,7 +1878,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Kurztitel",
+                        "name": "bibl_title_short",
                         "super": [
                             "hasValue"
                         ],
@@ -1864,7 +1893,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Typ",
+                        "name": "bibl_type",
                         "super": [
                             "hasValue"
                         ],
@@ -1881,7 +1910,7 @@
                         }
                     },
                     {
-                        "name": "unpubliziert_Typ",
+                        "name": "bibl_unpublished",
                         "super": [
                             "hasValue"
                         ],
@@ -1898,7 +1927,7 @@
                         }
                     },
                     {
-                        "name": "Autor",
+                        "name": "dc:author",
                         "super": [
                             "hasValue"
                         ],
@@ -1920,7 +1949,7 @@
                         }
                     },
                     {
-                        "name": "Titel_unselbst",
+                        "name": "bibl_title_dependent_rt",
                         "super": [
                             "hasValue"
                         ],
@@ -1935,7 +1964,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Titel_selbst (Verweis)",
+                        "name": "bibl_title_independent_rp",
                         "super": [
                             "hasLinkTo"
                         ],
@@ -1953,7 +1982,7 @@
                         }
                     },
                     {
-                        "name": "Titel_selbst",
+                        "name": "bibl_title_independent_rt",
                         "super": [
                             "hasValue"
                         ],
@@ -1968,7 +1997,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Herausgeber",
+                        "name": "editor",
                         "super": [
                             "hasValue"
                         ],
@@ -1983,7 +2012,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Verlagsort",
+                        "name": "place_publisher",
                         "super": [
                             "hasValue"
                         ],
@@ -1998,7 +2027,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Verlag",
+                        "name": "bibl_publisher",
                         "super": [
                             "hasValue"
                         ],
@@ -2013,7 +2042,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Publikationsdatum",
+                        "name": "ed_pubdate",
                         "super": [
                             "hasValue"
                         ],
@@ -2028,7 +2057,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Z\u00e4hlung",
+                        "name": "bibl_pages_type",
                         "super": [
                             "hasValue"
                         ],
@@ -2045,7 +2074,7 @@
                         }
                     },
                     {
-                        "name": "Seitenangabe",
+                        "name": "bibl_pages",
                         "super": [
                             "hasValue"
                         ],
@@ -2060,7 +2089,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Reihentitel",
+                        "name": "bibl_title_series_rt",
                         "super": [
                             "hasValue"
                         ],
@@ -2075,7 +2104,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Zusatz",
+                        "name": "bibl_addition_rt",
                         "super": [
                             "hasValue"
                         ],
@@ -2090,7 +2119,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Abstract",
+                        "name": "bibl_abstract_rt",
                         "super": [
                             "hasValue"
                         ],
@@ -2105,7 +2134,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Online-Zugang",
+                        "name": "bibl_online_rt",
                         "super": [
                             "hasValue"
                         ],
@@ -2120,7 +2149,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "verwendet in Bibliografie",
+                        "name": "bibl_usage",
                         "super": [
                             "hasValue"
                         ],
@@ -2137,7 +2166,7 @@
                         }
                     },
                     {
-                        "name": "Status",
+                        "name": "bibl_status",
                         "super": [
                             "hasValue"
                         ],
@@ -2154,7 +2183,7 @@
                         }
                     },
                     {
-                        "name": "Quelle",
+                        "name": "bibl_source_rt",
                         "super": [
                             "hasValue"
                         ],
@@ -2169,7 +2198,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Standort (swissbib)",
+                        "name": "bibl_location_rt",
                         "super": [
                             "hasValue"
                         ],
@@ -2184,7 +2213,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Erscheinungsvermerk",
+                        "name": "sourceDesc_impresssum",
                         "super": [
                             "hasValue"
                         ],
@@ -2199,7 +2228,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Verlag (Referenz)",
+                        "name": "ref_publisher",
                         "super": [
                             "hasLinkTo"
                         ],
@@ -2217,7 +2246,7 @@
                         }
                     },
                     {
-                        "name": "Erscheinungsdatum",
+                        "name": "date_publication",
                         "super": [
                             "hasValue"
                         ],
@@ -2232,7 +2261,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Standort des konsultierten Exemplars",
+                        "name": "source_location_ED_used_rt",
                         "super": [
                             "hasValue"
                         ],
@@ -2247,7 +2276,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Standort weiterer Exemplare",
+                        "name": "source_location_ED_further_rt",
                         "super": [
                             "hasValue"
                         ],
@@ -2262,7 +2291,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Titel nach Vorlage",
+                        "name": "sourceDesc_ED_title",
                         "super": [
                             "hasValue"
                         ],
@@ -2277,7 +2306,7 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "Kommentar",
+                        "name": "salsah:comment",
                         "super": [
                             "hasValue"
                         ],
@@ -2299,7 +2328,7 @@
                         }
                     },
                     {
-                        "name": "Verleger",
+                        "name": "dc:publisher",
                         "super": [
                             "hasValue"
                         ],
@@ -2322,7 +2351,7 @@
                         }
                     },
                     {
-                        "name": "Adresse",
+                        "name": "salsah:address",
                         "super": [
                             "hasValue"
                         ],
@@ -2341,7 +2370,7 @@
                         }
                     },
                     {
-                        "name": "Skizzenkommentar",
+                        "name": "sketch_commentary",
                         "super": [
                             "hasValue"
                         ],
