@@ -1717,7 +1717,7 @@
                             "en": "N"
                         },
                         "comments": {},
-                        "gui_element": "__FILEUPLOAD__",
+                        "gui_element": "Fileupload",
                         "gui_attributes": {}
                     },
                     {
