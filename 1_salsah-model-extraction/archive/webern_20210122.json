@@ -1714,9 +1714,11 @@
                         "super": [],
                         "object": "",
                         "labels": {
-                            "en": "N"
+                            "en": "LOCATION"
                         },
-                        "comments": {},
+                        "comments": {
+                            "en": "** file upload **"
+                        },
                         "gui_element": "Fileupload",
                         "gui_attributes": {}
                     },
@@ -2942,7 +2944,7 @@
                         "cardinalities": [
                             {
                                 "propname": "salsah:__location__",
-                                "cardinality": 1
+                                "cardinality": "1"
                             },
                             {
                                 "propname": "dc:title",
@@ -3078,7 +3080,7 @@
                         "cardinalities": [
                             {
                                 "propname": "salsah:__location__",
-                                "cardinality": 1
+                                "cardinality": "1"
                             },
                             {
                                 "propname": ":ref_mnr",
@@ -3308,7 +3310,7 @@
                         "cardinalities": [
                             {
                                 "propname": "salsah:__location__",
-                                "cardinality": 1
+                                "cardinality": "1"
                             },
                             {
                                 "propname": "dc:title",
@@ -3466,7 +3468,7 @@
                         "cardinalities": [
                             {
                                 "propname": "salsah:__location__",
-                                "cardinality": 1
+                                "cardinality": "1"
                             },
                             {
                                 "propname": "dc:title",
@@ -3542,7 +3544,7 @@
                         "cardinalities": [
                             {
                                 "propname": "salsah:__location__",
-                                "cardinality": 1
+                                "cardinality": "1"
                             },
                             {
                                 "propname": "dc:title",

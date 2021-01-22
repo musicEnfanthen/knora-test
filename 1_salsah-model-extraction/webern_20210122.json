@@ -1710,19 +1710,6 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "salsah:__location__",
-                        "super": [],
-                        "object": "",
-                        "labels": {
-                            "en": "LOCATION"
-                        },
-                        "comments": {
-                            "en": "** file upload **"
-                        },
-                        "gui_element": "Fileupload",
-                        "gui_attributes": {}
-                    },
-                    {
                         "name": "salsah:transcription",
                         "super": [
                             "hasLinkTo"
@@ -2943,10 +2930,6 @@
                         },
                         "cardinalities": [
                             {
-                                "propname": "salsah:__location__",
-                                "cardinality": "1"
-                            },
-                            {
                                 "propname": "dc:title",
                                 "cardinality": "1"
                             },
@@ -3078,10 +3061,6 @@
                             "en": "Digital copy of a physical material carrier (piece of music)"
                         },
                         "cardinalities": [
-                            {
-                                "propname": "salsah:__location__",
-                                "cardinality": "1"
-                            },
                             {
                                 "propname": ":ref_mnr",
                                 "cardinality": "1"
@@ -3309,10 +3288,6 @@
                         },
                         "cardinalities": [
                             {
-                                "propname": "salsah:__location__",
-                                "cardinality": "1"
-                            },
-                            {
                                 "propname": "dc:title",
                                 "cardinality": "1"
                             },
@@ -3467,10 +3442,6 @@
                         },
                         "cardinalities": [
                             {
-                                "propname": "salsah:__location__",
-                                "cardinality": "1"
-                            },
-                            {
                                 "propname": "dc:title",
                                 "cardinality": "1"
                             },
@@ -3542,10 +3513,6 @@
                             "en": "Digital copy of a (graphic) source overview"
                         },
                         "cardinalities": [
-                            {
-                                "propname": "salsah:__location__",
-                                "cardinality": "1"
-                            },
                             {
                                 "propname": "dc:title",
                                 "cardinality": "1"
