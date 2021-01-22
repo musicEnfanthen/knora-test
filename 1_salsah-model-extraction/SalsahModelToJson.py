@@ -364,27 +364,27 @@ class Converter:
                             controlList.append(property["name"])
 
                             # fill in the labels of the properties
-                            for labelId in property["label"]:
-                                if property["name"] != "__location__":
+                            if property["name"] == "__location__":
+                                tmpOnto["project"]["ontologies"][0]["properties"][-1]["labels"].update({
+                                    "en": property["label"]
+                                })
+                            else:
+                                for labelId in property["label"]:
                                     tmpOnto["project"]["ontologies"][0]["properties"][-1]["labels"].update({
                                         labelId["shortname"]: labelId["label"]
-                                    })
-                                else:
-                                    tmpOnto["project"]["ontologies"][0]["properties"][-1]["labels"].update({
-                                        "en": labelId
                                     })
 
                             # fill in the descriptions of the property as comments
                             if property["description"] is not None and isinstance(property["description"], list):
                                  for descriptionId in property["description"]:
-                                     if property["name"] != "__location__":
                                          tmpOnto["project"]["ontologies"][0]["properties"][-1]["comments"].update({
                                              descriptionId["shortname"]: descriptionId["description"]
                                          })
-                                     else:
-                                         tmpOnto["project"]["ontologies"][0]["properties"][-1]["comments"].update({
-                                            "en": descriptionId
-                                         })
+                            elif property["description"] is not isinstance(property["description"], list):
+                                if property["name"] == "__location__":
+                                     tmpOnto["project"]["ontologies"][0]["properties"][-1]["comments"].update({
+                                        "en": property["description"]
+                                     })
 
                             # fill in gui_element
                             tmpOnto["project"]["ontologies"][0]["properties"][-1]["gui_element"] = guiEleMap[property["gui_name"]]
