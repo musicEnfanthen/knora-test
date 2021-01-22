@@ -243,7 +243,7 @@ class Converter:
                         tmpOnto["project"]["ontologies"][0]["resources"][-1]["cardinalities"].append({
                             "propname": propertyName,
                             # "gui_order": "",  # TODO gui_order not yet implemented by knora.
-                            "cardinality": propertyId["occurrence"]
+                            "cardinality": str(propertyId["occurrence"])
                         })
             else:
                 continue
