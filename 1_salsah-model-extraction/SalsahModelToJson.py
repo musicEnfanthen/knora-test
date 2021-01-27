@@ -49,7 +49,9 @@ class Converter:
     def fillDesc(self, project):
         for vocabulary in salsahJson.salsahVocabularies["vocabularies"]:
             if vocabulary["description"] and vocabulary["shortname"].lower() == project["shortname"].lower():
-                tmpOnto["project"]["descriptions"] = vocabulary["description"]
+                tmpOnto["project"]["descriptions"].update({
+                    "en": vocabulary["description"]
+                })
 
     # ==================================================================================================================
     # Fill in the vocabulary name and label
