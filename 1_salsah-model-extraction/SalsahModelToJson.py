@@ -200,22 +200,27 @@ class Converter:
                 # prepare resources pattern
                 for resourcetype in resourcetypes:
                     tmpOnto["project"]["ontologies"][0]["resources"].append({
-                        "name": resourcetype["label"][0]["label"],
+                        "name": "",
                         "super": "",
                         "labels": {},
                         "comments": {},
                         "cardinalities": []
                     })
 
-                    # fill in the labels
-                    for label in resourcetype["label"]:
-                        tmpOnto["project"]["ontologies"][0]["resources"][-1]["labels"].update(
-                            {label["shortname"]: label["label"]})
-
                     # fetch restype_info
                     req = requests.get('https://salsah.org/api/resourcetypes/{}?lang=all'.format(resourcetype["id"]))
                     resType = req.json()
                     resTypeInfo = resType["restype_info"]
+
+                    # fill in the name
+                    nameSplit = resTypeInfo["name"].split(":")
+                    tmpOnto["project"]["ontologies"][0]["resources"][-1]["name"] = nameSplit[1]
+
+                    # fill in the labels
+                    if resTypeInfo["label"] is not None and isinstance(resTypeInfo["label"], list):
+                        for label in resTypeInfo["label"]:
+                            tmpOnto["project"]["ontologies"][0]["resources"][-1]["labels"].update(
+                                {label["shortname"]: label["label"]})
 
                     # fill in the description of the resources as comments
                     if resTypeInfo["description"] is not None and isinstance(resTypeInfo["description"], list):
