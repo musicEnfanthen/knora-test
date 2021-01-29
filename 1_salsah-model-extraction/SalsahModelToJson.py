@@ -409,13 +409,15 @@ class Converter:
                                         numEleKey = finalSplit[numEle][0]
                                         numEleValue = finalSplit[numEle][1]
 
-                                        if (numEleKey == "selection" or numEleKey == "hlist"):  # here the selections-id's are converted into the name
-                                            numEleKey = "hlist"
-                                            # add selections
+                                        # add selections
+                                        if numEleKey == "selection":
+                                            numEleKey = "hlist"     # selections are converted into hlists
                                             for selectionId in selections:
                                                 if numEleValue == selectionId["id"] and selectionId["name"] != "":
                                                     numEleValue = selectionId["name"]
-                                            # add hlists
+
+                                        # add hlists
+                                        if numEleKey == "hlist":
                                             for hlistsId in hlists:
                                                 if numEleValue == hlistsId["id"] and hlistsId["name"] != "":
                                                     numEleValue = hlistsId["name"]
