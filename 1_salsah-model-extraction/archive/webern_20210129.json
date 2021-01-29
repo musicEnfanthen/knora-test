@@ -575,7 +575,7 @@
                         },
                         "gui_element": "Pulldown",
                         "gui_attributes": {
-                            "hlist": "chronologytag"
+                            "hlist": "textbg_rt"
                         }
                     },
                     {
@@ -1556,7 +1556,7 @@
                         },
                         "gui_element": "Pulldown",
                         "gui_attributes": {
-                            "hlist": "awg_writingmaterials"
+                            "hlist": "fontfamily"
                         }
                     },
                     {
@@ -1573,7 +1573,7 @@
                         },
                         "gui_element": "Pulldown",
                         "gui_attributes": {
-                            "hlist": "awg_writingmaterials"
+                            "hlist": "fontfamily"
                         }
                     },
                     {
