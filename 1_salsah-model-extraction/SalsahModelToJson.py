@@ -11,6 +11,7 @@ import time
 class Converter:
 
     def __init__(self):
+        self.serverpath: str = "https://www.salsah.org"
         self.selection_mapping: Dict[str, str] = {}
         self.selection_node_mapping: Dict[str, str] = {}
         self.hlist_node_mapping: Dict[str, str] = {}
@@ -18,13 +19,13 @@ class Converter:
 
 
         # Retrieving the necessary informations from Webpages.
-        self.salsahJson = requests.get('https://www.salsah.org/api/projects').json()
+        self.salsahJson = requests.get(f'{self.serverpath}/api/projects').json()
         self.r = requests.get(
             'https://raw.githubusercontent.com/dhlab-basel/dasch-ark-resolver-data/master/data/shortcodes.csv')
-        self.salsahVocabularies = requests.get('https://www.salsah.org/api/vocabularies').json()
+        self.salsahVocabularies = requests.get(f'{self.serverpath}/api/vocabularies').json()
 
         # Testing stuff
-        # self.req = requests.get('https://www.salsah.org/api/resourcetypes/')
+        # self.req = requests.get(f'{self.serverpath}/api/resourcetypes/')
         # result = self.req.json()
         # pprint(result)
 
@@ -67,7 +68,7 @@ class Converter:
         for vocabulary in salsahJson.salsahVocabularies["vocabularies"]:
             if vocabulary["project_id"] == projects["id"]:
                 # fetch project_info
-                req = requests.get('https://www.salsah.org/api/projects/{}?lang=all'.format(vocabulary["shortname"]))
+                req = requests.get(f'{self.serverpath}/api/projects/{vocabulary["shortname"]}?lang=all')
                 result = req.json()
 
                 if 'project_info' in result.keys():
@@ -90,7 +91,7 @@ class Converter:
                     'lang': 'all'
                 }
                 # fetch selections
-                req = requests.get('http://salsah.org/api/selections/', params=payload)
+                req = requests.get(f'{self.serverpath}/api/selections/', params=payload)
                 selection_results = req.json()
                 selections = selection_results['selections']
 
@@ -107,7 +108,7 @@ class Converter:
                         root['comments'] = dict(
                             map(lambda a: (a['shortname'], a['description']), selection['description']))
                     payload = {'lang': 'all'}
-                    req_nodes = requests.get('http://salsah.org/api/selections/' + selection['id'], params=payload)
+                    req_nodes = requests.get(f'{self.serverpath}/api/selections/' + selection['id'], params=payload)
                     result_nodes = req_nodes.json()
 
                     self.selection_node_mapping.update(
@@ -129,7 +130,7 @@ class Converter:
                     'lang': 'all'
                 }
                 # fetch hlists
-                req = requests.get('http://salsah.org/api/hlists', params=payload)
+                req = requests.get(f'{self.serverpath}/api/hlists', params=payload)
                 hlist_results = req.json()
 
                 self.hlist_node_mapping.update(dict(map(lambda a: (a['id'], a['name']), hlist_results['hlists'])))
@@ -165,7 +166,7 @@ class Converter:
                         root['comments'] = dict(
                             map(lambda a: (a['shortname'], a['description']), hlist['description']))
                     payload = {'lang': 'all'}
-                    req_nodes = requests.get('http://salsah.org/api/hlists/' + hlist['id'], params=payload)
+                    req_nodes = requests.get(f'{self.serverpath}/api/hlists/' + hlist['id'], params=payload)
                     result_nodes = req_nodes.json()
 
                     root['nodes'] = process_children(result_nodes['hlist'])
@@ -193,7 +194,7 @@ class Converter:
                     'lang': 'all'
                 }
                 # fetch resourcetypes
-                req = requests.get('http://salsah.org/api/resourcetypes/', params=payload)
+                req = requests.get(f'{self.serverpath}/api/resourcetypes/', params=payload)
                 resourcetype_result = req.json()
                 resourcetypes = resourcetype_result["resourcetypes"]
 
@@ -208,7 +209,7 @@ class Converter:
                     })
 
                     # fetch restype_info
-                    req = requests.get('https://salsah.org/api/resourcetypes/{}?lang=all'.format(resourcetype["id"]))
+                    req = requests.get(f'{self.serverpath}/api/resourcetypes/{resourcetype["id"]}?lang=all')
                     resType = req.json()
                     resTypeInfo = resType["restype_info"]
 
@@ -313,12 +314,12 @@ class Converter:
         hlist_node_mapping = {}
 
         # fetch selections
-        req = requests.get('http://salsah.org/api/selections/')
+        req = requests.get(f'{self.serverpath}/api/selections/')
         selection_results = req.json()
         selections = selection_results["selections"]
 
         # fetch hlists
-        req2 = requests.get('http://salsah.org/api/hlists/')
+        req2 = requests.get(f'{self.serverpath}/api/hlists/')
         hlist_results = req2.json()
         hlists = hlist_results["hlists"]
 
@@ -329,7 +330,7 @@ class Converter:
                     'lang': 'all'
                 }
                 # fetch all resourcetypes
-                req = requests.get('http://salsah.org/api/resourcetypes/', params=payload)
+                req = requests.get(f'{self.serverpath}/api/resourcetypes/', params=payload)
                 resourcetype_results = req.json()
                 resourcetypes = resourcetype_results["resourcetypes"]
 
@@ -337,8 +338,7 @@ class Converter:
 
                 for resourcetype in resourcetypes:
                     # fetch the single resourcetype info
-                    req = requests.get(
-                        'https://salsah.org/api/resourcetypes/{}?lang=all'.format(resourcetype["id"]))
+                    req = requests.get(f'{self.serverpath}/api/resourcetypes/{resourcetype["id"]}?lang=all')
                     resType = req.json()
                     resTypeInfo = resType["restype_info"]
 
@@ -439,8 +439,7 @@ class Converter:
                                             # get resource type by value of restypeid
                                             if numEleValue != '0':
                                                 req = requests.get(
-                                                    'https://salsah.org/api/resourcetypes/{}?lang=all'.format(
-                                                        numEleValue))
+                                                    f'{self.serverpath}/api/resourcetypes/{numEleValue}?lang=all')
                                                 linkValueResType = req.json()
                                                 linkValueResTypeInfo = linkValueResType["restype_info"]
                                                 linkValueResName = linkValueResTypeInfo["name"]
