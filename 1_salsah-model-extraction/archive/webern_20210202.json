@@ -1734,7 +1734,7 @@
                         "super": [
                             "hasLinkTo"
                         ],
-                        "object": ":LinkValue",
+                        "object": "LinkValue",
                         "labels": {
                             "de": "ist ein Teil von",
                             "fr": "est un part de",
