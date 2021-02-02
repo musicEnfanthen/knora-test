@@ -579,24 +579,6 @@
                         }
                     },
                     {
-                        "name": "dc:date",
-                        "super": [
-                            "hasValue"
-                        ],
-                        "object": "DateValue",
-                        "labels": {
-                            "de": "Datum",
-                            "fr": "Date",
-                            "it": "Data",
-                            "en": "Date"
-                        },
-                        "comments": {
-                            "de": "Datum"
-                        },
-                        "gui_element": "Date",
-                        "gui_attributes": {}
-                    },
-                    {
                         "name": "daytime",
                         "super": [
                             "hasValue"
@@ -692,40 +674,6 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "salsah:comment_rt",
-                        "super": [
-                            "hasValue"
-                        ],
-                        "object": "TextValue",
-                        "labels": {
-                            "de": "Kommentar (Richtext)"
-                        },
-                        "comments": {
-                            "de": "Unstrukturierte Bemerkungen zu einem Objekt"
-                        },
-                        "gui_element": "Richtext",
-                        "gui_attributes": {}
-                    },
-                    {
-                        "name": "dc:title",
-                        "super": [
-                            "hasValue"
-                        ],
-                        "object": "TextValue",
-                        "labels": {
-                            "de": "Titel",
-                            "fr": "Titre",
-                            "it": "Titolo",
-                            "en": "Title"
-                        },
-                        "comments": {},
-                        "gui_element": "SimpleText",
-                        "gui_attributes": {
-                            "size": 80,
-                            "maxlength": 255
-                        }
-                    },
-                    {
                         "name": "corresp_type",
                         "super": [
                             "hasValue"
@@ -743,23 +691,6 @@
                         }
                     },
                     {
-                        "name": "dc:creator",
-                        "super": [
-                            "hasValue"
-                        ],
-                        "object": "TextValue",
-                        "labels": {
-                            "de": "Creator",
-                            "en": "Creator"
-                        },
-                        "comments": {},
-                        "gui_element": "SimpleText",
-                        "gui_attributes": {
-                            "size": 60,
-                            "maxlength": 255
-                        }
-                    },
-                    {
                         "name": "corresp_writer",
                         "super": [
                             "hasLinkTo"
@@ -773,7 +704,6 @@
                         },
                         "gui_element": "Searchbox",
                         "gui_attributes": {
-                            "restypeid": "45",
                             "numprops": 2
                         }
                     },
@@ -791,7 +721,6 @@
                         },
                         "gui_element": "Searchbox",
                         "gui_attributes": {
-                            "restypeid": "45",
                             "numprops": 2
                         }
                     },
@@ -884,7 +813,6 @@
                         },
                         "gui_element": "Searchbox",
                         "gui_attributes": {
-                            "restypeid": "45",
                             "numprops": 2
                         }
                     },
@@ -916,9 +844,7 @@
                             "de": "Ortsangabe zum Empf\u00e4nger einer Korrespondenz (ResPointer)"
                         },
                         "gui_element": "Geonames",
-                        "gui_attributes": {
-                            "restypeid": "0"
-                        }
+                        "gui_attributes": {}
                     },
                     {
                         "name": "date_received",
@@ -961,21 +887,6 @@
                         },
                         "comments": {
                             "de": "Beschreibt den Standort (physisch, Web) einer Reproduktion einer Quelle"
-                        },
-                        "gui_element": "Richtext",
-                        "gui_attributes": {}
-                    },
-                    {
-                        "name": "dc:description_rt",
-                        "super": [
-                            "hasValue"
-                        ],
-                        "object": "TextValue",
-                        "labels": {
-                            "de": "Beschreibung (Richtext)"
-                        },
-                        "comments": {
-                            "de": "Beschreibung"
                         },
                         "gui_element": "Richtext",
                         "gui_attributes": {}
@@ -1041,22 +952,6 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "dc:source_rt",
-                        "super": [
-                            "hasValue"
-                        ],
-                        "object": "TextValue",
-                        "labels": {
-                            "de": "Quelle (Richtext)"
-                        },
-                        "comments": {
-                            "de": "Eine zugeh\u00f6rige Ressource, von der die beschriebene Ressource abgeleitet ist. Die beschriebene Ressource kann ganz oder teilweise von der zugeh\u00f6rigen Ressource abgeleitet sein. Es wird empfohlen, die zugeh\u00f6rige Ressource mit Hilfe einer Zeichenkette zu identifizieren, die einem formalen Identifikationssystem entspricht.",
-                            "en": "A related resource from which the described resource is derived. The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system."
-                        },
-                        "gui_element": "Richtext",
-                        "gui_attributes": {}
-                    },
-                    {
                         "name": "mnr_plus",
                         "super": [
                             "hasValue"
@@ -1115,7 +1010,6 @@
                         },
                         "gui_element": "Searchbox",
                         "gui_attributes": {
-                            "restypeid": "28",
                             "numprops": 1
                         }
                     },
@@ -1268,7 +1162,6 @@
                         },
                         "gui_element": "Searchbox",
                         "gui_attributes": {
-                            "restypeid": "36",
                             "numprops": 1
                         }
                     },
@@ -1286,47 +1179,7 @@
                         },
                         "gui_element": "Searchbox",
                         "gui_attributes": {
-                            "restypeid": "43",
                             "numprops": 1
-                        }
-                    },
-                    {
-                        "name": "salsah:lastname",
-                        "super": [
-                            "hasValue"
-                        ],
-                        "object": "TextValue",
-                        "labels": {
-                            "de": "Name"
-                        },
-                        "comments": {
-                            "de": "Nachname einer Person",
-                            "en": "Last name of a person"
-                        },
-                        "gui_element": "SimpleText",
-                        "gui_attributes": {
-                            "size": 32,
-                            "maxlength": 32
-                        }
-                    },
-                    {
-                        "name": "salsah:firstname",
-                        "super": [
-                            "hasValue"
-                        ],
-                        "object": "TextValue",
-                        "labels": {
-                            "de": "Vorname",
-                            "en": "First name"
-                        },
-                        "comments": {
-                            "de": "Vorname einer Person",
-                            "en": "First name of a person"
-                        },
-                        "gui_element": "SimpleText",
-                        "gui_attributes": {
-                            "size": 32,
-                            "maxlength": 32
                         }
                     },
                     {
@@ -1523,7 +1376,6 @@
                         },
                         "gui_element": "Searchbox",
                         "gui_attributes": {
-                            "restypeid": "50",
                             "numprops": 2
                         }
                     },
@@ -1712,66 +1564,6 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "salsah:transcription",
-                        "super": [
-                            "hasLinkTo"
-                        ],
-                        "object": "salsah:transcription_area",
-                        "labels": {
-                            "de": "Transkription"
-                        },
-                        "comments": {
-                            "de": "Transkription"
-                        },
-                        "gui_element": "Searchbox",
-                        "gui_attributes": {
-                            "restypeid": "30",
-                            "numprops": 1
-                        }
-                    },
-                    {
-                        "name": "salsah:part_of",
-                        "super": [
-                            "hasLinkTo"
-                        ],
-                        "object": ":LinkValue",
-                        "labels": {
-                            "de": "ist ein Teil von",
-                            "fr": "est un part de",
-                            "it": "e una parte di",
-                            "en": "is a part of"
-                        },
-                        "comments": {
-                            "de": "Diese Property bezeichnet eine Verbindung zu einer anderen Resource, in dem ausgesagt wird, dass die vorliegende Resource ein integraler Teil der anderen Resource ist. Zum Beispiel ist eine Buchseite ein integraler Bestandteil genau eines Buches.",
-                            "en": "This property represents a connection to another resource where the given resource is an integral part of. As an example a page is an integral part of a book."
-                        },
-                        "gui_element": "Searchbox",
-                        "gui_attributes": {}
-                    },
-                    {
-                        "name": "salsah:seqnum",
-                        "super": [
-                            "hasValue"
-                        ],
-                        "object": "IntValue",
-                        "labels": {
-                            "de": "Sequenznummer",
-                            "fr": "Num\u00e9ro de S\u00e9quence",
-                            "it": "Numero di scala",
-                            "en": "Sequence number"
-                        },
-                        "comments": {
-                            "de": "Diese Property bezeichnet die Position in einer geordneten Reihenfolge",
-                            "fr": "Cette \"property\" d\u00e9note la position dans un s\u00e9quence.",
-                            "en": "This property stands for the position within a set of ordered items (resources)"
-                        },
-                        "gui_element": "Spinbox",
-                        "gui_attributes": {
-                            "min": 0,
-                            "max": -1
-                        }
-                    },
-                    {
                         "name": "rism_sigle",
                         "super": [
                             "hasValue"
@@ -1799,9 +1591,7 @@
                             "de": "Diese Property bezeichnet eine Verbindung zu einer anderen Resource, in dem ausgesagt wird, dass die vorliegende Resource ein integraler Teil eines Konvoluts ist. Zum Beispiel ist ein Konvolut ein integraler Bestandteil genau eines anderen Konvoluts."
                         },
                         "gui_element": "Searchbox",
-                        "gui_attributes": {
-                            "restypeid": "50"
-                        }
+                        "gui_attributes": {}
                     },
                     {
                         "name": "owning_institution",
@@ -1816,9 +1606,7 @@
                             "de": "bezeichnet eine besitzende Institution \n\nowl:equivalentProperty dbo:owningOrganisation"
                         },
                         "gui_element": "Searchbox",
-                        "gui_attributes": {
-                            "restypeid": "49"
-                        }
+                        "gui_attributes": {}
                     },
                     {
                         "name": "ref_mnr",
@@ -1834,7 +1622,6 @@
                         },
                         "gui_element": "Searchbox",
                         "gui_attributes": {
-                            "restypeid": "36",
                             "numprops": 1
                         }
                     },
@@ -1918,28 +1705,6 @@
                         }
                     },
                     {
-                        "name": "dc:author",
-                        "super": [
-                            "hasValue"
-                        ],
-                        "object": "TextValue",
-                        "labels": {
-                            "de": "Autor",
-                            "fr": "Auteur",
-                            "it": "Autore",
-                            "en": "Author"
-                        },
-                        "comments": {
-                            "de": "Ein Autor (lat. auctor \u201eUrheber\u201c, \u201eSch\u00f6pfer\u201c, \u201eF\u00f6rderer\u201c, \u201eVeranlasser\u201c) ist der Verfasser oder geistige Urheber eines Werkes. Dabei handelt es sich meist um Werke der Literatur im weitesten Sinn (Schriftsteller, Fachbuch-, Lehrbuch-, Sachbuch-, Drehbuch-, Fernseh-, Opern- oder B\u00fchnenautor). Seltener wird, mit einem deutlich juristischen Beiklang, als Autor der Urheber eines Werkes der nichtliterarischen Kunst (etwa Musik, Fotografie, Filmkunst) und der Wissenschaft verstanden (vgl. auch Softwareautoren, Gesetzesautoren). Un\u00fcblich scheint es auch zu sein, konkrete Poesie, visuelle Poesie oder Wortbilder als von Autoren geschaffen zu bezeichnen. (Wikipedia http://de.wikipedia.org/wiki/Autor)",
-                            "en": "An author or authress (sometimes, in reference to a woman author, authoress) is defined both as \"the person who originates or gives existence to anything\" and that authorship determines responsibility for what is created. (Wikipedia http://en.wikipedia.org/wiki/Author)"
-                        },
-                        "gui_element": "SimpleText",
-                        "gui_attributes": {
-                            "size": 60,
-                            "maxlength": 255
-                        }
-                    },
-                    {
                         "name": "bibl_title_dependent_rt",
                         "super": [
                             "hasValue"
@@ -1968,7 +1733,6 @@
                         },
                         "gui_element": "Searchbox",
                         "gui_attributes": {
-                            "restypeid": "126",
                             "numprops": 1
                         }
                     },
@@ -2232,7 +1996,6 @@
                         },
                         "gui_element": "Searchbox",
                         "gui_attributes": {
-                            "restypeid": "181",
                             "numprops": 2
                         }
                     },
@@ -2295,70 +2058,6 @@
                         },
                         "gui_element": "Richtext",
                         "gui_attributes": {}
-                    },
-                    {
-                        "name": "salsah:comment",
-                        "super": [
-                            "hasValue"
-                        ],
-                        "object": "TextValue",
-                        "labels": {
-                            "de": "Kommentar",
-                            "fr": "Commentaire",
-                            "it": "Commento",
-                            "en": "Comment"
-                        },
-                        "comments": {
-                            "de": "Unstrukturierte Bemerkungen zu einem Objekt"
-                        },
-                        "gui_element": "Textarea",
-                        "gui_attributes": {
-                            "width": "95%",
-                            "rows": 7,
-                            "wrap": "soft"
-                        }
-                    },
-                    {
-                        "name": "dc:publisher",
-                        "super": [
-                            "hasValue"
-                        ],
-                        "object": "TextValue",
-                        "labels": {
-                            "de": "Verleger",
-                            "fr": "Editions",
-                            "it": "Casa editrice",
-                            "en": "Publisher"
-                        },
-                        "comments": {
-                            "de": "Ein Verlag ist ein Medienunternehmen, das Werke der Literatur, Kunst, Musik oder Wissenschaft vervielf\u00e4ltigt und verbreitet. Der Verkauf kann \u00fcber den Handel (Kunst-, Buchhandel etc.) oder durch den Verlag selbst erfolgen. Das Wort \u201everlegen\u201c bedeutet im Mittelhochdeutschen \u201eGeld ausgeben\u201c oder \u201eetwas auf seine Rechnung nehmen\u201c. (Wikipedia http://de.wikipedia.org/wiki/Verlag)",
-                            "fr": "Une maison d\u2019\u00e9dition est une entreprise ou une association dont l\u2019activit\u00e9 principale est la production et la diffusion de livres. L\u2019activit\u00e9 est donc li\u00e9e \u00e0 l\u2019\u00e9dition de documents. Trois formes d'entreprise dominent la profession : SA, SARL et entreprise personnelle. (Wikipedia http://fr.wikipedia.org/wiki/Maison_d%27\u00e9dition)",
-                            "en": "Publishing is the process of production and dissemination of literature or information \u2013 the activity of making information available for public view. In some cases authors may be their own publishers, meaning: originators and developers of content also provide media to deliver and display the content. (Wikipedia http://en.wikipedia.org/wiki/Publisher)"
-                        },
-                        "gui_element": "SimpleText",
-                        "gui_attributes": {
-                            "size": 60,
-                            "maxlength": 255
-                        }
-                    },
-                    {
-                        "name": "salsah:address",
-                        "super": [
-                            "hasValue"
-                        ],
-                        "object": "TextValue",
-                        "labels": {
-                            "de": "Adresse",
-                            "en": "Address"
-                        },
-                        "comments": {
-                            "de": "Adresse (Strassenname, Nummer etc.)"
-                        },
-                        "gui_element": "SimpleText",
-                        "gui_attributes": {
-                            "size": 64,
-                            "maxlength": 64
-                        }
                     },
                     {
                         "name": "sketch_commentary",
