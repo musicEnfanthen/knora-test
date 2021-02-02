@@ -453,6 +453,7 @@ class Converter:
 
                                 if tmpOnto["project"]["ontologies"][0]["properties"][-1]["object"] == "LinkValue":
                                     print(property)
+                                    tmpOnto["project"]["ontologies"][0]["properties"][-1]["object"] = ":LinkValue"
 
     # ==================================================================================================================
 
