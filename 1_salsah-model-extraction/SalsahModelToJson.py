@@ -348,6 +348,9 @@ class Converter:
                             # check for duplicates
                             if property["name"] in controlList:
                                 continue
+                            # check for external vocabulary
+                            elif property["vocabulary"].lower() != project["shortname"].lower():
+                              continue
                             else:
                                 # prepare properties pattern
                                 tmpOnto["project"]["ontologies"][0]["properties"].append({
@@ -360,14 +363,8 @@ class Converter:
                                     "gui_attributes": {}
                                 })
 
-                                # check vocabulary of property
-                                propertyName = ""
-                                if property["vocabulary"].lower() is not None and property["vocabulary"].lower() == project["shortname"].lower():
-                                    propertyName = property["name"]
-                                elif property["vocabulary"].lower() is not None:
-                                    propertyName = property["vocabulary"].lower() + ":" + property["name"]
                                 # fill in the name of the property
-                                tmpOnto["project"]["ontologies"][0]["properties"][-1]["name"] = propertyName
+                                tmpOnto["project"]["ontologies"][0]["properties"][-1]["name"] = property["name"]
                                 controlList.append(property["name"])
 
                                 # fill in the labels of the properties
