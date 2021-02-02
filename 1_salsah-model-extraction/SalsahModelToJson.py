@@ -429,10 +429,11 @@ class Converter:
                                             except ValueError:
                                                 numEleValue = numEleValue
 
-                                        # fill in gui attributes (incl. hlists)
-                                        tmpOnto["project"]["ontologies"][0]["properties"][-1]["gui_attributes"].update({
-                                            numEleKey: numEleValue
-                                        })
+                                        # fill in gui attributes (incl. hlists; but exlcude restypeid)
+                                        if numEleKey != "restypeid":
+                                            tmpOnto["project"]["ontologies"][0]["properties"][-1]["gui_attributes"].update({
+                                                numEleKey: numEleValue
+                                            })
 
                                         # fill in ResourcePointer / LinkValue types
                                         if (numEleKey == "restypeid" and tmpOnto["project"]["ontologies"][0]["properties"][-1]["object"] == "LinkValue"):
