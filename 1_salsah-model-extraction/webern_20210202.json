@@ -2804,6 +2804,18 @@
                                 "cardinality": "0-n"
                             },
                             {
+                                "propname": ":literature_rt",
+                                "cardinality": "0-n"
+                            },
+                            {
+                                "propname": ":correspondence_rt",
+                                "cardinality": "0-n"
+                            },
+                            {
+                                "propname": ":further_sources_rt",
+                                "cardinality": "0-n"
+                            },
+                            {
                                 "propname": "salsah:comment_rt",
                                 "cardinality": "0-n"
                             }
