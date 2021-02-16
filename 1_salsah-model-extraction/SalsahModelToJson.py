@@ -64,10 +64,13 @@ class Converter:
 
     # ==================================================================================================================
     # Fill in the vocabulary prefixes
-    def fillPrefixes(self, projects):
-        for vocabulary in salsahJson.salsahVocabularies["vocabularies"]:
+    def fillPrefixes(self, prefix):
+        prefixMap = {
+            "dc": "http://purl.org/dc/terms/"
+        }
+        if prefix is not None and prefix in prefixMap:
             tmpOnto["prefixes"].update({
-                "dc": "http://purl.org/dc/terms/"
+                prefix: prefixMap[prefix]
             })
 
     # ==================================================================================================================
@@ -363,9 +366,9 @@ class Converter:
                                 if property["vocabulary"].lower() == project["shortname"].lower():
                                     propertyName = property["name"]
                                 else:
+                                    salsahJson.fillPrefixes(property["vocabulary"].lower())
                                     propertyName = property["vocabulary"].lower() + "_" + property["name"]
                                     propertySuperValue = property["vocabulary"].lower() + ":" + property["name"].removesuffix("_rt") # remove possible suffix from super value
-                                    print("Got dc:", propertyName)
 
                             # exclude duplicates
                             if propertyName in controlList:
@@ -536,8 +539,6 @@ if __name__ == '__main__':
             salsahJson.fetchResources(projects)
             #pprint("FetchProperties")
             salsahJson.fetchProperties(projects)
-            # pprint("FillPrefixes")
-            salsahJson.fillPrefixes(projects)
             # Creating the new json files
             f = open(projects["shortname"] + "_" + now + ".json", 'w')
             f.write(json.dumps(tmpOnto, indent=4))
