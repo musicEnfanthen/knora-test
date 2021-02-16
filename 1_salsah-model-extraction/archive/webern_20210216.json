@@ -1,7 +1,5 @@
 {
-    "prefixes": {
-        "dc": "http://purl.org/dc/terms/"
-    },
+    "prefixes": {},
     "project": {
         "shortcode": "0806",
         "shortname": "webern",
