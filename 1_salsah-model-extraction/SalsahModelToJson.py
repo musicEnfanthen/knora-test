@@ -63,6 +63,14 @@ class Converter:
                 tmpOnto["project"]["ontologies"][0]["label"] = vocabulary["longname"]
 
     # ==================================================================================================================
+    # Fill in the vocabulary prefixes
+    def fillPrefixes(self, projects):
+        for vocabulary in salsahJson.salsahVocabularies["vocabularies"]:
+            tmpOnto["prefixes"].update({
+                "dc": "http://purl.org/dc/terms/"
+            })
+
+    # ==================================================================================================================
     # Function responsible to get the keywords of the corresponding project
     def fetchKeywords(self, project):
         for vocabulary in salsahJson.salsahVocabularies["vocabularies"]:
@@ -243,10 +251,13 @@ class Converter:
                     for propertyId in resTypeInfo["properties"]:
                         # check vocabulary of propertyId
                         propertyName = ""
-                        if propertyId["vocabulary"].lower() is not None and propertyId["vocabulary"].lower() == project["shortname"].lower():
-                            propertyName = ":" + propertyId["name"]
-                        elif propertyId["vocabulary"].lower() is not None:
-                            propertyName = propertyId["vocabulary"].lower() + ":" + propertyId["name"]
+                        if propertyId["vocabulary"].lower() is not None:
+                            if propertyId["vocabulary"].lower() == project["shortname"].lower():
+                                propertyName = ":" + propertyId["name"]
+                            elif propertyId["vocabulary"].lower() != "salsah":
+                                propertyName = ":" + propertyId["vocabulary"].lower() + "_" + propertyId["name"]
+                            else:
+                                propertyName = propertyId["vocabulary"].lower() + ":" + propertyId["name"]
 
                         if propertyName != "salsah:__location__":
                             tmpOnto["project"]["ontologies"][0]["resources"][-1]["cardinalities"].append({
@@ -345,12 +356,24 @@ class Converter:
                     # loop through all properties of a resourcetype
                     for property in resTypeInfo["properties"]:
                         if "id" in property:
-                            # check for duplicates
-                            if property["name"] in controlList:
+                            # check vocabulary of property
+                            propertyName = ""
+                            propertySuperValue = ""
+                            if property["vocabulary"].lower() is not None:
+                                if property["vocabulary"].lower() == project["shortname"].lower():
+                                    propertyName = property["name"]
+                                else:
+                                    propertyName = property["vocabulary"].lower() + "_" + property["name"]
+                                    propertySuperValue = property["vocabulary"].lower() + ":" + property["name"].removesuffix("_rt") # remove possible suffix from super value
+                                    print("Got dc:", propertyName)
+
+                            # exclude duplicates
+                            if propertyName in controlList:
                                 continue
-                            # check for external vocabulary
-                            elif property["vocabulary"].lower() != project["shortname"].lower():
-                              continue
+                            # exclude salsah vocabulary
+                            elif property["vocabulary"].lower() == "salsah":
+                                continue
+                            # go for everything else
                             else:
                                 # prepare properties pattern
                                 tmpOnto["project"]["ontologies"][0]["properties"].append({
@@ -364,8 +387,8 @@ class Converter:
                                 })
 
                                 # fill in the name of the property
-                                tmpOnto["project"]["ontologies"][0]["properties"][-1]["name"] = property["name"]
-                                controlList.append(property["name"])
+                                tmpOnto["project"]["ontologies"][0]["properties"][-1]["name"] = propertyName
+                                controlList.append(propertyName)
 
                                 # fill in the labels of the properties
                                 for labelId in property["label"]:
@@ -392,6 +415,10 @@ class Converter:
                                         tmpOnto["project"]["ontologies"][0]["properties"][-1]["super"].append(superMap[objectMap[property["vt_name"]]])
                                     else:
                                         tmpOnto["project"]["ontologies"][0]["properties"][-1]["super"].append("hasValue")
+                                    # external properties need another super value
+                                    if property["vocabulary"].lower() is not None and property["vocabulary"].lower() != project["shortname"].lower():
+                                        tmpOnto["project"]["ontologies"][0]["properties"][-1]["super"].append(propertySuperValue)
+
 
                                 # fill in all attributes (gui_attributes and resource pointer)
                                 if "attributes" in property and property["attributes"] != "" and property["attributes"] is not None:
