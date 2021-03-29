@@ -695,6 +695,21 @@
                         "gui_attributes": {}
                     },
                     {
+                        "name": "salsah_comment_rt",
+                        "super": [
+                            "hasValue"
+                        ],
+                        "object": "TextValue",
+                        "labels": {
+                            "de": "Kommentar (Richtext)"
+                        },
+                        "comments": {
+                            "de": "Unstrukturierte Bemerkungen zu einem Objekt"
+                        },
+                        "gui_element": "Richtext",
+                        "gui_attributes": {}
+                    },
+                    {
                         "name": "dc_title",
                         "super": [
                             "hasValue",
@@ -1275,6 +1290,45 @@
                         }
                     },
                     {
+                        "name": "salsah_lastname",
+                        "super": [
+                            "hasValue"
+                        ],
+                        "object": "TextValue",
+                        "labels": {
+                            "de": "Name"
+                        },
+                        "comments": {
+                            "de": "Nachname einer Person",
+                            "en": "Last name of a person"
+                        },
+                        "gui_element": "SimpleText",
+                        "gui_attributes": {
+                            "size": 32,
+                            "maxlength": 32
+                        }
+                    },
+                    {
+                        "name": "salsah_firstname",
+                        "super": [
+                            "hasValue"
+                        ],
+                        "object": "TextValue",
+                        "labels": {
+                            "de": "Vorname",
+                            "en": "First name"
+                        },
+                        "comments": {
+                            "de": "Vorname einer Person",
+                            "en": "First name of a person"
+                        },
+                        "gui_element": "SimpleText",
+                        "gui_attributes": {
+                            "size": 32,
+                            "maxlength": 32
+                        }
+                    },
+                    {
                         "name": "alt_name_rt",
                         "super": [
                             "hasValue"
@@ -1654,6 +1708,23 @@
                         },
                         "gui_element": "Date",
                         "gui_attributes": {}
+                    },
+                    {
+                        "name": "salsah_transcription",
+                        "super": [
+                            "hasLinkTo"
+                        ],
+                        "object": "salsah:transcription_area",
+                        "labels": {
+                            "de": "Transkription"
+                        },
+                        "comments": {
+                            "de": "Transkription"
+                        },
+                        "gui_element": "Searchbox",
+                        "gui_attributes": {
+                            "numprops": 1
+                        }
                     },
                     {
                         "name": "rism_sigle",
@@ -2175,6 +2246,28 @@
                         "gui_attributes": {}
                     },
                     {
+                        "name": "salsah_comment",
+                        "super": [
+                            "hasValue"
+                        ],
+                        "object": "TextValue",
+                        "labels": {
+                            "de": "Kommentar",
+                            "fr": "Commentaire",
+                            "it": "Commento",
+                            "en": "Comment"
+                        },
+                        "comments": {
+                            "de": "Unstrukturierte Bemerkungen zu einem Objekt"
+                        },
+                        "gui_element": "Textarea",
+                        "gui_attributes": {
+                            "width": "95%",
+                            "rows": 7,
+                            "wrap": "soft"
+                        }
+                    },
+                    {
                         "name": "dc_publisher",
                         "super": [
                             "hasValue",
@@ -2196,6 +2289,25 @@
                         "gui_attributes": {
                             "size": 60,
                             "maxlength": 255
+                        }
+                    },
+                    {
+                        "name": "salsah_address",
+                        "super": [
+                            "hasValue"
+                        ],
+                        "object": "TextValue",
+                        "labels": {
+                            "de": "Adresse",
+                            "en": "Address"
+                        },
+                        "comments": {
+                            "de": "Adresse (Strassenname, Nummer etc.)"
+                        },
+                        "gui_element": "SimpleText",
+                        "gui_attributes": {
+                            "size": 64,
+                            "maxlength": 64
                         }
                     },
                     {
@@ -2268,7 +2380,7 @@
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "salsah:comment_rt",
+                                "propname": ":salsah_comment_rt",
                                 "cardinality": "0-n"
                             }
                         ]
@@ -2390,7 +2502,7 @@
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "salsah:comment_rt",
+                                "propname": ":salsah_comment_rt",
                                 "cardinality": "0-n"
                             }
                         ]
@@ -2399,16 +2511,16 @@
                         "name": "musical_piece",
                         "super": "Resource",
                         "labels": {
-                            "de": "Musikst\u00fcck (Moldenhauer-Nummer)",
-                            "fr": "Musique (num\u00e9ro de Moldenhauer)",
-                            "it": "Musica (numero di Moldenhauer)",
-                            "en": "Piece of music (Moldenhauer nr.)"
+                            "de": "Musikst\u00fcck (AWG-ID)",
+                            "fr": "Musique (AWG-ID)",
+                            "it": "Musica (AWG-ID)",
+                            "en": "Piece of music (AWG-ID)"
                         },
                         "comments": {
-                            "de": "einzelnes Musikst\u00fcck (identifiziert durch Moldenhauer-Nummer)",
-                            "fr": "un seul morceau de musique (identifi\u00e9 par le num\u00e9ro de Moldenhauer)",
-                            "it": "brano musicale singolo (identificato dal numero di Moldenhauer)",
-                            "en": "single piece of music (identified by Moldenhauer number)"
+                            "de": "einzelnes Musikst\u00fcck (identifiziert durch AWG-ID)",
+                            "fr": "un seul morceau de musique (identifi\u00e9 par AWG-ID)",
+                            "it": "brano musicale singolo (identificato dal AWG-ID)",
+                            "en": "single piece of music (identified by AWG-ID)"
                         },
                         "cardinalities": [
                             {
@@ -2456,7 +2568,7 @@
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "salsah:comment_rt",
+                                "propname": ":salsah_comment_rt",
                                 "cardinality": "0-n"
                             }
                         ]
@@ -2530,7 +2642,7 @@
                                 "cardinality": "1-n"
                             },
                             {
-                                "propname": "salsah:comment_rt",
+                                "propname": ":salsah_comment_rt",
                                 "cardinality": "0-n"
                             }
                         ]
@@ -2572,7 +2684,7 @@
                                 "cardinality": "1-n"
                             },
                             {
-                                "propname": "salsah:comment_rt",
+                                "propname": ":salsah_comment_rt",
                                 "cardinality": "0-n"
                             },
                             {
@@ -2602,11 +2714,11 @@
                         },
                         "cardinalities": [
                             {
-                                "propname": "salsah:lastname",
+                                "propname": ":salsah_lastname",
                                 "cardinality": "1"
                             },
                             {
-                                "propname": "salsah:firstname",
+                                "propname": ":salsah_firstname",
                                 "cardinality": "1"
                             },
                             {
@@ -2654,7 +2766,7 @@
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "salsah:comment_rt",
+                                "propname": ":salsah_comment_rt",
                                 "cardinality": "0-n"
                             }
                         ]
@@ -2760,7 +2872,7 @@
                                 "cardinality": "1"
                             },
                             {
-                                "propname": "salsah:comment_rt",
+                                "propname": ":salsah_comment_rt",
                                 "cardinality": "0-n"
                             }
                         ]
@@ -2786,7 +2898,7 @@
                                 "cardinality": "1"
                             },
                             {
-                                "propname": "salsah:transcription",
+                                "propname": ":salsah_transcription",
                                 "cardinality": "0-n"
                             },
                             {
@@ -2798,7 +2910,7 @@
                                 "cardinality": "1"
                             },
                             {
-                                "propname": "salsah:comment_rt",
+                                "propname": ":salsah_comment_rt",
                                 "cardinality": "0-n"
                             }
                         ]
@@ -2828,7 +2940,7 @@
                                 "cardinality": "0-1"
                             },
                             {
-                                "propname": "salsah:comment_rt",
+                                "propname": ":salsah_comment_rt",
                                 "cardinality": "0-n"
                             }
                         ]
@@ -2938,7 +3050,7 @@
                                 "cardinality": "0-1"
                             },
                             {
-                                "propname": "salsah:comment_rt",
+                                "propname": ":salsah_comment_rt",
                                 "cardinality": "0-n"
                             }
                         ]
@@ -3008,7 +3120,7 @@
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "salsah:comment_rt",
+                                "propname": ":salsah_comment_rt",
                                 "cardinality": "0-n"
                             }
                         ]
@@ -3118,7 +3230,7 @@
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "salsah:comment_rt",
+                                "propname": ":salsah_comment_rt",
                                 "cardinality": "0-n"
                             }
                         ]
@@ -3153,14 +3265,14 @@
                             },
                             {
                                 "propname": "salsah:part_of",
-                                "cardinality": "1"
+                                "cardinality": "0-1"
                             },
                             {
                                 "propname": "salsah:seqnum",
                                 "cardinality": "1"
                             },
                             {
-                                "propname": "salsah:comment_rt",
+                                "propname": ":salsah_comment_rt",
                                 "cardinality": "0-n"
                             }
                         ]
@@ -3230,7 +3342,7 @@
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "salsah:comment",
+                                "propname": ":salsah_comment",
                                 "cardinality": "0-n"
                             }
                         ]
@@ -3264,7 +3376,7 @@
                                 "cardinality": "0-1"
                             },
                             {
-                                "propname": "salsah:address",
+                                "propname": ":salsah_address",
                                 "cardinality": "0-n"
                             },
                             {
@@ -3272,7 +3384,7 @@
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "salsah:comment_rt",
+                                "propname": ":salsah_comment_rt",
                                 "cardinality": "0-n"
                             }
                         ]
@@ -3314,7 +3426,7 @@
                                 "cardinality": "1"
                             },
                             {
-                                "propname": "salsah:comment_rt",
+                                "propname": ":salsah_comment_rt",
                                 "cardinality": "0-n"
                             }
                         ]
@@ -3344,7 +3456,7 @@
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "salsah:comment_rt",
+                                "propname": ":salsah_comment_rt",
                                 "cardinality": "0-n"
                             }
                         ]
@@ -3386,7 +3498,7 @@
                                 "cardinality": "1"
                             },
                             {
-                                "propname": "salsah:comment_rt",
+                                "propname": ":salsah_comment_rt",
                                 "cardinality": "0-n"
                             }
                         ]
