@@ -197,6 +197,11 @@ class Converter:
             "object": "Resource",
             "image": "StillImageRepresentation"
         }
+        salsahControlList = [
+            "part_of",
+            "seqnum",
+            "__location__"
+        ]
 
         for vocabulary in salsahJson.salsahVocabularies["vocabularies"]:
             if project["id"] == vocabulary["project_id"]:
@@ -257,10 +262,10 @@ class Converter:
                         if propertyId["vocabulary"].lower() is not None:
                             if propertyId["vocabulary"].lower() == project["shortname"].lower():
                                 propertyName = ":" + propertyId["name"]
-                            elif propertyId["vocabulary"].lower() != "salsah":
-                                propertyName = ":" + propertyId["vocabulary"].lower() + "_" + propertyId["name"]
+                            elif propertyId["vocabulary"].lower() == "salsah" and propertyId["name"] in salsahControlList:
+                                propertyName = propertyId["vocabulary"].lower() + ":" + propertyId["name"].removesuffix("_rt")
                             else:
-                                propertyName = propertyId["vocabulary"].lower() + ":" + propertyId["name"]
+                                propertyName = ":" + propertyId["vocabulary"].lower() + "_" + propertyId["name"]
 
                         if propertyName != "salsah:__location__":
                             tmpOnto["project"]["ontologies"][0]["resources"][-1]["cardinalities"].append({
@@ -274,6 +279,11 @@ class Converter:
     # ==================================================================================================================
     def fetchProperties(self, project):
         controlList = []  # List to identify duplicates of properties. We dont want duplicates in the properties list
+        salsahControlList = [
+            "part_of",
+            "seqnum",
+            "__location__"
+        ]
 
         guiEleMap = {
             "text": "SimpleText",
@@ -366,17 +376,18 @@ class Converter:
                                 if property["vocabulary"].lower() == project["shortname"].lower():
                                     propertyName = property["name"]
                                 else:
-                                    salsahJson.fillPrefixes(property["vocabulary"].lower())
                                     propertyName = property["vocabulary"].lower() + "_" + property["name"]
-                                    propertySuperValue = property["vocabulary"].lower() + ":" + property["name"].removesuffix("_rt") # remove possible suffix from super value
+                                    if property["vocabulary"].lower() != "salsah":
+                                        salsahJson.fillPrefixes(property["vocabulary"].lower())
+                                        propertySuperValue = property["vocabulary"].lower() + ":" + property["name"].removesuffix("_rt") # remove possible suffix from super value
 
                             # exclude duplicates
                             if propertyName in controlList:
                                 continue
-                            # exclude salsah vocabulary
-                            elif property["vocabulary"].lower() == "salsah":
+                            # exclude certain salsah properties
+                            elif property["vocabulary"].lower() == "salsah" and property["name"] in salsahControlList:
                                 continue
-                            # go for everything else
+                            # continue for everything else
                             else:
                                 # prepare properties pattern
                                 tmpOnto["project"]["ontologies"][0]["properties"].append({
@@ -419,7 +430,7 @@ class Converter:
                                     else:
                                         tmpOnto["project"]["ontologies"][0]["properties"][-1]["super"].append("hasValue")
                                     # external properties need another super value
-                                    if property["vocabulary"].lower() is not None and property["vocabulary"].lower() != project["shortname"].lower():
+                                    if property["vocabulary"].lower() is not None and property["vocabulary"].lower() != project["shortname"].lower() and property["vocabulary"].lower() != "salsah":
                                         tmpOnto["project"]["ontologies"][0]["properties"][-1]["super"].append(propertySuperValue)
 
 
