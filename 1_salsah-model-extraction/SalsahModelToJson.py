@@ -197,11 +197,11 @@ class Converter:
             "object": "Resource",
             "image": "StillImageRepresentation"
         }
-        salsahControlList = [
-            "part_of",
-            "seqnum",
-            "__location__"
-        ]
+        salsahPropertyMap = {
+            "part_of": "isPartOf",
+            "seqnum": "seqnum",
+            "__location__": "__location__"
+        }
 
         for vocabulary in salsahJson.salsahVocabularies["vocabularies"]:
             if project["id"] == vocabulary["project_id"]:
@@ -262,12 +262,12 @@ class Converter:
                         if propertyId["vocabulary"].lower() is not None:
                             if propertyId["vocabulary"].lower() == project["shortname"].lower():
                                 propertyName = ":" + propertyId["name"]
-                            elif propertyId["vocabulary"].lower() == "salsah" and propertyId["name"] in salsahControlList:
-                                propertyName = propertyId["vocabulary"].lower() + ":" + propertyId["name"].removesuffix("_rt")
+                            elif propertyId["vocabulary"].lower() == "salsah" and propertyId["name"] in salsahPropertyMap:
+                                propertyName = salsahPropertyMap[propertyId["name"]]
                             else:
                                 propertyName = ":" + propertyId["vocabulary"].lower() + "_" + propertyId["name"]
 
-                        if propertyName != "salsah:__location__":
+                        if propertyName != "__location__":
                             tmpOnto["project"]["ontologies"][0]["resources"][-1]["cardinalities"].append({
                                 "propname": propertyName,
                                 # "gui_order": "",  # TODO gui_order not yet implemented by knora.

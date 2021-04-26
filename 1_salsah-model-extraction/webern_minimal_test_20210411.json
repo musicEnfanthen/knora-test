@@ -1,0 +1,145 @@
+{
+    "prefixes": {
+        "dc": "http://purl.org/dc/terms/",
+        "test": "/test"
+    },
+    "project": {
+        "shortcode": "0806",
+        "shortname": "webern",
+        "longname": "Anton Webern Gesamtausgabe",
+        "descriptions": {
+            "de": "Die Anton Webern Gesamtausgabe ist eine kritisch-historische Edition, die darauf abzielt, Weberns gesamtes Werk in wissenschaftlicher Form der Musikwissenschaft und -praxis zug\u00e4nglich zu machen. Die Ausgabe enth\u00e4lt nicht nur alle Werke, die Webern selbst zur Drucklegung weitergeleitet hat, sondern auch deren unver\u00f6ffentlichte Varianten. Dazu geh\u00f6ren auch Kompositionen, die zu Lebzeiten nie ver\u00f6ffentlicht wurden, Werke aus seiner Jugend- und Studienzeit sowie Fragmente, Skizzen, Arrangements und Bearbeitungen seiner und anderer Partituren.<br/>\n<em>Link</em>:<a href=\"http://data.dasch.swiss/webern\">http://data.dasch.swiss/webern</a><br/>\n<em>Status</em>: <b>weitergehend</b></br>\n<em>Lizenz</em>: <b>restricted<b> (kontaktieren Sie DaSCH f\u00fcr weitere Informationen)",
+            "fr": "L'Anton Webern est une \u00e9dition critique et historique qui vise \u00e0 rendre l'ensemble de l'\u0153uvre de Webern accessible \u00e0 la pratique et \u00e0 l'\u00e9rudition musicale sous une forme savante. L'\u00e9dition comprend non seulement toutes les \u0153uvres que Webern lui-m\u00eame avait envoy\u00e9es pour \u00eatre imprim\u00e9es, mais aussi leurs versions in\u00e9dites. Il comprend \u00e9galement des compositions qui n'ont jamais \u00e9t\u00e9 rendues publiques de son vivant, des \u0153uvres de sa jeunesse et de ses ann\u00e9es d'\u00e9tudiant, ainsi que des fragments, des esquisses, des arrangements et des r\u00e9visions de ses partitions et d'autres.\n<em>Lien</em>:<a href=\"http://data.dasch.swiss/webern\">http://data.dasch.swiss/webern</a><br/>\n<em>Status</em>: <b>ongoing</b><brt/>\n<em>License</em>: <b>restricted<b> (contact DaSCH for information)",
+            "en": "The Anton Webern Gesamtausgabe is a critical-historical edition which aims to make Webern\u2019s entire oeuvre accessible to musical scholarship and practice in a scholarly form. The edition includes not only all the works Webern himself had forwarded to be printed but also their unpublished variants. It also includes compositions that were never made public in his lifetime, works from his youth and student years, as well as fragments, sketches, arrangements and revisions of his and other scores.<br/>\n<em>Link</em>:<a href=\"http://data.dasch.swiss/webern\">http://data.dasch.swiss/webern</a><br/>\n<em>Status</em>: <b>ongoing</b><br/>\n<em>License</em>: <b>restricted<b> (contact DaSCH for information)"
+        },
+        "keywords": [
+            "webern"
+        ],
+        "lists": [],
+        "ontologies": [
+            {
+                "name": "webern",
+                "label": "Anton Webern Edition",
+                "properties": [
+                    {
+                        "name": "hasComment_rt",
+                        "labels": {
+                            "de": "Kommentar (Richtext)"
+                        },
+                        "super": [
+                            "hasComment"
+                        ],
+                        "object": "TextValue",
+                        "gui_element": "Richtext"
+                    },
+                    {
+                        "name": "hasTitle",
+                        "labels": {
+                            "de": "Titel",
+                            "fr": "Titre",
+                            "it": "Titolo",
+                            "en": "Title"
+                        },
+                        "super": [
+                            "hasValue",
+                            "dc:title"
+                        ],
+                        "object": "TextValue",
+                        "gui_element": "SimpleText",
+                        "gui_attributes": {
+                            "size": 80,
+                            "maxlength": "255"
+                        }
+                    },
+                    {
+                        "name": "hasTranscription",
+                        "labels": {
+                            "de": "Transkription"
+                        },
+                        "super": [
+                            "hasValue"
+                        ],
+                        "object": "TextValue",
+                        "gui_element": "Searchbox",
+                        "gui_attributes": {
+                            "numprops": 1
+                        }
+                    },
+                    {
+                        "name": "hasPart_of",
+                        "labels": {
+                            "de": "ist ein Teil von",
+                            "fr": "est un part de",
+                            "it": "e una parte di",
+                            "en": "is a part of"
+                        },
+                        "super": [
+                            "isPartOf"
+                        ],
+                        "object": "Resource",
+                        "gui_element": "Searchbox"
+                    },
+                    {
+                        "name": "hasSeqnum",
+                        "labels": {
+                            "de": "Sequenznummer",
+                            "fr": "Num\u00e9ro de S\u00e9quence",
+                            "it": "Numero di scala",
+                            "en": "Sequence number"
+                        },
+                        "super": [
+                            "seqnum"
+                        ],
+                        "object": "IntValue",
+                        "gui_element": "Spinbox"
+                    }
+                ],
+                "resources": [
+                    {
+                        "name": "Digitalcopy_correspondence",
+                        "super": "StillImageRepresentation",
+                        "labels": {
+                            "de": "Digitalisat (Korrespondenz)",
+                            "fr": "Copie num\u00e9rique (correspondance)",
+                            "it": "Copia digitale (corrispondenza)",
+                            "en": "Digital copy (correspondence)"
+                        },
+                        "comments": {
+                            "de": "Digitalisat eines physischen materiellen Tr\u00e4gers (Korrespondenz)",
+                            "fr": "Copie num\u00e9rique d'un support mat\u00e9riel physique (correspondance)",
+                            "it": "Copia digitale  di un supporto fisico di materiale (corrispondenza)",
+                            "en": "Digital copy of a physical material carrier (correspondence)"
+                        },
+                        "cardinalities": [
+                            {
+                                "propname": ":hasTitle",
+                                "cardinality": "1",
+                                "gui_order": 0
+                            },
+                            {
+                                "propname": ":hasTranscription",
+                                "cardinality": "0-n",
+                                "gui_order": 0
+                            },
+                            {
+                                "propname": ":hasPart_of",
+                                "cardinality": "1",
+                                "gui_order": 0
+                            },
+                            {
+                                "propname": ":hasSeqnum",
+                                "cardinality": "1",
+                                "gui_order": 0
+                            },
+                            {
+                                "propname": ":hasComment_rt",
+                                "cardinality": "0-n",
+                                "gui_order": 0
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

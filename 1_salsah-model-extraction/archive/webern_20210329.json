@@ -1,14 +1,29 @@
 {
     "prefixes": {
-        "dc": "http://purl.org/dc/terms/"
+        "bibtex": "http://www.bibtex.org/",
+        "dc": "http://purl.org/dc/elements/1.1",
+        "foaf": "http://xmlns.com/foaf/spec/",
+        "test": "/test"
     },
     "project": {
         "shortcode": "0806",
         "shortname": "webern",
         "longname": "Anton Webern Gesamtausgabe",
         "descriptions": {
-            "en": "This is the special vocabulary for the Anton Webern Edition."
+            "de": "Die Anton Webern Gesamtausgabe ist eine kritisch-historische Edition, die darauf abzielt, Weberns gesamtes Werk in wissenschaftlicher Form der Musikwissenschaft und -praxis zug\u00e4nglich zu machen. Die Ausgabe enth\u00e4lt nicht nur alle Werke, die Webern selbst zur Drucklegung weitergeleitet hat, sondern auch deren unver\u00f6ffentlichte Varianten. Dazu geh\u00f6ren auch Kompositionen, die zu Lebzeiten nie ver\u00f6ffentlicht wurden, Werke aus seiner Jugend- und Studienzeit sowie Fragmente, Skizzen, Arrangements und Bearbeitungen seiner und anderer Partituren.<br/>\n<em>Link</em>:<a href=\"http://data.dasch.swiss/webern\">http://data.dasch.swiss/webern</a><br/>\n<em>Status</em>: <b>weitergehend</b></br>\n<em>Lizenz</em>: <b>restricted<b> (kontaktieren Sie DaSCH f\u00fcr weitere Informationen)",
+            "fr": "L'Anton Webern est une \u00e9dition critique et historique qui vise \u00e0 rendre l'ensemble de l'\u0153uvre de Webern accessible \u00e0 la pratique et \u00e0 l'\u00e9rudition musicale sous une forme savante. L'\u00e9dition comprend non seulement toutes les \u0153uvres que Webern lui-m\u00eame avait envoy\u00e9es pour \u00eatre imprim\u00e9es, mais aussi leurs versions in\u00e9dites. Il comprend \u00e9galement des compositions qui n'ont jamais \u00e9t\u00e9 rendues publiques de son vivant, des \u0153uvres de sa jeunesse et de ses ann\u00e9es d'\u00e9tudiant, ainsi que des fragments, des esquisses, des arrangements et des r\u00e9visions de ses partitions et d'autres.\n<em>Lien</em>:<a href=\"http://data.dasch.swiss/webern\">http://data.dasch.swiss/webern</a><br/>\n<em>Status</em>: <b>ongoing</b><brt/>\n<em>License</em>: <b>restricted<b> (contact DaSCH for information)",
+            "en": "The Anton Webern Gesamtausgabe is a critical-historical edition which aims to make Webern\u2019s entire oeuvre accessible to musical scholarship and practice in a scholarly form. The edition includes not only all the works Webern himself had forwarded to be printed but also their unpublished variants. It also includes compositions that were never made public in his lifetime, works from his youth and student years, as well as fragments, sketches, arrangements and revisions of his and other scores.<br/>\n<em>Link</em>:<a href=\"http://data.dasch.swiss/webern\">http://data.dasch.swiss/webern</a><br/>\n<em>Status</em>: <b>ongoing</b><br/>\n<em>License</em>: <b>restricted<b> (contact DaSCH for information)"
         },
+        "users": [
+            {
+                "username": "testuser",
+                "email": "testuser@test.org",
+                "givenName": "test",
+                "familyName": "user",
+                "password": "test",
+                "lang": "en"
+            }
+        ],
         "keywords": [
             "webern"
         ],
@@ -541,1725 +556,1342 @@
                 ]
             }
         ],
-        "groups": [],
-        "users": [],
         "ontologies": [
             {
                 "name": "webern",
                 "label": "Anton Webern Edition",
                 "properties": [
                     {
-                        "name": "event_rt",
+                        "name": "hasEvent_rt",
+                        "labels": {
+                            "de": "Ereignis"
+                        },
                         "super": [
                             "hasValue"
                         ],
                         "object": "TextValue",
-                        "labels": {
-                            "de": "Ereignis"
-                        },
-                        "comments": {
-                            "de": "Ein Ereignis mit Relevanz f\u00fcr A. Webern und/oder sein Werk."
-                        },
-                        "gui_element": "Richtext",
-                        "gui_attributes": {}
+                        "gui_element": "Richtext"
                     },
                     {
-                        "name": "chronology_type",
+                        "name": "hasChronology_type",
+                        "labels": {
+                            "de": "Ereignisart"
+                        },
                         "super": [
                             "hasValue"
                         ],
                         "object": "ListValue",
-                        "labels": {
-                            "de": "Ereignisart"
-                        },
-                        "comments": {
-                            "de": "Art eines chronologischen Ereignisses"
-                        },
-                        "gui_element": "Pulldown",
+                        "gui_element": "List",
                         "gui_attributes": {
                             "hlist": "chronologytag"
                         }
                     },
                     {
-                        "name": "dc_date",
-                        "super": [
-                            "hasValue",
-                            "dc:date"
-                        ],
-                        "object": "DateValue",
+                        "name": "hasDate",
                         "labels": {
                             "de": "Datum",
                             "fr": "Date",
                             "it": "Data",
                             "en": "Date"
                         },
-                        "comments": {
-                            "de": "Datum"
-                        },
-                        "gui_element": "Date",
-                        "gui_attributes": {}
-                    },
-                    {
-                        "name": "daytime",
                         "super": [
-                            "hasValue"
+                            "hasValue",
+                            "dc:date"
                         ],
                         "object": "TextValue",
+                        "gui_element": "Date"
+                    },
+                    {
+                        "name": "hasDaytime",
                         "labels": {
                             "de": "Tageszeit / Uhrzeit"
                         },
-                        "comments": {
-                            "de": "Tages- oder Uhrzeit eines Ereignisses"
-                        },
-                        "gui_element": "SimpleText",
-                        "gui_attributes": {}
-                    },
-                    {
-                        "name": "place",
                         "super": [
                             "hasValue"
                         ],
                         "object": "TextValue",
+                        "gui_element": "SimpleText"
+                    },
+                    {
+                        "name": "hasPlace",
                         "labels": {
                             "de": "Ort",
                             "fr": "Lieu",
                             "it": "Localit\u00e0"
                         },
-                        "comments": {
-                            "de": "Ort, wo ein Ereignis stattgefunden hat."
-                        },
+                        "super": [
+                            "hasValue"
+                        ],
+                        "object": "TextValue",
                         "gui_element": "SimpleText",
                         "gui_attributes": {
                             "size": 60,
-                            "maxlength": 200
+                            "maxlength": "200"
                         }
                     },
                     {
-                        "name": "placeGeo",
+                        "name": "hasPlacegeo",
+                        "labels": {
+                            "de": "Ort (GeoNames)"
+                        },
                         "super": [
                             "hasValue"
                         ],
                         "object": "GeonameValue",
-                        "labels": {
-                            "de": "Ort (GeoNames)"
-                        },
-                        "comments": {
-                            "de": "Geonames-Anbindung f\u00fcr einen Ort, wo ein Ereignis stattgefunden hat."
-                        },
-                        "gui_element": "Geonames",
-                        "gui_attributes": {}
+                        "gui_element": "Geonames"
                     },
                     {
-                        "name": "literature_rt",
-                        "super": [
-                            "hasValue"
-                        ],
-                        "object": "TextValue",
+                        "name": "hasLiterature_rt",
                         "labels": {
                             "de": "Literaturnachweis"
                         },
-                        "comments": {
-                            "de": "Literaturnachweise zu einem gegebenen Objekt"
-                        },
-                        "gui_element": "Richtext",
-                        "gui_attributes": {}
-                    },
-                    {
-                        "name": "correspondence_rt",
                         "super": [
                             "hasValue"
                         ],
                         "object": "TextValue",
+                        "gui_element": "Richtext"
+                    },
+                    {
+                        "name": "hasCorrespondence_rt",
                         "labels": {
                             "de": "Korrespondenznachweis"
                         },
-                        "comments": {
-                            "de": "Nachweis in Korrespondez von/zu oder \u00fcber Anton Webern."
-                        },
-                        "gui_element": "Richtext",
-                        "gui_attributes": {}
-                    },
-                    {
-                        "name": "further_sources_rt",
                         "super": [
                             "hasValue"
                         ],
                         "object": "TextValue",
+                        "gui_element": "Richtext"
+                    },
+                    {
+                        "name": "hasFurther_sources_rt",
                         "labels": {
                             "de": "andere Quellen"
                         },
-                        "comments": {
-                            "de": "andere Quellen (als Literatur oder Korrespondenz) zu einem gegebenen Objekt"
-                        },
-                        "gui_element": "Richtext",
-                        "gui_attributes": {}
-                    },
-                    {
-                        "name": "salsah_comment_rt",
                         "super": [
                             "hasValue"
                         ],
                         "object": "TextValue",
+                        "gui_element": "Richtext"
+                    },
+                    {
+                        "name": "hasComment_rt",
                         "labels": {
                             "de": "Kommentar (Richtext)"
                         },
-                        "comments": {
-                            "de": "Unstrukturierte Bemerkungen zu einem Objekt"
-                        },
-                        "gui_element": "Richtext",
-                        "gui_attributes": {}
-                    },
-                    {
-                        "name": "dc_title",
                         "super": [
-                            "hasValue",
-                            "dc:title"
+                            "hasComment"
                         ],
                         "object": "TextValue",
+                        "gui_element": "Richtext"
+                    },
+                    {
+                        "name": "hasTitle",
                         "labels": {
                             "de": "Titel",
                             "fr": "Titre",
                             "it": "Titolo",
                             "en": "Title"
                         },
-                        "comments": {},
+                        "super": [
+                            "hasValue",
+                            "dc:title"
+                        ],
+                        "object": "TextValue",
                         "gui_element": "SimpleText",
                         "gui_attributes": {
                             "size": 80,
-                            "maxlength": 255
+                            "maxlength": "255"
                         }
                     },
                     {
-                        "name": "corresp_type",
+                        "name": "hasCorresp_type",
+                        "labels": {
+                            "de": "Art"
+                        },
                         "super": [
                             "hasValue"
                         ],
                         "object": "ListValue",
-                        "labels": {
-                            "de": "Art"
-                        },
-                        "comments": {
-                            "de": "Art/Gattung einer Korrespondenz (dc:type)"
-                        },
                         "gui_element": "Pulldown",
                         "gui_attributes": {
                             "hlist": "corresp_type_selection"
                         }
                     },
                     {
-                        "name": "dc_creator",
+                        "name": "hasCreator",
+                        "labels": {
+                            "de": "Creator",
+                            "en": "Creator"
+                        },
                         "super": [
                             "hasValue",
                             "dc:creator"
                         ],
                         "object": "TextValue",
-                        "labels": {
-                            "de": "Creator",
-                            "en": "Creator"
-                        },
-                        "comments": {},
                         "gui_element": "SimpleText",
                         "gui_attributes": {
                             "size": 60,
-                            "maxlength": 255
+                            "maxlength": "255"
                         }
                     },
                     {
-                        "name": "corresp_writer",
-                        "super": [
-                            "hasLinkTo"
-                        ],
-                        "object": ":person",
+                        "name": "hasCorresp_writer",
                         "labels": {
                             "de": "Verfasser"
                         },
-                        "comments": {
-                            "de": "Verfasser einer Korrespondenz"
-                        },
+                        "super": [
+                            "hasLinkTo"
+                        ],
+                        "object": "webern:Person",
                         "gui_element": "Searchbox",
                         "gui_attributes": {
                             "numprops": 2
                         }
                     },
                     {
-                        "name": "corresp_contributor",
-                        "super": [
-                            "hasLinkTo"
-                        ],
-                        "object": ":person",
+                        "name": "hasCorresp_contributor",
                         "labels": {
                             "de": "Beitragender"
                         },
-                        "comments": {
-                            "de": "Verfasser einer Korrespondenz"
-                        },
-                        "gui_element": "Searchbox",
-                        "gui_attributes": {
-                            "numprops": 2
-                        }
-                    },
-                    {
-                        "name": "corresp_addressReturn",
-                        "super": [
-                            "hasValue"
-                        ],
-                        "object": "TextValue",
-                        "labels": {
-                            "de": "Absenderadresse"
-                        },
-                        "comments": {
-                            "de": "die autographe Adresse des Absenders einer Korrespondenz"
-                        },
-                        "gui_element": "Richtext",
-                        "gui_attributes": {}
-                    },
-                    {
-                        "name": "place_writer",
-                        "super": [
-                            "hasValue"
-                        ],
-                        "object": "GeonameValue",
-                        "labels": {
-                            "de": "Schreib-/Absendeort"
-                        },
-                        "comments": {
-                            "de": "Ortsangabe zum Absender einer Korrespondenz (ResPointer)"
-                        },
-                        "gui_element": "Geonames",
-                        "gui_attributes": {}
-                    },
-                    {
-                        "name": "date_autograph_rt",
-                        "super": [
-                            "hasValue"
-                        ],
-                        "object": "TextValue",
-                        "labels": {
-                            "de": "autographe Datierung"
-                        },
-                        "comments": {
-                            "de": "autographe Datierung in einer Quelle"
-                        },
-                        "gui_element": "Richtext",
-                        "gui_attributes": {}
-                    },
-                    {
-                        "name": "date_written",
-                        "super": [
-                            "hasValue"
-                        ],
-                        "object": "DateValue",
-                        "labels": {
-                            "de": "Schreibdatum"
-                        },
-                        "comments": {
-                            "de": "Datum des Abfassens einer Korrespondenz"
-                        },
-                        "gui_element": "Date",
-                        "gui_attributes": {}
-                    },
-                    {
-                        "name": "date_sent",
-                        "super": [
-                            "hasValue"
-                        ],
-                        "object": "DateValue",
-                        "labels": {
-                            "de": "Absendedatum"
-                        },
-                        "comments": {
-                            "de": "Datum des Absendens einer Korrespondenz"
-                        },
-                        "gui_element": "Date",
-                        "gui_attributes": {}
-                    },
-                    {
-                        "name": "corresp_recipient",
                         "super": [
                             "hasLinkTo"
                         ],
-                        "object": ":person",
-                        "labels": {
-                            "de": "Empf\u00e4nger"
-                        },
-                        "comments": {
-                            "de": "Empf\u00e4nger einer Korrespondenz"
-                        },
+                        "object": "webern:Person",
                         "gui_element": "Searchbox",
                         "gui_attributes": {
                             "numprops": 2
                         }
                     },
                     {
-                        "name": "corresp_addressRecipient",
+                        "name": "hasCorresp_addressreturn",
+                        "labels": {
+                            "de": "Absenderadresse"
+                        },
                         "super": [
                             "hasValue"
                         ],
                         "object": "TextValue",
-                        "labels": {
-                            "de": "Empf\u00e4ngeradresse"
-                        },
-                        "comments": {
-                            "de": "die autographe Adresse des Empf\u00e4ngers einer Korrespondenz"
-                        },
-                        "gui_element": "Richtext",
-                        "gui_attributes": {}
+                        "gui_element": "Richtext"
                     },
                     {
-                        "name": "place_recipient",
+                        "name": "hasPlace_writer",
+                        "labels": {
+                            "de": "Schreib-/Absendeort"
+                        },
                         "super": [
                             "hasValue"
                         ],
                         "object": "GeonameValue",
-                        "labels": {
-                            "de": "Empfangsort"
-                        },
-                        "comments": {
-                            "de": "Ortsangabe zum Empf\u00e4nger einer Korrespondenz (ResPointer)"
-                        },
-                        "gui_element": "Geonames",
-                        "gui_attributes": {}
+                        "gui_element": "Geonames"
                     },
                     {
-                        "name": "date_received",
+                        "name": "hasDate_autograph_rt",
+                        "labels": {
+                            "de": "autographe Datierung"
+                        },
+                        "super": [
+                            "hasValue"
+                        ],
+                        "object": "TextValue",
+                        "gui_element": "Richtext"
+                    },
+                    {
+                        "name": "hasDate_written",
+                        "labels": {
+                            "de": "Schreibdatum"
+                        },
                         "super": [
                             "hasValue"
                         ],
                         "object": "DateValue",
+                        "gui_element": "Date"
+                    },
+                    {
+                        "name": "hasDate_sent",
+                        "labels": {
+                            "de": "Absendedatum"
+                        },
+                        "super": [
+                            "hasValue"
+                        ],
+                        "object": "DateValue",
+                        "gui_element": "Date"
+                    },
+                    {
+                        "name": "hasCorresp_recipient",
+                        "labels": {
+                            "de": "Empf\u00e4nger"
+                        },
+                        "super": [
+                            "hasLinkTo"
+                        ],
+                        "object": "webern:Person",
+                        "gui_element": "Searchbox",
+                        "gui_attributes": {
+                            "numprops": 2
+                        }
+                    },
+                    {
+                        "name": "hasCorresp_addressrecipient",
+                        "labels": {
+                            "de": "Empf\u00e4ngeradresse"
+                        },
+                        "super": [
+                            "hasValue"
+                        ],
+                        "object": "TextValue",
+                        "gui_element": "Richtext"
+                    },
+                    {
+                        "name": "hasPlace_recipient",
+                        "labels": {
+                            "de": "Empfangsort"
+                        },
+                        "super": [
+                            "hasValue"
+                        ],
+                        "object": "GeonameValue",
+                        "gui_element": "Geonames"
+                    },
+                    {
+                        "name": "hasDate_received",
                         "labels": {
                             "de": "Empfangsdatum"
                         },
-                        "comments": {
-                            "de": "Datum des Empfangs einer Korrespondenz"
-                        },
-                        "gui_element": "Date",
-                        "gui_attributes": {}
-                    },
-                    {
-                        "name": "source_location_rt",
                         "super": [
                             "hasValue"
                         ],
-                        "object": "TextValue",
+                        "object": "DateValue",
+                        "gui_element": "Date"
+                    },
+                    {
+                        "name": "hasSource_location_rt",
                         "labels": {
                             "de": "Standort des physischen Originals"
                         },
-                        "comments": {
-                            "de": "Der Ort, wo das physische Original einer Quelle aufbewahrt wird"
-                        },
-                        "gui_element": "Richtext",
-                        "gui_attributes": {}
-                    },
-                    {
-                        "name": "reproduction",
                         "super": [
                             "hasValue"
                         ],
                         "object": "TextValue",
+                        "gui_element": "Richtext"
+                    },
+                    {
+                        "name": "hasReproduction",
                         "labels": {
                             "de": "Reproduktion"
                         },
-                        "comments": {
-                            "de": "Beschreibt den Standort (physisch, Web) einer Reproduktion einer Quelle"
-                        },
-                        "gui_element": "Richtext",
-                        "gui_attributes": {}
+                        "super": [
+                            "hasValue"
+                        ],
+                        "object": "TextValue",
+                        "gui_element": "Richtext"
                     },
                     {
-                        "name": "dc_description_rt",
+                        "name": "hasDescription_rt",
+                        "labels": {
+                            "de": "Beschreibung (Richtext)"
+                        },
                         "super": [
                             "hasValue",
                             "dc:description"
                         ],
                         "object": "TextValue",
-                        "labels": {
-                            "de": "Beschreibung (Richtext)"
-                        },
-                        "comments": {
-                            "de": "Beschreibung"
-                        },
-                        "gui_element": "Richtext",
-                        "gui_attributes": {}
+                        "gui_element": "Richtext"
                     },
                     {
-                        "name": "textincipit",
-                        "super": [
-                            "hasValue"
-                        ],
-                        "object": "TextValue",
+                        "name": "hasTextincipit",
                         "labels": {
                             "de": "Incipit"
                         },
-                        "comments": {
-                            "de": "Incipit eines Textes, Briefes, Liedtextes"
-                        },
-                        "gui_element": "SimpleText",
-                        "gui_attributes": {}
-                    },
-                    {
-                        "name": "content_rt",
                         "super": [
                             "hasValue"
                         ],
                         "object": "TextValue",
+                        "gui_element": "SimpleText"
+                    },
+                    {
+                        "name": "hasContent_rt",
                         "labels": {
                             "de": "Inhalt"
                         },
-                        "comments": {
-                            "de": "Inhalt"
-                        },
-                        "gui_element": "Richtext",
-                        "gui_attributes": {}
-                    },
-                    {
-                        "name": "transcription_rt",
                         "super": [
                             "hasValue"
                         ],
                         "object": "TextValue",
+                        "gui_element": "Richtext"
+                    },
+                    {
+                        "name": "hasTranscription_rt",
                         "labels": {
                             "de": "Transkription"
                         },
-                        "comments": {
-                            "de": "Transkription eines Textes"
-                        },
-                        "gui_element": "Richtext",
-                        "gui_attributes": {}
-                    },
-                    {
-                        "name": "context_rt",
                         "super": [
                             "hasValue"
                         ],
                         "object": "TextValue",
+                        "gui_element": "Richtext"
+                    },
+                    {
+                        "name": "hasContext_rt",
                         "labels": {
                             "de": "Kontextmaterial"
                         },
-                        "comments": {
-                            "de": "Kontextmaterial zu einer gegebenen Quelle"
-                        },
-                        "gui_element": "Richtext",
-                        "gui_attributes": {}
-                    },
-                    {
-                        "name": "dc_source_rt",
                         "super": [
-                            "hasValue",
-                            "dc:source"
+                            "hasValue"
                         ],
                         "object": "TextValue",
+                        "gui_element": "Richtext"
+                    },
+                    {
+                        "name": "hasSource_rt",
                         "labels": {
                             "de": "Quelle (Richtext)"
                         },
-                        "comments": {
-                            "de": "Eine zugeh\u00f6rige Ressource, von der die beschriebene Ressource abgeleitet ist. Die beschriebene Ressource kann ganz oder teilweise von der zugeh\u00f6rigen Ressource abgeleitet sein. Es wird empfohlen, die zugeh\u00f6rige Ressource mit Hilfe einer Zeichenkette zu identifizieren, die einem formalen Identifikationssystem entspricht.",
-                            "en": "A related resource from which the described resource is derived. The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system."
-                        },
-                        "gui_element": "Richtext",
-                        "gui_attributes": {}
-                    },
-                    {
-                        "name": "mnr_plus",
                         "super": [
-                            "hasValue"
+                            "hasValue",
+                            "dc:source_rt"
                         ],
                         "object": "TextValue",
+                        "gui_element": "Richtext"
+                    },
+                    {
+                        "name": "hasMnr_plus",
                         "labels": {
                             "de": "AWG-ID"
                         },
-                        "comments": {
-                            "de": "Die AWG-ID identifiziert ein St\u00fcck eindeutig (jenseits von Moldenhauer-Nummern)."
-                        },
-                        "gui_element": "SimpleText",
-                        "gui_attributes": {}
-                    },
-                    {
-                        "name": "mnr",
                         "super": [
                             "hasValue"
                         ],
-                        "object": "IntValue",
+                        "object": "TextValue",
+                        "gui_element": "SimpleText"
+                    },
+                    {
+                        "name": "hasMnr",
                         "labels": {
                             "de": "Moldenhauer-Nummer"
                         },
-                        "comments": {
-                            "de": "Die Moldenhauer-Nummer identifiziert ein St\u00fcck eindeutig"
-                        },
-                        "gui_element": "SimpleText",
-                        "gui_attributes": {}
-                    },
-                    {
-                        "name": "date_composition",
-                        "super": [
-                            "hasValue"
-                        ],
-                        "object": "DateValue",
-                        "labels": {
-                            "de": "Datum der Komposition"
-                        },
-                        "comments": {
-                            "de": "Datum der Komposition eines St\u00fccks"
-                        },
-                        "gui_element": "Date",
-                        "gui_attributes": {}
-                    },
-                    {
-                        "name": "performance",
-                        "super": [
-                            "hasLinkTo"
-                        ],
-                        "object": ":chronology",
-                        "labels": {
-                            "de": "Auff\u00fchrungen"
-                        },
-                        "comments": {
-                            "de": "Auff\u00fchrungen eines St\u00fccks"
-                        },
-                        "gui_element": "Searchbox",
-                        "gui_attributes": {
-                            "numprops": 1
-                        }
-                    },
-                    {
-                        "name": "date_firstpublication",
-                        "super": [
-                            "hasValue"
-                        ],
-                        "object": "DateValue",
-                        "labels": {
-                            "de": "Datum der Erstpublikation"
-                        },
-                        "comments": {
-                            "de": "Datum der Ver\u00f6ffentlichung eines St\u00fccks im Erstverlag"
-                        },
-                        "gui_element": "Date",
-                        "gui_attributes": {}
-                    },
-                    {
-                        "name": "firstpublisher",
-                        "super": [
-                            "hasValue"
-                        ],
-                        "object": "TextValue",
-                        "labels": {
-                            "de": "Erstverlag"
-                        },
-                        "comments": {
-                            "de": "Verlag, in dem ein St\u00fcck zum ersten Mal ver\u00f6ffentlicht wurde"
-                        },
-                        "gui_element": "SimpleText",
-                        "gui_attributes": {}
-                    },
-                    {
-                        "name": "instrumentation_rt",
-                        "super": [
-                            "hasValue"
-                        ],
-                        "object": "TextValue",
-                        "labels": {
-                            "de": "Besetzung"
-                        },
-                        "comments": {
-                            "de": "Besetzung des St\u00fccks"
-                        },
-                        "gui_element": "Richtext",
-                        "gui_attributes": {}
-                    },
-                    {
-                        "name": "further_non_edition_source_rt",
-                        "super": [
-                            "hasValue"
-                        ],
-                        "object": "TextValue",
-                        "labels": {
-                            "de": "weitere, f\u00fcr die Edition nicht relevante Quelle"
-                        },
-                        "comments": {
-                            "de": "Quelle zu einen Musikst\u00fcck, die f\u00fcr die Edition nicht relevant ist (posthumer Druck, etc.)"
-                        },
-                        "gui_element": "Richtext",
-                        "gui_attributes": {}
-                    },
-                    {
-                        "name": "textsource_rt",
-                        "super": [
-                            "hasValue"
-                        ],
-                        "object": "TextValue",
-                        "labels": {
-                            "de": "Textquelle"
-                        },
-                        "comments": {
-                            "de": "Angabe einer textuellen Quelle"
-                        },
-                        "gui_element": "Richtext",
-                        "gui_attributes": {}
-                    },
-                    {
-                        "name": "opus_num",
                         "super": [
                             "hasValue"
                         ],
                         "object": "IntValue",
-                        "labels": {
-                            "de": "Opus"
-                        },
-                        "comments": {
-                            "de": "Opus-Nummer eines ver\u00f6ffentlichten Werkes"
-                        },
-                        "gui_element": "SimpleText",
-                        "gui_attributes": {}
+                        "gui_element": "SimpleText"
                     },
                     {
-                        "name": "firstpublisher_rt",
-                        "super": [
-                            "hasValue"
-                        ],
-                        "object": "TextValue",
+                        "name": "hasDate_composition",
                         "labels": {
-                            "de": "Erstverlag (Richtext)"
+                            "de": "Datum der Komposition"
                         },
-                        "comments": {
-                            "de": "Verlag der Erstpublikation"
-                        },
-                        "gui_element": "Richtext",
-                        "gui_attributes": {}
-                    },
-                    {
-                        "name": "date_further_publication",
                         "super": [
                             "hasValue"
                         ],
                         "object": "DateValue",
-                        "labels": {
-                            "de": "Datum weitere Publikation"
-                        },
-                        "comments": {
-                            "de": "Datum weitere Publikation"
-                        },
-                        "gui_element": "Date",
-                        "gui_attributes": {}
+                        "gui_element": "Date"
                     },
                     {
-                        "name": "further_publisher_rt",
+                        "name": "hasPerformance",
+                        "labels": {
+                            "de": "Auff\u00fchrungen"
+                        },
+                        "super": [
+                            "hasLinkTo"
+                        ],
+                        "object": "webern:Chronology",
+                        "gui_element": "Searchbox",
+                        "gui_attributes": {
+                            "numprops": 1
+                        }
+                    },
+                    {
+                        "name": "hasDate_firstpublication",
+                        "labels": {
+                            "de": "Datum der Erstpublikation"
+                        },
+                        "super": [
+                            "hasValue"
+                        ],
+                        "object": "DateValue",
+                        "gui_element": "Date"
+                    },
+                    {
+                        "name": "hasFirstpublisher",
+                        "labels": {
+                            "de": "Erstverlag"
+                        },
                         "super": [
                             "hasValue"
                         ],
                         "object": "TextValue",
+                        "gui_element": "SimpleText"
+                    },
+                    {
+                        "name": "hasInstrumentation_rt",
+                        "labels": {
+                            "de": "Besetzung"
+                        },
+                        "super": [
+                            "hasValue"
+                        ],
+                        "object": "TextValue",
+                        "gui_element": "Richtext"
+                    },
+                    {
+                        "name": "hasFurther_non_edition_source_rt",
+                        "labels": {
+                            "de": "weitere, f\u00fcr die Edition nicht relevante Quelle"
+                        },
+                        "super": [
+                            "hasValue"
+                        ],
+                        "object": "TextValue",
+                        "gui_element": "Richtext"
+                    },
+                    {
+                        "name": "hasTextsource_rt",
+                        "labels": {
+                            "de": "Textquelle"
+                        },
+                        "super": [
+                            "hasValue"
+                        ],
+                        "object": "TextValue",
+                        "gui_element": "Richtext"
+                    },
+                    {
+                        "name": "hasOpus_num",
+                        "labels": {
+                            "de": "Opus"
+                        },
+                        "super": [
+                            "hasValue"
+                        ],
+                        "object": "IntValue",
+                        "gui_element": "SimpleText"
+                    },
+                    {
+                        "name": "hasFirstpublisher_rt",
+                        "labels": {
+                            "de": "Erstverlag (Richtext)"
+                        },
+                        "super": [
+                            "hasValue"
+                        ],
+                        "object": "TextValue",
+                        "gui_element": "Richtext"
+                    },
+                    {
+                        "name": "hasDate_further_publication",
+                        "labels": {
+                            "de": "Datum weitere Publikation"
+                        },
+                        "super": [
+                            "hasValue"
+                        ],
+                        "object": "DateValue",
+                        "gui_element": "Date"
+                    },
+                    {
+                        "name": "hasFurther_publisher_rt",
                         "labels": {
                             "de": "weiterer Verlag"
                         },
-                        "comments": {
-                            "de": "weiterer Verlag"
-                        },
-                        "gui_element": "Richtext",
-                        "gui_attributes": {}
+                        "super": [
+                            "hasValue"
+                        ],
+                        "object": "TextValue",
+                        "gui_element": "Richtext"
                     },
                     {
                         "name": "has_movement",
-                        "super": [
-                            "hasLinkTo"
-                        ],
-                        "object": ":musical_piece",
                         "labels": {
                             "de": "hat Satz"
                         },
-                        "comments": {
-                            "de": "Satzbezeichnung: Sequenz und Verweis auf Musikst\u00fcck  (zu Opus und Pr\u00e4-Opus)"
-                        },
-                        "gui_element": "Searchbox",
-                        "gui_attributes": {
-                            "numprops": 1
-                        }
-                    },
-                    {
-                        "name": "preopus_of",
                         "super": [
                             "hasLinkTo"
                         ],
-                        "object": ":opus",
-                        "labels": {
-                            "de": "Vorstufe von"
-                        },
-                        "comments": {
-                            "de": "Nennung der autorisierten Fassung (Webern-Opus)"
-                        },
+                        "object": "webern:Musical_piece",
                         "gui_element": "Searchbox",
                         "gui_attributes": {
                             "numprops": 1
                         }
                     },
                     {
-                        "name": "salsah_lastname",
-                        "super": [
-                            "hasValue"
-                        ],
-                        "object": "TextValue",
+                        "name": "hasPreopus_of",
                         "labels": {
-                            "de": "Name"
+                            "de": "Vorstufe von"
                         },
-                        "comments": {
-                            "de": "Nachname einer Person",
-                            "en": "Last name of a person"
-                        },
-                        "gui_element": "SimpleText",
+                        "super": [
+                            "hasLinkTo"
+                        ],
+                        "object": "webern:Opus",
+                        "gui_element": "Searchbox",
                         "gui_attributes": {
-                            "size": 32,
-                            "maxlength": 32
+                            "numprops": 1
                         }
                     },
                     {
-                        "name": "salsah_firstname",
+                        "name": "hasLastname",
+                        "labels": {
+                            "de": "Name"
+                        },
                         "super": [
                             "hasValue"
                         ],
                         "object": "TextValue",
+                        "gui_element": "SimpleText",
+                        "gui_attributes": {
+                            "size": 32,
+                            "maxlength": "32"
+                        }
+                    },
+                    {
+                        "name": "hasFirstname",
                         "labels": {
                             "de": "Vorname",
                             "en": "First name"
                         },
-                        "comments": {
-                            "de": "Vorname einer Person",
-                            "en": "First name of a person"
-                        },
+                        "super": [
+                            "hasValue"
+                        ],
+                        "object": "TextValue",
                         "gui_element": "SimpleText",
                         "gui_attributes": {
                             "size": 32,
-                            "maxlength": 32
+                            "maxlength": "32"
                         }
                     },
                     {
-                        "name": "alt_name_rt",
-                        "super": [
-                            "hasValue"
-                        ],
-                        "object": "TextValue",
+                        "name": "hasAlt_name_rt",
                         "labels": {
                             "de": "Namensvariante"
                         },
-                        "comments": {
-                            "de": "Namensvarianten (K\u00fcnstlername, andere Schreibweisen etc.)"
-                        },
-                        "gui_element": "Richtext",
-                        "gui_attributes": {}
-                    },
-                    {
-                        "name": "gnd",
                         "super": [
                             "hasValue"
                         ],
                         "object": "TextValue",
+                        "gui_element": "Richtext"
+                    },
+                    {
+                        "name": "hasGnd",
                         "labels": {
                             "de": "Gemeinsame Normdatei (GND)"
                         },
-                        "comments": {
-                            "de": "Verkn\u00fcpfung zur GND"
-                        },
-                        "gui_element": "Richtext",
-                        "gui_attributes": {}
-                    },
-                    {
-                        "name": "place_birth",
                         "super": [
                             "hasValue"
                         ],
                         "object": "TextValue",
+                        "gui_element": "Richtext"
+                    },
+                    {
+                        "name": "hasPlace_birth",
                         "labels": {
                             "de": "Geburtsort"
                         },
-                        "comments": {
-                            "de": "Geburtsort"
-                        },
-                        "gui_element": "SimpleText",
-                        "gui_attributes": {}
+                        "super": [
+                            "hasValue"
+                        ],
+                        "object": "TextValue",
+                        "gui_element": "SimpleText"
                     },
                     {
-                        "name": "date_birth",
+                        "name": "hasDate_birth",
+                        "labels": {
+                            "de": "Geburtsdatum"
+                        },
                         "super": [
                             "hasValue"
                         ],
                         "object": "DateValue",
-                        "labels": {
-                            "de": "Geburtsdatum"
-                        },
-                        "comments": {
-                            "de": "Geburtsdatum"
-                        },
-                        "gui_element": "Date",
-                        "gui_attributes": {}
+                        "gui_element": "Date"
                     },
                     {
-                        "name": "date_death",
+                        "name": "hasDate_death",
+                        "labels": {
+                            "de": "Sterbedatum"
+                        },
                         "super": [
                             "hasValue"
                         ],
                         "object": "DateValue",
-                        "labels": {
-                            "de": "Sterbedatum"
-                        },
-                        "comments": {
-                            "de": "Sterbedatum"
-                        },
-                        "gui_element": "Date",
-                        "gui_attributes": {}
+                        "gui_element": "Date"
                     },
                     {
-                        "name": "place_death",
+                        "name": "hasPlace_death",
+                        "labels": {
+                            "de": "Sterbeort"
+                        },
                         "super": [
                             "hasValue"
                         ],
                         "object": "TextValue",
-                        "labels": {
-                            "de": "Sterbeort"
-                        },
-                        "comments": {
-                            "de": "Sterbeort"
-                        },
-                        "gui_element": "SimpleText",
-                        "gui_attributes": {}
+                        "gui_element": "SimpleText"
                     },
                     {
-                        "name": "biography_rt",
-                        "super": [
-                            "hasValue"
-                        ],
-                        "object": "TextValue",
+                        "name": "hasBiography_rt",
                         "labels": {
                             "de": "Biographie"
                         },
-                        "comments": {
-                            "de": "berufliche, soziale und familienbezogene Informationen"
-                        },
-                        "gui_element": "Richtext",
-                        "gui_attributes": {}
-                    },
-                    {
-                        "name": "relation_webern_rt",
                         "super": [
                             "hasValue"
                         ],
                         "object": "TextValue",
+                        "gui_element": "Richtext"
+                    },
+                    {
+                        "name": "hasRelation_webern_rt",
                         "labels": {
                             "de": "Bezug zu Webern"
                         },
-                        "comments": {
-                            "de": "Bezug zu Webern"
-                        },
-                        "gui_element": "Richtext",
-                        "gui_attributes": {}
-                    },
-                    {
-                        "name": "sourcedesc_siglum",
                         "super": [
                             "hasValue"
                         ],
                         "object": "TextValue",
+                        "gui_element": "Richtext"
+                    },
+                    {
+                        "name": "hasSourcedesc_siglum",
                         "labels": {
                             "de": "Sigle"
                         },
-                        "comments": {
-                            "de": "verwendete Quellensigle in Bezug auf ein Musikst\u00fcck"
-                        },
-                        "gui_element": "SimpleText",
-                        "gui_attributes": {}
-                    },
-                    {
-                        "name": "sourceDesc_label",
                         "super": [
                             "hasValue"
                         ],
                         "object": "TextValue",
+                        "gui_element": "SimpleText"
+                    },
+                    {
+                        "name": "hasSourcedesc_label",
                         "labels": {
                             "de": "Bezeichnung"
                         },
-                        "comments": {
-                            "de": "Identifizierende Bezeichnung einer Quellenbeschreibung"
-                        },
-                        "gui_element": "Richtext",
-                        "gui_attributes": {}
-                    },
-                    {
-                        "name": "signature",
                         "super": [
                             "hasValue"
                         ],
                         "object": "TextValue",
+                        "gui_element": "Richtext"
+                    },
+                    {
+                        "name": "hasSignature",
                         "labels": {
                             "de": "Signatur"
                         },
-                        "comments": {
-                            "de": "Signatur (eindeutig)"
-                        },
-                        "gui_element": "SimpleText",
-                        "gui_attributes": {}
-                    },
-                    {
-                        "name": "signature_internal",
                         "super": [
                             "hasValue"
                         ],
                         "object": "TextValue",
+                        "gui_element": "SimpleText"
+                    },
+                    {
+                        "name": "hasSignature_internal",
                         "labels": {
                             "de": "interne Signatur (PSS)"
                         },
-                        "comments": {
-                            "de": "interne Signatur (eindeutig) der Paul Sacher Stiftung"
-                        },
-                        "gui_element": "SimpleText",
-                        "gui_attributes": {}
+                        "super": [
+                            "hasValue"
+                        ],
+                        "object": "TextValue",
+                        "gui_element": "SimpleText"
                     },
                     {
-                        "name": "ref_sourceIndex",
-                        "super": [
-                            "hasLinkTo"
-                        ],
-                        "object": ":convolute",
+                        "name": "hasRef_sourceindex",
                         "labels": {
                             "de": "Quellenindex (Referenz)"
                         },
-                        "comments": {
-                            "de": "Verweis auf einen Quellenindex"
-                        },
+                        "super": [
+                            "hasLinkTo"
+                        ],
+                        "object": "webern:Convolute",
                         "gui_element": "Searchbox",
                         "gui_attributes": {
                             "numprops": 2
                         }
                     },
                     {
-                        "name": "sourceDesc_papermaterial_rt",
-                        "super": [
-                            "hasValue"
-                        ],
-                        "object": "TextValue",
+                        "name": "hasSourcedesc_papermaterial_rt",
                         "labels": {
                             "de": "Beschreibstoff"
                         },
-                        "comments": {
-                            "de": "Beschreibung des Papiers"
-                        },
-                        "gui_element": "Richtext",
-                        "gui_attributes": {}
-                    },
-                    {
-                        "name": "sourceDesc_writingmat_main_hl",
                         "super": [
                             "hasValue"
                         ],
-                        "object": "ListValue",
+                        "object": "TextValue",
+                        "gui_element": "Richtext"
+                    },
+                    {
+                        "name": "hasSourcedesc_writingmat_main_hl",
                         "labels": {
                             "de": "Hauptschreibstoff (hlist)"
                         },
-                        "comments": {
-                            "de": "Beschreibung des Hauptschreibwerkzeugs"
-                        },
-                        "gui_element": "Pulldown",
+                        "super": [
+                            "hasValue"
+                        ],
+                        "object": "ListValue",
+                        "gui_element": "List",
                         "gui_attributes": {
                             "hlist": "awg_writingmaterials"
                         }
                     },
                     {
-                        "name": "sourceDesc_writingmat_further_hl",
-                        "super": [
-                            "hasValue"
-                        ],
-                        "object": "ListValue",
+                        "name": "hasSourcedesc_writingmat_further_hl",
                         "labels": {
                             "de": "weitere Schreibstoffe (hlist)"
                         },
-                        "comments": {
-                            "de": "Beschreibung weiterer vorkommender Schreibwerkzeuge"
-                        },
-                        "gui_element": "Pulldown",
+                        "super": [
+                            "hasValue"
+                        ],
+                        "object": "ListValue",
+                        "gui_element": "List",
                         "gui_attributes": {
                             "hlist": "awg_writingmaterials"
                         }
                     },
                     {
-                        "name": "sourceDesc_title_rt",
-                        "super": [
-                            "hasValue"
-                        ],
-                        "object": "TextValue",
+                        "name": "hasSourcedesc_title_rt",
                         "labels": {
                             "de": "autographer Titel"
                         },
-                        "comments": {
-                            "de": "autographer Titel in einer Quellenbeschreibung"
-                        },
-                        "gui_element": "Richtext",
-                        "gui_attributes": {}
-                    },
-                    {
-                        "name": "date_authentic",
                         "super": [
                             "hasValue"
                         ],
-                        "object": "DateValue",
+                        "object": "TextValue",
+                        "gui_element": "Richtext"
+                    },
+                    {
+                        "name": "hasDate_authentic",
                         "labels": {
                             "de": "gesicherte Datierung"
                         },
-                        "comments": {
-                            "de": "authentische Datierung"
-                        },
-                        "gui_element": "Date",
-                        "gui_attributes": {}
-                    },
-                    {
-                        "name": "date_estimated",
                         "super": [
                             "hasValue"
                         ],
                         "object": "DateValue",
+                        "gui_element": "Date"
+                    },
+                    {
+                        "name": "hasDate_estimated",
                         "labels": {
                             "de": "erschlossene Datierung"
                         },
-                        "comments": {
-                            "de": "erschlossene Datierung"
-                        },
-                        "gui_element": "Date",
-                        "gui_attributes": {}
+                        "super": [
+                            "hasValue"
+                        ],
+                        "object": "DateValue",
+                        "gui_element": "Date"
                     },
                     {
-                        "name": "sourceDesc_pagination_rt",
+                        "name": "hasSourcedesc_pagination_rt",
+                        "labels": {
+                            "de": "Paginierung"
+                        },
                         "super": [
                             "hasValue"
                         ],
                         "object": "TextValue",
-                        "labels": {
-                            "de": "Paginierung"
-                        },
-                        "comments": {
-                            "de": "Paginierung"
-                        },
-                        "gui_element": "Richtext",
-                        "gui_attributes": {}
+                        "gui_element": "Richtext"
                     },
                     {
-                        "name": "sourceDesc_beat_rt",
-                        "super": [
-                            "hasValue"
-                        ],
-                        "object": "TextValue",
+                        "name": "hasSourcedesc_beat_rt",
                         "labels": {
                             "de": "Taktzahlen"
                         },
-                        "comments": {
-                            "de": "autographe Taktzahlen in einer Quelle"
-                        },
-                        "gui_element": "Richtext",
-                        "gui_attributes": {}
-                    },
-                    {
-                        "name": "sourceDesc_instruments_rt",
                         "super": [
                             "hasValue"
                         ],
                         "object": "TextValue",
+                        "gui_element": "Richtext"
+                    },
+                    {
+                        "name": "hasSourcedesc_instruments_rt",
                         "labels": {
                             "de": "Instrumentenvorsatz"
                         },
-                        "comments": {
-                            "de": "Instrumentenvorsatz"
-                        },
-                        "gui_element": "Richtext",
-                        "gui_attributes": {}
-                    },
-                    {
-                        "name": "sourceDesc_annotations_rt",
                         "super": [
                             "hasValue"
                         ],
                         "object": "TextValue",
+                        "gui_element": "Richtext"
+                    },
+                    {
+                        "name": "hasSourcedesc_annotations_rt",
                         "labels": {
                             "de": "Eintragungen"
                         },
-                        "comments": {
-                            "de": "Eintragungen in einer Quelle"
-                        },
-                        "gui_element": "Richtext",
-                        "gui_attributes": {}
-                    },
-                    {
-                        "name": "sourceDesc_corrections_rt",
                         "super": [
                             "hasValue"
                         ],
                         "object": "TextValue",
+                        "gui_element": "Richtext"
+                    },
+                    {
+                        "name": "hasSourcedesc_corrections_rt",
                         "labels": {
                             "de": "Korrekturen"
                         },
-                        "comments": {
-                            "de": "autographe Korrekturspuren in einer Quelle"
-                        },
-                        "gui_element": "Richtext",
-                        "gui_attributes": {}
+                        "super": [
+                            "hasValue"
+                        ],
+                        "object": "TextValue",
+                        "gui_element": "Richtext"
                     },
                     {
-                        "name": "date_version",
+                        "name": "hasDate_version",
+                        "labels": {
+                            "de": "Versionsdatum"
+                        },
                         "super": [
                             "hasValue"
                         ],
                         "object": "DateValue",
-                        "labels": {
-                            "de": "Versionsdatum"
-                        },
-                        "comments": {
-                            "de": "Versionsdatum"
-                        },
-                        "gui_element": "Date",
-                        "gui_attributes": {}
+                        "gui_element": "Date"
                     },
                     {
-                        "name": "salsah_transcription",
-                        "super": [
-                            "hasLinkTo"
-                        ],
-                        "object": "salsah:transcription_area",
+                        "name": "hasTranscription",
                         "labels": {
                             "de": "Transkription"
                         },
-                        "comments": {
-                            "de": "Transkription"
-                        },
+                        "super": [
+                            "hasValue"
+                        ],
+                        "object": "TextValue",
                         "gui_element": "Searchbox",
                         "gui_attributes": {
                             "numprops": 1
                         }
                     },
                     {
-                        "name": "rism_sigle",
+                        "name": "hasPart_of",
+                        "labels": {
+                            "de": "ist ein Teil von",
+                            "fr": "est un part de",
+                            "it": "e una parte di",
+                            "en": "is a part of"
+                        },
                         "super": [
-                            "hasValue"
+                            "isPartOf"
                         ],
-                        "object": "TextValue",
+                        "object": "Resource",
+                        "gui_element": "Searchbox"
+                    },
+                    {
+                        "name": "hasSeqnum",
+                        "labels": {
+                            "de": "Sequenznummer",
+                            "fr": "Num\u00e9ro de S\u00e9quence",
+                            "it": "Numero di scala",
+                            "en": "Sequence number"
+                        },
+                        "super": [
+                            "seqnum"
+                        ],
+                        "object": "IntValue",
+                        "gui_element": "Spinbox"
+                    },
+                    {
+                        "name": "hasRism_sigle",
                         "labels": {
                             "de": "RISM-Sigle"
                         },
-                        "comments": {
-                            "de": "Repr\u00e4sentiert das RISM-Sigle einer Bibliothek."
-                        },
-                        "gui_element": "SimpleText",
-                        "gui_attributes": {}
+                        "super": [
+                            "hasValue"
+                        ],
+                        "object": "TextValue",
+                        "gui_element": "SimpleText"
                     },
                     {
-                        "name": "part_of_convolute",
-                        "super": [
-                            "hasLinkTo"
-                        ],
-                        "object": ":convolute",
+                        "name": "hasPart_of_convolute",
                         "labels": {
                             "de": "ist ein Teil von (Konvolut)"
                         },
-                        "comments": {
-                            "de": "Diese Property bezeichnet eine Verbindung zu einer anderen Resource, in dem ausgesagt wird, dass die vorliegende Resource ein integraler Teil eines Konvoluts ist. Zum Beispiel ist ein Konvolut ein integraler Bestandteil genau eines anderen Konvoluts."
-                        },
-                        "gui_element": "Searchbox",
-                        "gui_attributes": {}
-                    },
-                    {
-                        "name": "owning_institution",
                         "super": [
                             "hasLinkTo"
                         ],
-                        "object": ":rism_reference",
+                        "object": "webern:Convolute",
+                        "gui_element": "Searchbox"
+                    },
+                    {
+                        "name": "hasOwning_institution",
                         "labels": {
                             "de": "besitzende Institution"
                         },
-                        "comments": {
-                            "de": "bezeichnet eine besitzende Institution \n\nowl:equivalentProperty dbo:owningOrganisation"
-                        },
-                        "gui_element": "Searchbox",
-                        "gui_attributes": {}
-                    },
-                    {
-                        "name": "ref_mnr",
                         "super": [
                             "hasLinkTo"
                         ],
-                        "object": ":musical_piece",
+                        "object": "webern:Rism_reference",
+                        "gui_element": "Searchbox"
+                    },
+                    {
+                        "name": "hasRef_mnr",
                         "labels": {
                             "de": "Moldenhauer-Nummer (Referenz)"
                         },
-                        "comments": {
-                            "de": "Bezug zu einer Moldenhauernummer"
-                        },
+                        "super": [
+                            "hasLinkTo"
+                        ],
+                        "object": "webern:Musical_piece",
                         "gui_element": "Searchbox",
                         "gui_attributes": {
                             "numprops": 1
                         }
                     },
                     {
-                        "name": "filepath_original",
-                        "super": [
-                            "hasValue"
-                        ],
-                        "object": "TextValue",
+                        "name": "hasFilepath_original",
                         "labels": {
                             "de": "Originaldateiname"
                         },
-                        "comments": {
-                            "de": "gibt den originalen Namen einer Scan-Datei an"
-                        },
-                        "gui_element": "SimpleText",
-                        "gui_attributes": {}
-                    },
-                    {
-                        "name": "published_in",
                         "super": [
                             "hasValue"
                         ],
                         "object": "TextValue",
+                        "gui_element": "SimpleText"
+                    },
+                    {
+                        "name": "hasPublished_in",
                         "labels": {
                             "de": "abgedruckt in"
                         },
-                        "comments": {
-                            "de": "Bibliographischer Nachweis von Abdrucken eines Musikst\u00fccks"
-                        },
-                        "gui_element": "Richtext",
-                        "gui_attributes": {}
-                    },
-                    {
-                        "name": "bibl_title_short",
                         "super": [
                             "hasValue"
                         ],
                         "object": "TextValue",
+                        "gui_element": "Richtext"
+                    },
+                    {
+                        "name": "hasBibl_title_short",
                         "labels": {
                             "de": "Kurztitel"
                         },
-                        "comments": {
-                            "de": "Kurztitel f\u00fcr bibliografierte Literatur"
-                        },
-                        "gui_element": "SimpleText",
-                        "gui_attributes": {}
+                        "super": [
+                            "hasValue"
+                        ],
+                        "object": "TextValue",
+                        "gui_element": "SimpleText"
                     },
                     {
-                        "name": "bibl_type",
+                        "name": "hasBibl_type",
+                        "labels": {
+                            "de": "Typ"
+                        },
                         "super": [
                             "hasValue"
                         ],
                         "object": "ListValue",
-                        "labels": {
-                            "de": "Typ"
-                        },
-                        "comments": {
-                            "de": "Typ einer Bibliografieangabe"
-                        },
                         "gui_element": "Pulldown",
                         "gui_attributes": {
                             "hlist": "bibl_type_selection"
                         }
                     },
                     {
-                        "name": "bibl_unpublished",
+                        "name": "hasBibl_unpublished",
+                        "labels": {
+                            "de": "unpubliziert_Typ"
+                        },
                         "super": [
                             "hasValue"
                         ],
                         "object": "ListValue",
-                        "labels": {
-                            "de": "unpubliziert_Typ"
-                        },
-                        "comments": {
-                            "de": "Typ einer unpublizierten Literaturangabe"
-                        },
                         "gui_element": "Pulldown",
                         "gui_attributes": {
                             "hlist": "bibl_unpub_selection"
                         }
                     },
                     {
-                        "name": "dc_author",
-                        "super": [
-                            "hasValue",
-                            "dc:author"
-                        ],
-                        "object": "TextValue",
+                        "name": "hasAuthor",
                         "labels": {
                             "de": "Autor",
                             "fr": "Auteur",
                             "it": "Autore",
                             "en": "Author"
                         },
-                        "comments": {
-                            "de": "Ein Autor (lat. auctor \u201eUrheber\u201c, \u201eSch\u00f6pfer\u201c, \u201eF\u00f6rderer\u201c, \u201eVeranlasser\u201c) ist der Verfasser oder geistige Urheber eines Werkes. Dabei handelt es sich meist um Werke der Literatur im weitesten Sinn (Schriftsteller, Fachbuch-, Lehrbuch-, Sachbuch-, Drehbuch-, Fernseh-, Opern- oder B\u00fchnenautor). Seltener wird, mit einem deutlich juristischen Beiklang, als Autor der Urheber eines Werkes der nichtliterarischen Kunst (etwa Musik, Fotografie, Filmkunst) und der Wissenschaft verstanden (vgl. auch Softwareautoren, Gesetzesautoren). Un\u00fcblich scheint es auch zu sein, konkrete Poesie, visuelle Poesie oder Wortbilder als von Autoren geschaffen zu bezeichnen. (Wikipedia http://de.wikipedia.org/wiki/Autor)",
-                            "en": "An author or authress (sometimes, in reference to a woman author, authoress) is defined both as \"the person who originates or gives existence to anything\" and that authorship determines responsibility for what is created. (Wikipedia http://en.wikipedia.org/wiki/Author)"
-                        },
+                        "super": [
+                            "hasValue",
+                            "dc:author"
+                        ],
+                        "object": "TextValue",
                         "gui_element": "SimpleText",
                         "gui_attributes": {
                             "size": 60,
-                            "maxlength": 255
+                            "maxlength": "255"
                         }
                     },
                     {
-                        "name": "bibl_title_dependent_rt",
+                        "name": "hasBibl_title_dependent_rt",
+                        "labels": {
+                            "de": "Titel_unselbst"
+                        },
                         "super": [
                             "hasValue"
                         ],
                         "object": "TextValue",
-                        "labels": {
-                            "de": "Titel_unselbst"
-                        },
-                        "comments": {
-                            "de": "Titelaufnahme unselbst\u00e4ndiger Literatur"
-                        },
-                        "gui_element": "Richtext",
-                        "gui_attributes": {}
+                        "gui_element": "Richtext"
                     },
                     {
-                        "name": "bibl_title_independent_rp",
-                        "super": [
-                            "hasLinkTo"
-                        ],
-                        "object": ":bibliography",
+                        "name": "hasBibl_title_independent_rp",
                         "labels": {
                             "de": "Titel_selbst (Verweis)"
                         },
-                        "comments": {
-                            "de": "ResourcePointer auf eine selbst\u00e4ndige Literaturangabe"
-                        },
+                        "super": [
+                            "hasLinkTo"
+                        ],
+                        "object": "webern:Bibliography",
                         "gui_element": "Searchbox",
                         "gui_attributes": {
                             "numprops": 1
                         }
                     },
                     {
-                        "name": "bibl_title_independent_rt",
-                        "super": [
-                            "hasValue"
-                        ],
-                        "object": "TextValue",
+                        "name": "hasBibl_title_independent_rt",
                         "labels": {
                             "de": "Titel_selbst"
                         },
-                        "comments": {
-                            "de": "Titelaufnahme selbst\u00e4ndiger Literatur"
-                        },
-                        "gui_element": "Richtext",
-                        "gui_attributes": {}
-                    },
-                    {
-                        "name": "editor",
                         "super": [
                             "hasValue"
                         ],
                         "object": "TextValue",
+                        "gui_element": "Richtext"
+                    },
+                    {
+                        "name": "hasEditor",
                         "labels": {
                             "de": "Herausgeber"
                         },
-                        "comments": {
-                            "de": "Herausgeber"
-                        },
-                        "gui_element": "SimpleText",
-                        "gui_attributes": {}
-                    },
-                    {
-                        "name": "place_publisher",
                         "super": [
                             "hasValue"
                         ],
                         "object": "TextValue",
+                        "gui_element": "SimpleText"
+                    },
+                    {
+                        "name": "hasPlace_publisher",
                         "labels": {
                             "de": "Verlagsort"
                         },
-                        "comments": {
-                            "de": "Verlagsort"
-                        },
-                        "gui_element": "SimpleText",
-                        "gui_attributes": {}
-                    },
-                    {
-                        "name": "bibl_publisher",
                         "super": [
                             "hasValue"
                         ],
                         "object": "TextValue",
+                        "gui_element": "SimpleText"
+                    },
+                    {
+                        "name": "hasBibl_publisher",
                         "labels": {
                             "de": "Verlag"
                         },
-                        "comments": {
-                            "de": "Verlag"
-                        },
-                        "gui_element": "SimpleText",
-                        "gui_attributes": {}
+                        "super": [
+                            "hasValue"
+                        ],
+                        "object": "TextValue",
+                        "gui_element": "SimpleText"
                     },
                     {
-                        "name": "ed_pubdate",
+                        "name": "hasEd_pubdate",
+                        "labels": {
+                            "de": "Publikationsdatum"
+                        },
                         "super": [
                             "hasValue"
                         ],
                         "object": "DateValue",
-                        "labels": {
-                            "de": "Publikationsdatum"
-                        },
-                        "comments": {
-                            "de": "Publikationsdatum einer Ver\u00f6ffentlichung"
-                        },
-                        "gui_element": "Date",
-                        "gui_attributes": {}
+                        "gui_element": "Date"
                     },
                     {
-                        "name": "bibl_pages_type",
+                        "name": "hasBibl_pages_type",
+                        "labels": {
+                            "de": "Z\u00e4hlung"
+                        },
                         "super": [
                             "hasValue"
                         ],
                         "object": "ListValue",
-                        "labels": {
-                            "de": "Z\u00e4hlung"
-                        },
-                        "comments": {
-                            "de": "Gibt die Art der Z\u00e4hlung an (Blatt, Seite, Spalte, Zeile)"
-                        },
                         "gui_element": "Pulldown",
                         "gui_attributes": {
                             "hlist": "bibl_pagination_type_selection"
                         }
                     },
                     {
-                        "name": "bibl_pages",
-                        "super": [
-                            "hasValue"
-                        ],
-                        "object": "TextValue",
+                        "name": "hasBibl_pages",
                         "labels": {
                             "de": "Seitenangabe"
                         },
-                        "comments": {
-                            "de": "Seitenangabe f\u00fcr bibliografierte Literatur"
-                        },
-                        "gui_element": "SimpleText",
-                        "gui_attributes": {}
-                    },
-                    {
-                        "name": "bibl_title_series_rt",
                         "super": [
                             "hasValue"
                         ],
                         "object": "TextValue",
+                        "gui_element": "SimpleText"
+                    },
+                    {
+                        "name": "hasBibl_title_series_rt",
                         "labels": {
                             "de": "Reihentitel"
                         },
-                        "comments": {
-                            "de": "Titelaufnahme f\u00fcr Reihen"
-                        },
-                        "gui_element": "Richtext",
-                        "gui_attributes": {}
-                    },
-                    {
-                        "name": "bibl_addition_rt",
                         "super": [
                             "hasValue"
                         ],
                         "object": "TextValue",
+                        "gui_element": "Richtext"
+                    },
+                    {
+                        "name": "hasBibl_addition_rt",
                         "labels": {
                             "de": "Zusatz"
                         },
-                        "comments": {
-                            "de": "zus\u00e4tzliche Angaben in einer Bibliografie"
-                        },
-                        "gui_element": "Richtext",
-                        "gui_attributes": {}
-                    },
-                    {
-                        "name": "bibl_abstract_rt",
                         "super": [
                             "hasValue"
                         ],
                         "object": "TextValue",
+                        "gui_element": "Richtext"
+                    },
+                    {
+                        "name": "hasBibl_abstract_rt",
                         "labels": {
                             "de": "Abstract"
                         },
-                        "comments": {
-                            "de": "Abstract f\u00fcr eine bibliografierte Literatur"
-                        },
-                        "gui_element": "Richtext",
-                        "gui_attributes": {}
-                    },
-                    {
-                        "name": "bibl_online_rt",
                         "super": [
                             "hasValue"
                         ],
                         "object": "TextValue",
+                        "gui_element": "Richtext"
+                    },
+                    {
+                        "name": "hasBibl_online_rt",
                         "labels": {
                             "de": "Online-Zugang"
                         },
-                        "comments": {
-                            "de": "URL f\u00fcr den Online-Zugang zu einer bibliografierten Literatur"
-                        },
-                        "gui_element": "Richtext",
-                        "gui_attributes": {}
+                        "super": [
+                            "hasValue"
+                        ],
+                        "object": "TextValue",
+                        "gui_element": "Richtext"
                     },
                     {
-                        "name": "bibl_usage",
+                        "name": "hasBibl_usage",
+                        "labels": {
+                            "de": "verwendet in Bibliografie"
+                        },
                         "super": [
                             "hasValue"
                         ],
                         "object": "ListValue",
-                        "labels": {
-                            "de": "verwendet in Bibliografie"
-                        },
-                        "comments": {
-                            "de": "Auswahl einer Bibliografie, in der eine bestimmte Literaturangabe verwendet werden soll"
-                        },
                         "gui_element": "Pulldown",
                         "gui_attributes": {
                             "hlist": "bibl_usage_selection"
                         }
                     },
                     {
-                        "name": "bibl_status",
+                        "name": "hasBibl_status",
+                        "labels": {
+                            "de": "Status"
+                        },
                         "super": [
                             "hasValue"
                         ],
                         "object": "ListValue",
-                        "labels": {
-                            "de": "Status"
-                        },
-                        "comments": {
-                            "de": "Status einer bibliografischen Angabe"
-                        },
                         "gui_element": "Pulldown",
                         "gui_attributes": {
                             "hlist": "bibl_stat_selection"
                         }
                     },
                     {
-                        "name": "bibl_source_rt",
-                        "super": [
-                            "hasValue"
-                        ],
-                        "object": "TextValue",
+                        "name": "hasBibl_source_rt",
                         "labels": {
                             "de": "Quelle"
                         },
-                        "comments": {
-                            "de": "Quellenangabe zu einer bibliografierten Literatur"
-                        },
-                        "gui_element": "Richtext",
-                        "gui_attributes": {}
-                    },
-                    {
-                        "name": "bibl_location_rt",
                         "super": [
                             "hasValue"
                         ],
                         "object": "TextValue",
+                        "gui_element": "Richtext"
+                    },
+                    {
+                        "name": "hasBibl_location_rt",
                         "labels": {
                             "de": "Standort (swissbib)"
                         },
-                        "comments": {
-                            "de": "Standort einer bibliografierten Literatur in der Swissbib"
-                        },
-                        "gui_element": "Richtext",
-                        "gui_attributes": {}
-                    },
-                    {
-                        "name": "sourceDesc_impresssum",
                         "super": [
                             "hasValue"
                         ],
                         "object": "TextValue",
+                        "gui_element": "Richtext"
+                    },
+                    {
+                        "name": "hasSourcedesc_impresssum",
                         "labels": {
                             "de": "Erscheinungsvermerk"
                         },
-                        "comments": {
-                            "de": "Publikationsangaben zu einer Druckver\u00f6ffentlichung (Ort: Verlag, Jahr)"
-                        },
-                        "gui_element": "SimpleText",
-                        "gui_attributes": {}
+                        "super": [
+                            "hasValue"
+                        ],
+                        "object": "TextValue",
+                        "gui_element": "SimpleText"
                     },
                     {
-                        "name": "ref_publisher",
-                        "super": [
-                            "hasLinkTo"
-                        ],
-                        "object": ":publishing_house",
+                        "name": "hasRef_publisher",
                         "labels": {
                             "de": "Verlag (Referenz)"
                         },
-                        "comments": {
-                            "de": "Referenz auf einen Verlag (Objekt)"
-                        },
+                        "super": [
+                            "hasLinkTo"
+                        ],
+                        "object": "webern:Publishing_house",
                         "gui_element": "Searchbox",
                         "gui_attributes": {
                             "numprops": 2
                         }
                     },
                     {
-                        "name": "date_publication",
+                        "name": "hasDate_publication",
+                        "labels": {
+                            "de": "Erscheinungsdatum"
+                        },
                         "super": [
                             "hasValue"
                         ],
                         "object": "DateValue",
-                        "labels": {
-                            "de": "Erscheinungsdatum"
-                        },
-                        "comments": {
-                            "de": "Datum einer Publikation"
-                        },
-                        "gui_element": "Date",
-                        "gui_attributes": {}
+                        "gui_element": "Date"
                     },
                     {
-                        "name": "source_location_ED_used_rt",
-                        "super": [
-                            "hasValue"
-                        ],
-                        "object": "TextValue",
+                        "name": "hasSource_location_ed_used_rt",
                         "labels": {
                             "de": "Standort des konsultierten Exemplars"
                         },
-                        "comments": {
-                            "de": "Der Ort, wo das physische Original eines gedruckten Exemplars aufbewahrt wird, das f\u00fcr eine Quellenbeschreibung konsultiert wurde"
-                        },
-                        "gui_element": "Richtext",
-                        "gui_attributes": {}
-                    },
-                    {
-                        "name": "source_location_ED_further_rt",
                         "super": [
                             "hasValue"
                         ],
                         "object": "TextValue",
+                        "gui_element": "Richtext"
+                    },
+                    {
+                        "name": "hasSource_location_ed_further_rt",
                         "labels": {
                             "de": "Standort weiterer Exemplare"
                         },
-                        "comments": {
-                            "de": "Der Ort, wo weitere physische Original eines Druckes aufbewahrt werden"
-                        },
-                        "gui_element": "Richtext",
-                        "gui_attributes": {}
-                    },
-                    {
-                        "name": "sourceDesc_ED_title",
                         "super": [
                             "hasValue"
                         ],
                         "object": "TextValue",
+                        "gui_element": "Richtext"
+                    },
+                    {
+                        "name": "hasSourcedesc_ed_title",
                         "labels": {
                             "de": "Titel nach Vorlage"
                         },
-                        "comments": {
-                            "de": "in eine Quellenbeschreibung aufgenommener Titel nach Vorlage eines Druckes "
-                        },
-                        "gui_element": "Richtext",
-                        "gui_attributes": {}
-                    },
-                    {
-                        "name": "salsah_comment",
                         "super": [
                             "hasValue"
                         ],
                         "object": "TextValue",
+                        "gui_element": "Richtext"
+                    },
+                    {
+                        "name": "hasComment",
                         "labels": {
                             "de": "Kommentar",
                             "fr": "Commentaire",
                             "it": "Commento",
                             "en": "Comment"
                         },
-                        "comments": {
-                            "de": "Unstrukturierte Bemerkungen zu einem Objekt"
-                        },
+                        "super": [
+                            "hasComment"
+                        ],
+                        "object": "TextValue",
                         "gui_element": "Textarea",
                         "gui_attributes": {
                             "width": "95%",
@@ -2268,67 +1900,55 @@
                         }
                     },
                     {
-                        "name": "dc_publisher",
-                        "super": [
-                            "hasValue",
-                            "dc:publisher"
-                        ],
-                        "object": "TextValue",
+                        "name": "hasPublisher",
                         "labels": {
                             "de": "Verleger",
                             "fr": "Editions",
                             "it": "Casa editrice",
                             "en": "Publisher"
                         },
-                        "comments": {
-                            "de": "Ein Verlag ist ein Medienunternehmen, das Werke der Literatur, Kunst, Musik oder Wissenschaft vervielf\u00e4ltigt und verbreitet. Der Verkauf kann \u00fcber den Handel (Kunst-, Buchhandel etc.) oder durch den Verlag selbst erfolgen. Das Wort \u201everlegen\u201c bedeutet im Mittelhochdeutschen \u201eGeld ausgeben\u201c oder \u201eetwas auf seine Rechnung nehmen\u201c. (Wikipedia http://de.wikipedia.org/wiki/Verlag)",
-                            "fr": "Une maison d\u2019\u00e9dition est une entreprise ou une association dont l\u2019activit\u00e9 principale est la production et la diffusion de livres. L\u2019activit\u00e9 est donc li\u00e9e \u00e0 l\u2019\u00e9dition de documents. Trois formes d'entreprise dominent la profession : SA, SARL et entreprise personnelle. (Wikipedia http://fr.wikipedia.org/wiki/Maison_d%27\u00e9dition)",
-                            "en": "Publishing is the process of production and dissemination of literature or information \u2013 the activity of making information available for public view. In some cases authors may be their own publishers, meaning: originators and developers of content also provide media to deliver and display the content. (Wikipedia http://en.wikipedia.org/wiki/Publisher)"
-                        },
+                        "super": [
+                            "hasValue",
+                            "dc:publisher"
+                        ],
+                        "object": "TextValue",
                         "gui_element": "SimpleText",
                         "gui_attributes": {
                             "size": 60,
-                            "maxlength": 255
+                            "maxlength": "255"
                         }
                     },
                     {
-                        "name": "salsah_address",
-                        "super": [
-                            "hasValue"
-                        ],
-                        "object": "TextValue",
+                        "name": "hasAddress",
                         "labels": {
                             "de": "Adresse",
                             "en": "Address"
                         },
-                        "comments": {
-                            "de": "Adresse (Strassenname, Nummer etc.)"
-                        },
-                        "gui_element": "SimpleText",
-                        "gui_attributes": {
-                            "size": 64,
-                            "maxlength": 64
-                        }
-                    },
-                    {
-                        "name": "sketch_commentary",
                         "super": [
                             "hasValue"
                         ],
                         "object": "TextValue",
+                        "gui_element": "SimpleText",
+                        "gui_attributes": {
+                            "size": 64,
+                            "maxlength": "64"
+                        }
+                    },
+                    {
+                        "name": "hasSketch_commentary",
                         "labels": {
                             "de": "Skizzenkommentar"
                         },
-                        "comments": {
-                            "de": "Ein Skizzenkommentar zu einer Skizzenedition"
-                        },
-                        "gui_element": "Richtext",
-                        "gui_attributes": {}
+                        "super": [
+                            "hasValue"
+                        ],
+                        "object": "TextValue",
+                        "gui_element": "Richtext"
                     }
                 ],
                 "resources": [
                     {
-                        "name": "chronology",
+                        "name": "Chronology",
                         "super": "Resource",
                         "labels": {
                             "de": "Chronologie",
@@ -2344,49 +1964,59 @@
                         },
                         "cardinalities": [
                             {
-                                "propname": ":event_rt",
-                                "cardinality": "0-1"
+                                "propname": ":hasEvent_rt",
+                                "cardinality": "0-1",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":chronology_type",
-                                "cardinality": "1-n"
+                                "propname": ":hasChronology_type",
+                                "cardinality": "1-n",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":dc_date",
-                                "cardinality": "0-1"
+                                "propname": ":hasDate",
+                                "cardinality": "0-1",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":daytime",
-                                "cardinality": "0-1"
+                                "propname": ":hasDaytime",
+                                "cardinality": "0-1",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":place",
-                                "cardinality": "0-n"
+                                "propname": ":hasPlace",
+                                "cardinality": "0-n",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":placeGeo",
-                                "cardinality": "0-n"
+                                "propname": ":hasPlacegeo",
+                                "cardinality": "0-n",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":literature_rt",
-                                "cardinality": "0-n"
+                                "propname": ":hasLiterature_rt",
+                                "cardinality": "0-n",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":correspondence_rt",
-                                "cardinality": "0-n"
+                                "propname": ":hasCorrespondence_rt",
+                                "cardinality": "0-n",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":further_sources_rt",
-                                "cardinality": "0-n"
+                                "propname": ":hasFurther_sources_rt",
+                                "cardinality": "0-n",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":salsah_comment_rt",
-                                "cardinality": "0-n"
+                                "propname": ":hasComment_rt",
+                                "cardinality": "0-n",
+                                "gui_order": 0
                             }
                         ]
                     },
                     {
-                        "name": "correspondence",
+                        "name": "Correspondence",
                         "super": "Resource",
                         "labels": {
                             "de": "Korrespondenz",
@@ -2402,113 +2032,119 @@
                         },
                         "cardinalities": [
                             {
-                                "propname": ":dc_title",
-                                "cardinality": "1"
+                                "propname": ":hasTitle",
+                                "cardinality": "1",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":corresp_type",
-                                "cardinality": "0-1"
+                                "propname": ":hasCorresp_type",
+                                "cardinality": "0-1",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":dc_creator",
-                                "cardinality": "1"
+                                "propname": ":hasCreator",
+                                "cardinality": "1",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":place",
-                                "cardinality": "0-n"
+                                "propname": ":hasCorresp_writer",
+                                "cardinality": "0-n",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":dc_date",
-                                "cardinality": "0-1"
+                                "propname": ":hasCorresp_contributor",
+                                "cardinality": "0-n",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":corresp_writer",
-                                "cardinality": "0-n"
+                                "propname": ":hasCorresp_addressreturn",
+                                "cardinality": "0-1",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":corresp_contributor",
-                                "cardinality": "0-n"
+                                "propname": ":hasPlace_writer",
+                                "cardinality": "0-n",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":corresp_addressReturn",
-                                "cardinality": "0-1"
+                                "propname": ":hasDate_autograph_rt",
+                                "cardinality": "0-n",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":place_writer",
-                                "cardinality": "0-n"
+                                "propname": ":hasDate_written",
+                                "cardinality": "0-n",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":date_autograph_rt",
-                                "cardinality": "0-n"
+                                "propname": ":hasDate_sent",
+                                "cardinality": "0-1",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":date_written",
-                                "cardinality": "0-n"
+                                "propname": ":hasCorresp_recipient",
+                                "cardinality": "0-n",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":date_sent",
-                                "cardinality": "0-1"
+                                "propname": ":hasCorresp_addressrecipient",
+                                "cardinality": "0-1",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":corresp_recipient",
-                                "cardinality": "0-n"
+                                "propname": ":hasPlace_recipient",
+                                "cardinality": "0-1",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":corresp_addressRecipient",
-                                "cardinality": "0-1"
+                                "propname": ":hasDate_received",
+                                "cardinality": "0-1",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":place_recipient",
-                                "cardinality": "0-1"
+                                "propname": ":hasSource_location_rt",
+                                "cardinality": "0-1",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":date_received",
-                                "cardinality": "0-1"
+                                "propname": ":hasReproduction",
+                                "cardinality": "0-n",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":source_location_rt",
-                                "cardinality": "0-1"
+                                "propname": ":hasDescription_rt",
+                                "cardinality": "0-n",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":reproduction",
-                                "cardinality": "0-n"
+                                "propname": ":hasTextincipit",
+                                "cardinality": "0-1",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":dc_description_rt",
-                                "cardinality": "0-n"
+                                "propname": ":hasContent_rt",
+                                "cardinality": "0-n",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":textincipit",
-                                "cardinality": "0-1"
+                                "propname": ":hasTranscription_rt",
+                                "cardinality": "0-n",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":content_rt",
-                                "cardinality": "0-n"
+                                "propname": ":hasContext_rt",
+                                "cardinality": "0-n",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":transcription_rt",
-                                "cardinality": "0-n"
-                            },
-                            {
-                                "propname": ":literature_rt",
-                                "cardinality": "0-n"
-                            },
-                            {
-                                "propname": ":context_rt",
-                                "cardinality": "0-n"
-                            },
-                            {
-                                "propname": ":dc_source_rt",
-                                "cardinality": "0-n"
-                            },
-                            {
-                                "propname": ":salsah_comment_rt",
-                                "cardinality": "0-n"
+                                "propname": ":hasSource_rt",
+                                "cardinality": "0-n",
+                                "gui_order": 0
                             }
                         ]
                     },
                     {
-                        "name": "musical_piece",
+                        "name": "Musical_piece",
                         "super": "Resource",
                         "labels": {
                             "de": "Musikst\u00fcck (AWG-ID)",
@@ -2524,57 +2160,54 @@
                         },
                         "cardinalities": [
                             {
-                                "propname": ":mnr_plus",
-                                "cardinality": "1"
+                                "propname": ":hasMnr_plus",
+                                "cardinality": "1",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":mnr",
-                                "cardinality": "0-1"
+                                "propname": ":hasMnr",
+                                "cardinality": "0-1",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":dc_title",
-                                "cardinality": "0-n"
+                                "propname": ":hasDate_composition",
+                                "cardinality": "0-1",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":date_composition",
-                                "cardinality": "0-1"
+                                "propname": ":hasPerformance",
+                                "cardinality": "0-n",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":performance",
-                                "cardinality": "0-n"
+                                "propname": ":hasDate_firstpublication",
+                                "cardinality": "0-1",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":date_firstpublication",
-                                "cardinality": "0-1"
+                                "propname": ":hasFirstpublisher",
+                                "cardinality": "0-1",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":firstpublisher",
-                                "cardinality": "0-1"
+                                "propname": ":hasInstrumentation_rt",
+                                "cardinality": "0-1",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":instrumentation_rt",
-                                "cardinality": "0-1"
+                                "propname": ":hasFurther_non_edition_source_rt",
+                                "cardinality": "0-n",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":dc_source_rt",
-                                "cardinality": "0-n"
-                            },
-                            {
-                                "propname": ":further_non_edition_source_rt",
-                                "cardinality": "0-n"
-                            },
-                            {
-                                "propname": ":textsource_rt",
-                                "cardinality": "0-n"
-                            },
-                            {
-                                "propname": ":salsah_comment_rt",
-                                "cardinality": "0-n"
+                                "propname": ":hasTextsource_rt",
+                                "cardinality": "0-n",
+                                "gui_order": 0
                             }
                         ]
                     },
                     {
-                        "name": "opus",
+                        "name": "Opus",
                         "super": "Resource",
                         "labels": {
                             "de": "Werk",
@@ -2590,65 +2223,34 @@
                         },
                         "cardinalities": [
                             {
-                                "propname": ":opus_num",
-                                "cardinality": "1"
+                                "propname": ":hasOpus_num",
+                                "cardinality": "1",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":dc_title",
-                                "cardinality": "1"
+                                "propname": ":hasFirstpublisher_rt",
+                                "cardinality": "1-n",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":date_composition",
-                                "cardinality": "1"
+                                "propname": ":hasDate_further_publication",
+                                "cardinality": "0-n",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":performance",
-                                "cardinality": "0-n"
-                            },
-                            {
-                                "propname": ":date_firstpublication",
-                                "cardinality": "1"
-                            },
-                            {
-                                "propname": ":firstpublisher_rt",
-                                "cardinality": "1-n"
-                            },
-                            {
-                                "propname": ":date_further_publication",
-                                "cardinality": "0-n"
-                            },
-                            {
-                                "propname": ":further_publisher_rt",
-                                "cardinality": "0-n"
-                            },
-                            {
-                                "propname": ":instrumentation_rt",
-                                "cardinality": "1"
-                            },
-                            {
-                                "propname": ":dc_source_rt",
-                                "cardinality": "1-n"
-                            },
-                            {
-                                "propname": ":further_non_edition_source_rt",
-                                "cardinality": "0-n"
-                            },
-                            {
-                                "propname": ":textsource_rt",
-                                "cardinality": "0-n"
+                                "propname": ":hasFurther_publisher_rt",
+                                "cardinality": "0-n",
+                                "gui_order": 0
                             },
                             {
                                 "propname": ":has_movement",
-                                "cardinality": "1-n"
-                            },
-                            {
-                                "propname": ":salsah_comment_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "1-n",
+                                "gui_order": 0
                             }
                         ]
                     },
                     {
-                        "name": "preopus",
+                        "name": "Preopus",
                         "super": "Resource",
                         "labels": {
                             "de": "Vorstufe",
@@ -2664,41 +2266,14 @@
                         },
                         "cardinalities": [
                             {
-                                "propname": ":dc_title",
-                                "cardinality": "1"
-                            },
-                            {
-                                "propname": ":date_composition",
-                                "cardinality": "1"
-                            },
-                            {
-                                "propname": ":performance",
-                                "cardinality": "0-1"
-                            },
-                            {
-                                "propname": ":instrumentation_rt",
-                                "cardinality": "1"
-                            },
-                            {
-                                "propname": ":dc_source_rt",
-                                "cardinality": "1-n"
-                            },
-                            {
-                                "propname": ":salsah_comment_rt",
-                                "cardinality": "0-n"
-                            },
-                            {
-                                "propname": ":has_movement",
-                                "cardinality": "0-n"
-                            },
-                            {
-                                "propname": ":preopus_of",
-                                "cardinality": "1"
+                                "propname": ":hasPreopus_of",
+                                "cardinality": "1",
+                                "gui_order": 0
                             }
                         ]
                     },
                     {
-                        "name": "person",
+                        "name": "Person",
                         "super": "Resource",
                         "labels": {
                             "de": "Person",
@@ -2714,65 +2289,59 @@
                         },
                         "cardinalities": [
                             {
-                                "propname": ":salsah_lastname",
-                                "cardinality": "1"
+                                "propname": ":hasLastname",
+                                "cardinality": "1",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":salsah_firstname",
-                                "cardinality": "1"
+                                "propname": ":hasFirstname",
+                                "cardinality": "1",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":alt_name_rt",
-                                "cardinality": "0-n"
+                                "propname": ":hasAlt_name_rt",
+                                "cardinality": "0-n",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":gnd",
-                                "cardinality": "0-1"
+                                "propname": ":hasGnd",
+                                "cardinality": "0-1",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":place_birth",
-                                "cardinality": "0-1"
+                                "propname": ":hasPlace_birth",
+                                "cardinality": "0-1",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":date_birth",
-                                "cardinality": "0-1"
+                                "propname": ":hasDate_birth",
+                                "cardinality": "0-1",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":date_death",
-                                "cardinality": "0-1"
+                                "propname": ":hasDate_death",
+                                "cardinality": "0-1",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":place_death",
-                                "cardinality": "0-1"
+                                "propname": ":hasPlace_death",
+                                "cardinality": "0-1",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":biography_rt",
-                                "cardinality": "0-n"
+                                "propname": ":hasBiography_rt",
+                                "cardinality": "0-n",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":relation_webern_rt",
-                                "cardinality": "0-n"
-                            },
-                            {
-                                "propname": ":literature_rt",
-                                "cardinality": "0-n"
-                            },
-                            {
-                                "propname": ":correspondence_rt",
-                                "cardinality": "0-n"
-                            },
-                            {
-                                "propname": ":further_sources_rt",
-                                "cardinality": "0-n"
-                            },
-                            {
-                                "propname": ":salsah_comment_rt",
-                                "cardinality": "0-n"
+                                "propname": ":hasRelation_webern_rt",
+                                "cardinality": "0-n",
+                                "gui_order": 0
                             }
                         ]
                     },
                     {
-                        "name": "ed_sourcedescription_ms",
+                        "name": "Ed_sourcedescription_ms",
                         "super": "Resource",
                         "labels": {
                             "de": "[AWG] Quellenbeschreibung (MS)",
@@ -2788,97 +2357,94 @@
                         },
                         "cardinalities": [
                             {
-                                "propname": ":sourcedesc_siglum",
-                                "cardinality": "1"
+                                "propname": ":hasSourcedesc_siglum",
+                                "cardinality": "1",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":sourceDesc_label",
-                                "cardinality": "1"
+                                "propname": ":hasSourcedesc_label",
+                                "cardinality": "1",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":source_location_rt",
-                                "cardinality": "1"
+                                "propname": ":hasSignature",
+                                "cardinality": "0-n",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":signature",
-                                "cardinality": "0-n"
+                                "propname": ":hasSignature_internal",
+                                "cardinality": "0-n",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":signature_internal",
-                                "cardinality": "0-n"
+                                "propname": ":hasRef_sourceindex",
+                                "cardinality": "0-n",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":ref_sourceIndex",
-                                "cardinality": "0-n"
+                                "propname": ":hasSourcedesc_papermaterial_rt",
+                                "cardinality": "0-n",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":dc_description_rt",
-                                "cardinality": "0-n"
+                                "propname": ":hasSourcedesc_writingmat_main_hl",
+                                "cardinality": "0-n",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":sourceDesc_papermaterial_rt",
-                                "cardinality": "0-n"
+                                "propname": ":hasSourcedesc_writingmat_further_hl",
+                                "cardinality": "0-n",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":sourceDesc_writingmat_main_hl",
-                                "cardinality": "0-n"
+                                "propname": ":hasSourcedesc_title_rt",
+                                "cardinality": "0-n",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":sourceDesc_writingmat_further_hl",
-                                "cardinality": "0-n"
+                                "propname": ":hasDate_authentic",
+                                "cardinality": "0-n",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":sourceDesc_title_rt",
-                                "cardinality": "0-n"
+                                "propname": ":hasDate_estimated",
+                                "cardinality": "0-n",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":date_autograph_rt",
-                                "cardinality": "0-n"
+                                "propname": ":hasSourcedesc_pagination_rt",
+                                "cardinality": "0-n",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":date_authentic",
-                                "cardinality": "0-n"
+                                "propname": ":hasSourcedesc_beat_rt",
+                                "cardinality": "0-n",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":date_estimated",
-                                "cardinality": "0-n"
+                                "propname": ":hasSourcedesc_instruments_rt",
+                                "cardinality": "0-n",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":sourceDesc_pagination_rt",
-                                "cardinality": "0-n"
+                                "propname": ":hasSourcedesc_annotations_rt",
+                                "cardinality": "0-n",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":sourceDesc_beat_rt",
-                                "cardinality": "0-n"
+                                "propname": ":hasSourcedesc_corrections_rt",
+                                "cardinality": "0-n",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":sourceDesc_instruments_rt",
-                                "cardinality": "0-n"
-                            },
-                            {
-                                "propname": ":sourceDesc_annotations_rt",
-                                "cardinality": "0-n"
-                            },
-                            {
-                                "propname": ":content_rt",
-                                "cardinality": "0-n"
-                            },
-                            {
-                                "propname": ":sourceDesc_corrections_rt",
-                                "cardinality": "0-n"
-                            },
-                            {
-                                "propname": ":date_version",
-                                "cardinality": "1"
-                            },
-                            {
-                                "propname": ":salsah_comment_rt",
-                                "cardinality": "0-n"
+                                "propname": ":hasDate_version",
+                                "cardinality": "1",
+                                "gui_order": 0
                             }
                         ]
                     },
                     {
-                        "name": "digitalcopy_correspondence",
+                        "name": "Digitalcopy_correspondence",
                         "super": "StillImageRepresentation",
                         "labels": {
                             "de": "Digitalisat (Korrespondenz)",
@@ -2894,29 +2460,24 @@
                         },
                         "cardinalities": [
                             {
-                                "propname": ":dc_title",
-                                "cardinality": "1"
+                                "propname": ":hasTranscription",
+                                "cardinality": "0-n",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":salsah_transcription",
-                                "cardinality": "0-n"
+                                "propname": ":hasPart_of",
+                                "cardinality": "1",
+                                "gui_order": 0
                             },
                             {
-                                "propname": "salsah:part_of",
-                                "cardinality": "1"
-                            },
-                            {
-                                "propname": "salsah:seqnum",
-                                "cardinality": "1"
-                            },
-                            {
-                                "propname": ":salsah_comment_rt",
-                                "cardinality": "0-n"
+                                "propname": ":hasSeqnum",
+                                "cardinality": "1",
+                                "gui_order": 0
                             }
                         ]
                     },
                     {
-                        "name": "transcription_test",
+                        "name": "Transcription_test",
                         "super": "Resource",
                         "labels": {
                             "de": "Transkriptionstest (Korresp.)",
@@ -2930,23 +2491,10 @@
                             "it": "Una trascrizione di una corrispondenza correlata",
                             "en": "A transcription of a related correspondence"
                         },
-                        "cardinalities": [
-                            {
-                                "propname": ":dc_title",
-                                "cardinality": "1"
-                            },
-                            {
-                                "propname": ":dc_date",
-                                "cardinality": "0-1"
-                            },
-                            {
-                                "propname": ":salsah_comment_rt",
-                                "cardinality": "0-n"
-                            }
-                        ]
+                        "cardinalities": []
                     },
                     {
-                        "name": "rism_reference",
+                        "name": "Rism_reference",
                         "super": "Resource",
                         "labels": {
                             "de": "RISM-Referenz",
@@ -2962,17 +2510,14 @@
                         },
                         "cardinalities": [
                             {
-                                "propname": ":rism_sigle",
-                                "cardinality": "1"
-                            },
-                            {
-                                "propname": ":dc_description_rt",
-                                "cardinality": "0-1"
+                                "propname": ":hasRism_sigle",
+                                "cardinality": "1",
+                                "gui_order": 0
                             }
                         ]
                     },
                     {
-                        "name": "convolute",
+                        "name": "Convolute",
                         "super": "Resource",
                         "labels": {
                             "de": "Konvolut",
@@ -2988,29 +2533,19 @@
                         },
                         "cardinalities": [
                             {
-                                "propname": ":signature",
-                                "cardinality": "1-n"
+                                "propname": ":hasPart_of_convolute",
+                                "cardinality": "0-1",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":dc_description_rt",
-                                "cardinality": "0-1"
-                            },
-                            {
-                                "propname": "salsah:part_of",
-                                "cardinality": "0-1"
-                            },
-                            {
-                                "propname": ":part_of_convolute",
-                                "cardinality": "0-1"
-                            },
-                            {
-                                "propname": ":owning_institution",
-                                "cardinality": "0-1"
+                                "propname": ":hasOwning_institution",
+                                "cardinality": "0-1",
+                                "gui_order": 0
                             }
                         ]
                     },
                     {
-                        "name": "digitalcopy_musical_piece",
+                        "name": "Digitalcopy_musical_piece",
                         "super": "StillImageRepresentation",
                         "labels": {
                             "de": "Digitalisat (Musikst\u00fcck)",
@@ -3026,37 +2561,24 @@
                         },
                         "cardinalities": [
                             {
-                                "propname": ":ref_mnr",
-                                "cardinality": "1"
+                                "propname": ":hasRef_mnr",
+                                "cardinality": "1",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":filepath_original",
-                                "cardinality": "1"
+                                "propname": ":hasFilepath_original",
+                                "cardinality": "1",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":dc_description_rt",
-                                "cardinality": "0-n"
-                            },
-                            {
-                                "propname": ":published_in",
-                                "cardinality": "0-n"
-                            },
-                            {
-                                "propname": "salsah:part_of",
-                                "cardinality": "1"
-                            },
-                            {
-                                "propname": "salsah:seqnum",
-                                "cardinality": "0-1"
-                            },
-                            {
-                                "propname": ":salsah_comment_rt",
-                                "cardinality": "0-n"
+                                "propname": ":hasPublished_in",
+                                "cardinality": "0-n",
+                                "gui_order": 0
                             }
                         ]
                     },
                     {
-                        "name": "supplement",
+                        "name": "Supplement",
                         "super": "Resource",
                         "labels": {
                             "de": "Supplement",
@@ -3070,63 +2592,10 @@
                             "it": "Una classe di contenitori per materiale supplementare che non \u00e8 coperta da una classe di risorse separata.",
                             "en": "A container class for supplementary material that is not covered by a separate resource class."
                         },
-                        "cardinalities": [
-                            {
-                                "propname": ":dc_title",
-                                "cardinality": "1"
-                            },
-                            {
-                                "propname": ":corresp_type",
-                                "cardinality": "0-1"
-                            },
-                            {
-                                "propname": ":dc_creator",
-                                "cardinality": "0-n"
-                            },
-                            {
-                                "propname": ":place",
-                                "cardinality": "0-n"
-                            },
-                            {
-                                "propname": ":dc_date",
-                                "cardinality": "0-1"
-                            },
-                            {
-                                "propname": ":source_location_rt",
-                                "cardinality": "0-1"
-                            },
-                            {
-                                "propname": ":dc_description_rt",
-                                "cardinality": "0-n"
-                            },
-                            {
-                                "propname": ":content_rt",
-                                "cardinality": "0-n"
-                            },
-                            {
-                                "propname": ":transcription_rt",
-                                "cardinality": "0-n"
-                            },
-                            {
-                                "propname": ":literature_rt",
-                                "cardinality": "0-n"
-                            },
-                            {
-                                "propname": ":further_sources_rt",
-                                "cardinality": "0-n"
-                            },
-                            {
-                                "propname": ":dc_source_rt",
-                                "cardinality": "0-n"
-                            },
-                            {
-                                "propname": ":salsah_comment_rt",
-                                "cardinality": "0-n"
-                            }
-                        ]
+                        "cardinalities": []
                     },
                     {
-                        "name": "bibliography",
+                        "name": "Bibliography",
                         "super": "Resource",
                         "labels": {
                             "de": "Bibliografie",
@@ -3142,101 +2611,114 @@
                         },
                         "cardinalities": [
                             {
-                                "propname": ":bibl_title_short",
-                                "cardinality": "1"
+                                "propname": ":hasBibl_title_short",
+                                "cardinality": "1",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":bibl_type",
-                                "cardinality": "0-1"
+                                "propname": ":hasBibl_type",
+                                "cardinality": "0-1",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":bibl_unpublished",
-                                "cardinality": "0-1"
+                                "propname": ":hasBibl_unpublished",
+                                "cardinality": "0-1",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":dc_author",
-                                "cardinality": "0-n"
+                                "propname": ":hasAuthor",
+                                "cardinality": "0-n",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":bibl_title_dependent_rt",
-                                "cardinality": "0-1"
+                                "propname": ":hasBibl_title_dependent_rt",
+                                "cardinality": "0-1",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":bibl_title_independent_rp",
-                                "cardinality": "0-1"
+                                "propname": ":hasBibl_title_independent_rp",
+                                "cardinality": "0-1",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":bibl_title_independent_rt",
-                                "cardinality": "0-1"
+                                "propname": ":hasBibl_title_independent_rt",
+                                "cardinality": "0-1",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":editor",
-                                "cardinality": "0-n"
+                                "propname": ":hasEditor",
+                                "cardinality": "0-n",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":place_publisher",
-                                "cardinality": "0-n"
+                                "propname": ":hasPlace_publisher",
+                                "cardinality": "0-n",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":bibl_publisher",
-                                "cardinality": "0-n"
+                                "propname": ":hasBibl_publisher",
+                                "cardinality": "0-n",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":ed_pubdate",
-                                "cardinality": "0-1"
+                                "propname": ":hasEd_pubdate",
+                                "cardinality": "0-1",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":bibl_pages_type",
-                                "cardinality": "0-1"
+                                "propname": ":hasBibl_pages_type",
+                                "cardinality": "0-1",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":bibl_pages",
-                                "cardinality": "0-n"
+                                "propname": ":hasBibl_pages",
+                                "cardinality": "0-n",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":bibl_title_series_rt",
-                                "cardinality": "0-1"
+                                "propname": ":hasBibl_title_series_rt",
+                                "cardinality": "0-1",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":bibl_addition_rt",
-                                "cardinality": "0-n"
+                                "propname": ":hasBibl_addition_rt",
+                                "cardinality": "0-n",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":bibl_abstract_rt",
-                                "cardinality": "0-n"
+                                "propname": ":hasBibl_abstract_rt",
+                                "cardinality": "0-n",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":bibl_online_rt",
-                                "cardinality": "0-n"
+                                "propname": ":hasBibl_online_rt",
+                                "cardinality": "0-n",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":date_version",
-                                "cardinality": "1"
+                                "propname": ":hasBibl_usage",
+                                "cardinality": "0-n",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":bibl_usage",
-                                "cardinality": "0-n"
+                                "propname": ":hasBibl_status",
+                                "cardinality": "1",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":bibl_status",
-                                "cardinality": "1"
+                                "propname": ":hasBibl_source_rt",
+                                "cardinality": "0-n",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":bibl_source_rt",
-                                "cardinality": "0-n"
-                            },
-                            {
-                                "propname": ":bibl_location_rt",
-                                "cardinality": "0-n"
-                            },
-                            {
-                                "propname": ":salsah_comment_rt",
-                                "cardinality": "0-n"
+                                "propname": ":hasBibl_location_rt",
+                                "cardinality": "0-n",
+                                "gui_order": 0
                             }
                         ]
                     },
                     {
-                        "name": "digitalcopy_supplement",
+                        "name": "Digitalcopy_supplement",
                         "super": "StillImageRepresentation",
                         "labels": {
                             "de": "Digitalisat (Supplement)",
@@ -3250,35 +2732,10 @@
                             "it": "Copia digitale di un supporto materiale fisico (supplemento)",
                             "en": "Digital copy of a physical material carrier (supplement)"
                         },
-                        "cardinalities": [
-                            {
-                                "propname": ":dc_title",
-                                "cardinality": "1"
-                            },
-                            {
-                                "propname": ":filepath_original",
-                                "cardinality": "1"
-                            },
-                            {
-                                "propname": ":dc_description_rt",
-                                "cardinality": "0-n"
-                            },
-                            {
-                                "propname": "salsah:part_of",
-                                "cardinality": "0-1"
-                            },
-                            {
-                                "propname": "salsah:seqnum",
-                                "cardinality": "1"
-                            },
-                            {
-                                "propname": ":salsah_comment_rt",
-                                "cardinality": "0-n"
-                            }
-                        ]
+                        "cardinalities": []
                     },
                     {
-                        "name": "ed_sourcedescription_print",
+                        "name": "Ed_sourcedescription_print",
                         "super": "Resource",
                         "labels": {
                             "de": "[AWG] Quellenbeschreibung (Druck",
@@ -3294,61 +2751,44 @@
                         },
                         "cardinalities": [
                             {
-                                "propname": ":sourcedesc_siglum",
-                                "cardinality": "1"
+                                "propname": ":hasSourcedesc_impresssum",
+                                "cardinality": "1",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":sourceDesc_label",
-                                "cardinality": "1"
+                                "propname": ":hasRef_publisher",
+                                "cardinality": "0-1",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":sourceDesc_impresssum",
-                                "cardinality": "1"
+                                "propname": ":hasDate_publication",
+                                "cardinality": "1",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":place_publisher",
-                                "cardinality": "1"
+                                "propname": ":hasSource_location_ed_used_rt",
+                                "cardinality": "1",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":placeGeo",
-                                "cardinality": "0-1"
+                                "propname": ":hasSource_location_ed_further_rt",
+                                "cardinality": "0-n",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":ref_publisher",
-                                "cardinality": "0-1"
+                                "propname": ":hasSourcedesc_ed_title",
+                                "cardinality": "0-n",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":date_publication",
-                                "cardinality": "1"
-                            },
-                            {
-                                "propname": ":source_location_ED_used_rt",
-                                "cardinality": "1"
-                            },
-                            {
-                                "propname": ":source_location_ED_further_rt",
-                                "cardinality": "0-n"
-                            },
-                            {
-                                "propname": ":dc_description_rt",
-                                "cardinality": "0-n"
-                            },
-                            {
-                                "propname": ":sourceDesc_ED_title",
-                                "cardinality": "0-n"
-                            },
-                            {
-                                "propname": ":content_rt",
-                                "cardinality": "0-n"
-                            },
-                            {
-                                "propname": ":salsah_comment",
-                                "cardinality": "0-n"
+                                "propname": ":hasComment",
+                                "cardinality": "0-n",
+                                "gui_order": 0
                             }
                         ]
                     },
                     {
-                        "name": "publishing_house",
+                        "name": "Publishing_house",
                         "super": "Resource",
                         "labels": {
                             "de": "Verlag",
@@ -3364,33 +2804,19 @@
                         },
                         "cardinalities": [
                             {
-                                "propname": ":dc_publisher",
-                                "cardinality": "1"
+                                "propname": ":hasPublisher",
+                                "cardinality": "1",
+                                "gui_order": 0
                             },
                             {
-                                "propname": ":alt_name_rt",
-                                "cardinality": "0-n"
-                            },
-                            {
-                                "propname": ":gnd",
-                                "cardinality": "0-1"
-                            },
-                            {
-                                "propname": ":salsah_address",
-                                "cardinality": "0-n"
-                            },
-                            {
-                                "propname": ":dc_description_rt",
-                                "cardinality": "0-n"
-                            },
-                            {
-                                "propname": ":salsah_comment_rt",
-                                "cardinality": "0-n"
+                                "propname": ":hasAddress",
+                                "cardinality": "0-n",
+                                "gui_order": 0
                             }
                         ]
                     },
                     {
-                        "name": "digitalcopy_transcription",
+                        "name": "Digitalcopy_transcription",
                         "super": "StillImageRepresentation",
                         "labels": {
                             "de": "Digitalisat (edierter Notentext)",
@@ -3404,35 +2830,10 @@
                             "it": "Copia digitale di un testo musicale edito",
                             "en": "Digital copy of an edited musical text"
                         },
-                        "cardinalities": [
-                            {
-                                "propname": ":dc_title",
-                                "cardinality": "1"
-                            },
-                            {
-                                "propname": ":filepath_original",
-                                "cardinality": "1"
-                            },
-                            {
-                                "propname": ":dc_description_rt",
-                                "cardinality": "0-n"
-                            },
-                            {
-                                "propname": "salsah:part_of",
-                                "cardinality": "1"
-                            },
-                            {
-                                "propname": "salsah:seqnum",
-                                "cardinality": "1"
-                            },
-                            {
-                                "propname": ":salsah_comment_rt",
-                                "cardinality": "0-n"
-                            }
-                        ]
+                        "cardinalities": []
                     },
                     {
-                        "name": "ed_score",
+                        "name": "Ed_score",
                         "super": "Resource",
                         "labels": {
                             "de": "[AWG] Edierter Notentext",
@@ -3448,21 +2849,14 @@
                         },
                         "cardinalities": [
                             {
-                                "propname": ":dc_title",
-                                "cardinality": "1"
-                            },
-                            {
-                                "propname": ":sketch_commentary",
-                                "cardinality": "0-n"
-                            },
-                            {
-                                "propname": ":salsah_comment_rt",
-                                "cardinality": "0-n"
+                                "propname": ":hasSketch_commentary",
+                                "cardinality": "0-n",
+                                "gui_order": 0
                             }
                         ]
                     },
                     {
-                        "name": "digitalcopy_sourcedescription",
+                        "name": "Digitalcopy_sourcedescription",
                         "super": "StillImageRepresentation",
                         "labels": {
                             "de": "Digitalisat (Quellen\u00fcbersicht)",
@@ -3476,32 +2870,7 @@
                             "it": "Copia digitale di una panoramica (grafica) delle fonti",
                             "en": "Digital copy of a (graphic) source overview"
                         },
-                        "cardinalities": [
-                            {
-                                "propname": ":dc_title",
-                                "cardinality": "1"
-                            },
-                            {
-                                "propname": ":filepath_original",
-                                "cardinality": "1"
-                            },
-                            {
-                                "propname": ":dc_description_rt",
-                                "cardinality": "0-n"
-                            },
-                            {
-                                "propname": "salsah:part_of",
-                                "cardinality": "1"
-                            },
-                            {
-                                "propname": "salsah:seqnum",
-                                "cardinality": "1"
-                            },
-                            {
-                                "propname": ":salsah_comment_rt",
-                                "cardinality": "0-n"
-                            }
-                        ]
+                        "cardinalities": []
                     }
                 ]
             }
