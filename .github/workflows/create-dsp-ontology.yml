@@ -53,4 +53,4 @@ jobs:
 
       - name: Create ontology via DSP-TOOLS
         working-directory: ${{ env.DSP_TOOLS_DIR }}
-        run: dsp-tools create ./1_salsah-model-extraction/webern_*.json -s ${{ secrets.TESTSERVER_URL }} -u ${{ secrets.TESTSERVER_USER }} -p ${{ secrets.TESTSERVER_PW }}
+        run: dsp-tools create ./1_salsah-model-extraction/webern_*.json -s ${{ secrets.TESTSERVER_URL }} -u ${{ secrets.TESTSERVER_USERNAME }} -p ${{ secrets.TESTSERVER_PW }}
