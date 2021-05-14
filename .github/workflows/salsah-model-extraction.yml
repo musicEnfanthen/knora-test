@@ -27,6 +27,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Install DSP-tools
+        working-directory: ${{ github.workspace }}/${{ env.SCRIPT_DIR }}
+        run: pip install dsp-tools
+
       - name: Check for existing JSON file
         working-directory: ${{ github.workspace }}/${{ env.SCRIPT_DIR }}
         run: |
@@ -46,7 +50,21 @@ jobs:
       - name: Run extraction script
         working-directory: ${{ github.workspace }}/${{ env.SCRIPT_DIR }}
         run: python SalsahModelToJson.py
-      
+
+      - name: Validate extracted model via DSP-TOOLS
+        working-directory: ${{ github.workspace }}/${{ env.SCRIPT_DIR }}
+        run: dsp-tools create webern_*.json --validate
+
+      - name: Remove gaga file
+        working-directory: ${{ github.workspace }}/${{ env.SCRIPT_DIR }}
+        run: |
+          if [ ! -f gaga.json ]; then
+            echo "No gaga file to remove."
+          else
+            echo "Removing gaga file."
+            rm gaga.json
+          fi
+
       - name: Check git status before commit
         run: |
           git config --get remote.origin.url
