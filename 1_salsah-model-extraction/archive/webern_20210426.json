@@ -2938,11 +2938,11 @@
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "salsah:part_of",
+                                "propname": "isPartOf",
                                 "cardinality": "1"
                             },
                             {
-                                "propname": "salsah:seqnum",
+                                "propname": "seqnum",
                                 "cardinality": "1"
                             },
                             {
@@ -3032,7 +3032,7 @@
                                 "cardinality": "0-1"
                             },
                             {
-                                "propname": "salsah:part_of",
+                                "propname": "isPartOf",
                                 "cardinality": "0-1"
                             },
                             {
@@ -3078,11 +3078,11 @@
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "salsah:part_of",
+                                "propname": "isPartOf",
                                 "cardinality": "1"
                             },
                             {
-                                "propname": "salsah:seqnum",
+                                "propname": "seqnum",
                                 "cardinality": "0-1"
                             },
                             {
@@ -3300,11 +3300,11 @@
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "salsah:part_of",
+                                "propname": "isPartOf",
                                 "cardinality": "0-1"
                             },
                             {
-                                "propname": "salsah:seqnum",
+                                "propname": "seqnum",
                                 "cardinality": "1"
                             },
                             {
@@ -3426,7 +3426,7 @@
                         ]
                     },
                     {
-                        "name": "digitalcopy_transcription",
+                        "name": "digitalcopy_editedtext",
                         "super": "StillImageRepresentation",
                         "labels": {
                             "de": "Digitalisat (edierter Notentext)",
@@ -3454,11 +3454,11 @@
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "salsah:part_of",
+                                "propname": "isPartOf",
                                 "cardinality": "1"
                             },
                             {
-                                "propname": "salsah:seqnum",
+                                "propname": "seqnum",
                                 "cardinality": "1"
                             },
                             {
@@ -3526,11 +3526,11 @@
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "salsah:part_of",
+                                "propname": "isPartOf",
                                 "cardinality": "1"
                             },
                             {
-                                "propname": "salsah:seqnum",
+                                "propname": "seqnum",
                                 "cardinality": "1"
                             },
                             {
